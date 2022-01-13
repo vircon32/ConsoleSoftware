@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="TripleBubble" />
+		<Option pch_mode="2" />
+		<Option compiler="vircon32_c_compiler" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Run.bat" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/" />
+				<Option type="0" />
+				<Option compiler="vircon32_c_compiler" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<ExtraCommands>
+			<Add after="make.bat" />
+		</ExtraCommands>
+		<Unit filename="Bubble.h" />
+		<Unit filename="Character.h" />
+		<Unit filename="Definitions.h" />
+		<Unit filename="Globals.h" />
+		<Unit filename="Launcher.h" />
+		<Unit filename="Main.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Playfield.h" />
+		<Unit filename="Points.h" />
+		<Unit filename="SceneArcadeClassic.h" />
+		<Unit filename="SceneArcadeTriple.h" />
+		<Unit filename="SceneEnding.h" />
+		<Unit filename="SceneGameOver.h" />
+		<Unit filename="SceneMainMenu.h" />
+		<Unit filename="SceneTitle.h" />
+		<Unit filename="TextureRegions.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+			<code_completion />
+			<envvars />
+			<debugger />
+			<fortran_project />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

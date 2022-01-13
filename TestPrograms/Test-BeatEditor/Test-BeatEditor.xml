@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Test: Beat editor" version="1.0" />
+    <binary path="obj/Test-BeatEditor.vbin" />
+    <textures>
+        <texture path="obj/TextureEditor.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/SoundDrum.vsnd" />
+        <sound path="obj/SoundSticks.vsnd" />
+        <sound path="obj/SoundClap.vsnd" />
+        <sound path="obj/SoundBell.vsnd" />
+    </sounds>
+</rom-definition>

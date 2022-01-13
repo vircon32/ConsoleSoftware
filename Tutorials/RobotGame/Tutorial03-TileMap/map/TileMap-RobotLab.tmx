@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.1" tiledversion="2018.09.12" orientation="orthogonal" renderorder="right-down" width="14" height="7" tilewidth="96" tileheight="96" infinite="0" nextlayerid="4" nextobjectid="1">
+ <tileset firstgid="1" source="TileSet-RobotLab.tsx"/>
+ <layer id="2" name="RobotLab" width="14" height="7">
+  <data encoding="csv">
+0,29,30,37,17,37,29,30,37,0,0,37,30,0,
+29,37,32,22,25,22,30,21,22,11,11,22,40,0,
+37,32,16,19,19,19,33,19,19,38,38,39,20,29,
+24,4,19,19,19,19,38,39,19,19,19,19,20,30,
+35,18,19,7,27,27,8,19,19,19,19,19,2,24,
+0,26,27,28,35,35,26,9,27,27,27,27,28,35,
+0,34,35,36,0,0,34,17,36,35,35,35,36,0
+</data>
+ </layer>
+</map>

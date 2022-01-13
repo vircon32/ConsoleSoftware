@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Triple Bubble" version="1.0" />
+    <binary path="obj/TripleBubble.vbin" />
+    <textures>
+        <texture path="obj/TextureTitle.vtex" />
+        <texture path="obj/TextureMenus.vtex" />
+        <texture path="obj/TextureGameplay.vtex" />
+        <texture path="obj/TextureCutscenes.vtex" />
+        <texture path="obj/TextureCharacter1.vtex" />
+        <texture path="obj/TextureCharacter2.vtex" />
+        <texture path="obj/TextureCharacter3.vtex" />
+        <texture path="obj/TextureWorld1.vtex" />
+        <texture path="obj/TextureWorld2.vtex" />
+        <texture path="obj/TextureWorld3.vtex" />
+        <texture path="obj/TextureWorld4.vtex" />
+        <texture path="obj/TextureWorld5.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/MusicWorld1.vsnd" />
+        <sound path="obj/MusicWorld2.vsnd" />
+        <sound path="obj/MusicWorld3.vsnd" />
+        <sound path="obj/MusicWorld4.vsnd" />
+        <sound path="obj/MusicWorld5.vsnd" />
+        <sound path="obj/SoundTitleBubble.vsnd" />
+        <sound path="obj/SoundTitleFanfare.vsnd" />
+        <sound path="obj/SoundTitleStart.vsnd" />
+        <sound path="obj/SoundMenuMove.vsnd" />
+        <sound path="obj/SoundMenuAccept.vsnd" />
+        <sound path="obj/SoundMenuCancel.vsnd" />
+        <sound path="obj/SoundLauncherMove.vsnd" />
+        <sound path="obj/SoundBubbleShoot.vsnd" />
+        <sound path="obj/SoundBubbleBounce.vsnd" />
+        <sound path="obj/SoundBubblePlaced.vsnd" />
+        <sound path="obj/SoundBubblesBurst.vsnd" />
+        <sound path="obj/SoundBurstFanfare.vsnd" />
+        <sound path="obj/SoundChangeLauncher.vsnd" />
+        <sound path="obj/SoundCountdown.vsnd" />
+        <sound path="obj/SoundCeilingDrop.vsnd" />
+        <sound path="obj/SoundPause.vsnd" />
+        <sound path="obj/SoundLevelClear.vsnd" />
+        <sound path="obj/SoundDeath.vsnd" />
+        <sound path="obj/SoundReady.vsnd" />
+        <sound path="obj/SoundClear.vsnd" />
+        <sound path="obj/SoundFailed.vsnd" />
+        <sound path="obj/SoundCombo.vsnd" />
+        <sound path="obj/SoundComboNice.vsnd" />
+        <sound path="obj/SoundComboGreat.vsnd" />
+    </sounds>
+</rom-definition>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="2048" version="1.0" />
+    <binary path="obj/Main.vbin" />
+    <textures>
+        <texture path="obj/Texture2048.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/MusicTitle.vsnd" />
+        <sound path="obj/MusicGameplay.vsnd" />
+        
+        <sound path="obj/SoundTitleTiles.vsnd" />
+        <sound path="obj/SoundTitleLogo.vsnd" />
+        <sound path="obj/SoundTitleStart.vsnd" />
+        <sound path="obj/SoundQuitGame.vsnd" />
+        <sound path="obj/SoundMenuMove.vsnd" />
+        <sound path="obj/SoundMenuAccept.vsnd" />
+        <sound path="obj/SoundMenuCancel.vsnd" />
+        <sound path="obj/SoundMoveBoard.vsnd" />
+        <sound path="obj/SoundTileCollision.vsnd" />
+        <sound path="obj/SoundTileAdded.vsnd" />
+        <sound path="obj/SoundNewHighest.vsnd" />
+        <sound path="obj/SoundWin.vsnd" />
+        <sound path="obj/SoundLose.vsnd" />
+    </sounds>
+</rom-definition>

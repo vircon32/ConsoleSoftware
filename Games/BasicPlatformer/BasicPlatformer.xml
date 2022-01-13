@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Basic Platformer" version="1.0" />
+    <binary path="obj/Main.vbin" />
+    <textures>
+        <texture path="obj/TextureGame.vtex" />
+        <texture path="obj/TextureTextFont.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/MusicTitle.vsnd" />
+        <sound path="obj/MusicWorld1.vsnd" />
+        <sound path="obj/MusicWorld2.vsnd" />
+        <sound path="obj/MusicWorld3.vsnd" />
+        <sound path="obj/MusicWorldClear.vsnd" />
+        <sound path="obj/MusicCredits.vsnd" />
+        <sound path="obj/MusicEnding.vsnd" />
+        <sound path="obj/MusicGameOver.vsnd" />
+        
+        <sound path="obj/SoundJump.vsnd" />
+        <sound path="obj/SoundLand.vsnd" />
+        <sound path="obj/SoundCoin.vsnd" />
+        <sound path="obj/SoundOnOff.vsnd" />
+        <sound path="obj/SoundSpring.vsnd" />
+        <sound path="obj/SoundGetKey.vsnd" />
+        <sound path="obj/SoundOpenDoor.vsnd" />
+        <sound path="obj/SoundGoal.vsnd" />
+        <sound path="obj/SoundDeath.vsnd" />
+        <sound path="obj/SoundPause.vsnd" />
+        <sound path="obj/SoundStart.vsnd" />
+        <sound path="obj/SoundHurry.vsnd" />
+    </sounds>
+</rom-definition>

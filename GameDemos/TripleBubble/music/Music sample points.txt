@@ -1,0 +1,7 @@
+SAMPLES FOR LOOP START:
+
+World 1: 165339
+World 2:  86553
+World 3: 170803
+World 4: 185653
+World 5: 165492

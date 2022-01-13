@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Test: Random numbers" version="1.0" />
+    <binary path="obj\Test-RandomNumbers.vbin" />
+    <textures>
+        <texture path="obj\Texture-DiceStats.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj\Sound-DiceRoll.vsnd" />
+        <sound path="obj\Sound-PageComplete.vsnd" />
+    </sounds>
+</rom-definition>

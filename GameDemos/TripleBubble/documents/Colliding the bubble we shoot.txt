@@ -1,0 +1,17 @@
+Raycast
+
+Origin + Angle
+  --> Ray trajectory (with wall bouncing) --> actually 1 ray per bounce
+  --> Ordered list of areas the ray contacts (with their time of entry in frames)
+  
+---------------------------------------------
+
+We don't need to recalculate this every frame!
+Only when the angle actually changes
+
+---------------------------------------------
+
+For each individual ray we can split the ray collision detection into a list
+of collisions with each row. This is possible because we know the trajectory
+always goes upwards.
+

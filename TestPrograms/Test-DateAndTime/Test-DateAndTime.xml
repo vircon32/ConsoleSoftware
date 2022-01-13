@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Test: Date and time" version="1.0" />
+    <binary path="obj\Test-DateAndTime.vbin" />
+    <textures>
+        <texture path="obj\Texture-Clock.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj\Sound-TicTac.vsnd" />
+    </sounds>
+</rom-definition>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Test: Math functions" version="1.0" />
+    <binary path="obj\Test-MathFunctions.vbin" />
+    <textures>
+        <texture path="obj\Texture-MathFunctions.vtex" />
+    </textures>
+    <sounds />
+</rom-definition>

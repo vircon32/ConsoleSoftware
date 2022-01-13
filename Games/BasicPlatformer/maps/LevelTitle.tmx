@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.1" tiledversion="2018.09.12" orientation="orthogonal" renderorder="right-down" width="16" height="9" tilewidth="40" tileheight="40" infinite="0" nextlayerid="2" nextobjectid="1">
+ <tileset firstgid="1" source="TileSetLevels.tsx"/>
+ <layer id="1" name="LevelTitle" width="16" height="9">
+  <data encoding="csv">
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,0,0,0,0,0,0,0,0,0,4,0,0,
+15,15,0,0,0,0,0,0,0,0,0,0,0,15,15,15,
+0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,17,0,0,0,0,0,0,0,0,0,0,0,0,3,
+0,17,17,17,0,0,0,2,0,0,4,4,0,0,14,14,
+14,14,14,14,14,14,14,14,14,14,14,14,14,14,13,13
+</data>
+ </layer>
+</map>

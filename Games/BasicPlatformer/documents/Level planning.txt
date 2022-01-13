@@ -1,0 +1,106 @@
+------------------------------
+  Required skills
+------------------------------
+This game deliberately includes very few gameplay elements.
+To plan what we can achieve with them, I have elaborated
+this small list of the skills we can require to the player
+and the elements we can combine to test each skill.
+
+
+1) Precise platforming
+    - hard jumps
+    - small platforms
+    - big falls
+    - obstructing spikes
+
+2) Movement coordination
+    - Conveyors
+    - Springs
+    - Morning stars
+    
+3) Exact timing
+    - On/Off blocks
+    - Springs
+    - Morning stars
+    - Conveyors
+    
+4) Routing
+    - Coins
+    - Keys and doors
+    - One ways
+    - Bridges
+    - Goal
+    
+5) Speedrunning
+    - Different timer allowances
+    - Waiting on on/off blocks
+    - Waiting on morning stars
+    - Fast movement on conveyors
+
+
+------------------------------
+  Level planning
+------------------------------
+In addition to the skill tests, I have found very useful to
+build every map having some central idea. So, the ideas I
+used to make each of the 30 levels were the following:
+
+
+1-1) Teach the base game mechanics: Coins, goal, spikes
+1-2) Present falls and longer levels (scrolling)
+1-3) Present on/off blocks and require simple timing
+1-4) Present one ways and key doors: light routing
+1-5) Larger level, more complex routing with coordination
+
+1-6) Precise platforming with more spikes
+1-7) Present springs, jump over walls or climb high
+1-8) Multiple key doors, precise platforming, less generous timer
+1-9) On/Off sections combined with springs
+1-10) Coins placed in aerial spring jumps, more spikes, less generous timer 
+
+2-1) Present conveyors
+2-2) Nested key doors
+2-3) More advanced movement: springs + conveyors
+2-4) Present morning stars
+2-5) Downwards level (spring elevators, then descents)
+
+2-6) Morning stars + Conveyors
+2-7) Connected rooms concept
+2-8) More advanced movement: conveyors + on/off
+2-9) More advanced movement: springs + on/off
+2-10) Labyrinth (complex routing, thin passages, traps, maximum coins)
+
+3-1) Morning stars + Springs
+3-2) Advanced timing: Morning stars, On/Off, Springs
+3-3) 3 separate sections, 1 coin each. Vertical level
+3-4) Top to bottom level, single screen width, some traps
+3-5) Very large level, mostly horizontal. Maximum coins
+
+3-6) Advanced movement: Conveyors + Springs + On/Off
+3-7) Morning stars + Conveyors (conveyor passages)
+3-8) Short stage, sequential challenges, tight timer
+3-9) Round clockwise path, use all elements
+3-10) Hard platforming with spikes, timer a bit tight
+
+
+Of course, to actually design the whole level you will need
+more details than this, but that comes with experience.
+
+
+------------------------------
+  Teaching game mechanics
+------------------------------
+A level especially important in every game is the first
+level, in which you need to teach the basics of gameplay.
+That is even more important in a game like this, that
+features no tutorials at all. For instance, in level 1-1,
+one of the coins is placed in a block 3 tiles over the
+player, to make them realize they can't reach that coin
+in a single jump (the maximum height a jump can clear is
+2 blocks).
+
+Also, when teaching new mechanics, it is useful to first
+intoduce them in an easy way so that players can safely
+experiment and understand them. After that you can now
+design harder tests to encourage players to master those
+mechanics to a higher degree.

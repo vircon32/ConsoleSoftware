@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="bios" title="Vircon32 standard BIOS" version="1.0" />
+    <binary path="obj\StandardBios.vbin" />
+    <textures>
+        <texture path="obj\BiosTexture.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj\BiosSound.vsnd" />
+    </sounds>
+</rom-definition>

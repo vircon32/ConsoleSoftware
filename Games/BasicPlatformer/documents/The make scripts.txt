@@ -1,0 +1,68 @@
+---------------------------------------------
+  How are Vircon32 games built from source?
+---------------------------------------------
+Vircon32 games are built from its source code and assets.
+To write the full game, the following source files have
+been created:
+
+ - Source code files, written in C language.
+ - Texture images, in PNG format
+ - Music and sound files, in WAV format.
+ - Level maps, saved from the Tiled editor.
+ - An XML file describing the final game ROM.
+
+All of these are the starting point. Having those files 
+you can then use the Vircon32 development tools to create
+the final executable game ROM, which is a single .v32 file.
+
+
+-------------------------------------
+  Steps needed in the script
+-------------------------------------
+In general, the steps to create a game from its source
+for a tile-based game like this one will be the following:
+
+ 1) Call the tile map importer, to convert all level maps.
+    This will produce binary files with those maps as arrays.
+    
+ 2) Call the compiler, to compile the main C file.
+    This will produce an assembly file including all level maps
+ 
+ 3) Call the assembler, to convert the assembly file from step 2.
+    This will translate the assembly into native Vircon32 binaries.
+ 
+ 4) Call the PNG importer to convert all image files.
+    This will produce a series of native Vircon32 textures.
+ 
+ 5) Call the WAV importer to convert all music and sound files.
+    This will produce a series of native Vircon32 sounds.
+ 
+ 6) Call the ROM packer program to process the XML file.
+    This will produce the final ROM file with binaries, textures
+    and sounds. This is the file that can be played in the emulator.
+
+
+------------------------------------------------------
+  Understanding the Make.bat and MakeAll.bat scripts
+------------------------------------------------------
+The scripts themselves are windows .BAT files, but the same process
+could also be done using bash scripts in Linux, or any other way.
+
+These scripts are more sophisticated than simply calling the 6
+steps that we described earlier. In particular, there are 2 global
+strategies that are used to make the process more convenient:
+
+ 1) The make script will check for errors at each step, and when
+    any error happens it will automatically abort the compilation
+    process and report the corresponding error instead.
+
+ 2) By separating the build in 2 scripts, we are giving the option
+    of either using Make.bat to only rebuild the code (which is the
+    most frequent element to change), or calling MakeAll.bat instead
+    to perform the whole process when the rest of the game assets
+    (images, sounds and maps) have changed. This is done because in
+    a larger game, the full build might take longer and rewrite many
+    files with no need to.
+    
+Note that for a first time build it will be needed to use MakeAll.bat
+in order to ensure that all game elements are processed.

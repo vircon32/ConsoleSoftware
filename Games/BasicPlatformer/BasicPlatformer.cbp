@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="BasicPlatformer" />
+		<Option pch_mode="2" />
+		<Option compiler="vircon32_c_compiler" />
+		<Option virtualFolders="Game scenes/;Level objects/" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Run.bat" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/" />
+				<Option type="0" />
+				<Option compiler="vircon32_c_compiler" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<ExtraCommands>
+			<Add after="make.bat" />
+		</ExtraCommands>
+		<Unit filename="Box.h">
+			<Option virtualFolder="Level objects/" />
+		</Unit>
+		<Unit filename="Definitions.h" />
+		<Unit filename="DrawFunctions.h" />
+		<Unit filename="GameLogic.h" />
+		<Unit filename="LevelMap.h" />
+		<Unit filename="Levels.h" />
+		<Unit filename="Main.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Physics.h" />
+		<Unit filename="Player.h" />
+		<Unit filename="SceneCredits.h">
+			<Option virtualFolder="Game scenes/" />
+		</Unit>
+		<Unit filename="SceneEnding.h">
+			<Option virtualFolder="Game scenes/" />
+		</Unit>
+		<Unit filename="SceneGameOver.h">
+			<Option virtualFolder="Game scenes/" />
+		</Unit>
+		<Unit filename="SceneGameplay.h">
+			<Option virtualFolder="Game scenes/" />
+		</Unit>
+		<Unit filename="SceneTitle.h">
+			<Option virtualFolder="Game scenes/" />
+		</Unit>
+		<Unit filename="SceneWorldClear.h">
+			<Option compilerVar="CC" />
+			<Option virtualFolder="Game scenes/" />
+		</Unit>
+		<Unit filename="Text.h" />
+		<Unit filename="TextureRegions.h" />
+		<Unit filename="TileProperties.h" />
+		<Unit filename="levelobjects/Coin.h">
+			<Option virtualFolder="Level objects/" />
+		</Unit>
+		<Unit filename="levelobjects/Conveyor.h">
+			<Option virtualFolder="Level objects/" />
+		</Unit>
+		<Unit filename="levelobjects/Door.h">
+			<Option virtualFolder="Level objects/" />
+		</Unit>
+		<Unit filename="levelobjects/Goal.h">
+			<Option virtualFolder="Level objects/" />
+		</Unit>
+		<Unit filename="levelobjects/Highlight.h">
+			<Option virtualFolder="Level objects/" />
+		</Unit>
+		<Unit filename="levelobjects/Key.h">
+			<Option virtualFolder="Level objects/" />
+		</Unit>
+		<Unit filename="levelobjects/MorningStar.h">
+			<Option virtualFolder="Level objects/" />
+		</Unit>
+		<Unit filename="levelobjects/OnOffBlock.h">
+			<Option virtualFolder="Level objects/" />
+		</Unit>
+		<Unit filename="levelobjects/Spike.h">
+			<Option virtualFolder="Level objects/" />
+		</Unit>
+		<Unit filename="levelobjects/Spring.h">
+			<Option virtualFolder="Level objects/" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

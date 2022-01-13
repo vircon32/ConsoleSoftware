@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Tutorial 01: Default font" version="1.0" />
+    <binary path="obj\Tutorial01-DefaultFont.vbin" />
+    <textures />
+    <sounds />
+</rom-definition>

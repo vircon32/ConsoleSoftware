@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Tutorial 05: Variable width font" version="1.0" />
+    <binary path="obj\Tutorial05-VariableWidthFont.vbin" />
+    <textures>
+        <texture path="obj\Texture-Font22x32.vtex" />
+    </textures>
+    <sounds />
+</rom-definition>

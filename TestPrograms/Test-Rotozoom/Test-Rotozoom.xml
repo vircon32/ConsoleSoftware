@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Test: Rotozoom" version="1.0" />
+    <binary path="obj\Test-Rotozoom.vbin" />
+    <textures>
+        <texture path="obj\Texture-Background.vtex" />
+        <texture path="obj\Texture-Wheel.vtex" />
+    </textures>
+    <sounds />
+</rom-definition>
