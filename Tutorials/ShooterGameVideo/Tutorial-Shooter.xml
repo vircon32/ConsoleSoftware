@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Tutorial: Shooter" version="1.0" />
+    <binary path="obj\Tutorial-Shooter.vbin" />
+    <textures>
+        <texture path="obj\TextureBackground.vtex" />
+        <texture path="obj\TextureGameObjects.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj\MusicGameplay.vsnd" />
+        <sound path="obj\SoundShoot.vsnd" />
+        <sound path="obj\SoundExplosion.vsnd" />
+        <sound path="obj\SoundDeath.vsnd" />
+    </sounds>
+</rom-definition>
