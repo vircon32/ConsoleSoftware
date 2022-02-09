@@ -1,0 +1,62 @@
+=======================
+  RIPPLE EFFECT
+=======================
+To make this effect work we need to split the reflected area into
+horizontal scanlines (1 region each). This effect works by using a
+sine function as offset, so that at each screen scanline we draw
+not the reflected line that would correspond, but we select one of
+the adjacent scanlines as indicated by the sine function.
+
+To account for the distance making things appear smaller in camera,
+we take origin at the horizon Y coordinate and use a square root to
+make the waves progressively larger towards the camera (screen bottom).
+
+A ripple function similar to the one used in the code can be seen
+plotted in the image that comes in this folder.
+
+You can toggle ripple effect on/off using button A.
+
+
+=======================
+  LIGHTING EFFECT
+=======================
+What we want to do is apply light on the back part of the waves, and
+shadows on the front. We can identify those parts with the derivative
+of the ripple function, which we can approximate as simply using cosine
+instead of sine (not exact because of the square root, but it works).
+
+Light is applied by ussing additive blending mode with a helper white
+line region. Shadow is applied simply using the multiply color with a
+helper black line region.
+
+You can toggle lighting effect on/off using button B.
+
+
+=======================
+  SEAFLOOR SEETHROUGH
+=======================
+Towards the camera, the seefloor can progressively be seen more clearly
+behind the reflections. To do this we control the opacity of the drawn
+reflection per line, decreasing it towards the screen bottom.
+
+
+=======================
+  MOVEMENT OF WAVES
+=======================
+Since our ripple function is a sine, to make it cycle we simply add a
+factor between 0 and 2*pi to the sine during all current frame. Then
+we make that factor proportional to: frames mod 90.
+
+
+=======================
+ NOTE ON OPTIMIZATION
+=======================
+Note that the ripple function could easily be precalculated, even for
+each of the 90 animation frames. This could greatly increase speed,
+making all needed calculations a simple lookup. The same can be done
+with the ripple slope.
+
+However, getting rid of sin/cos/sqrt is not a big difference for the
+console, since the CPU can do those calculations in a sincle cycle. The
+speed increase will rather come for removing the function call overhead
+and eliminate expression calculations.
