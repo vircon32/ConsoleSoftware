@@ -1,0 +1,20 @@
+In this tutorial we are applying 2 different types
+of motion blur. It's always either one or the other.
+Button A allows to toggle between them. 
+
+=============================
+   FULL-SCREEN BLUR EFFECT
+=============================
+This is done by using the multiply color to draw the
+background not completely opaque. That way the previous
+frames can be slightly seen through, creating the blur
+effect for all moving objects automatically.
+
+=============================
+  SINGLE OBJECT BLUR EFFECT
+=============================
+To blur only the player ship and not the rest we need
+to draw the background fully opaque, so we will have to
+draw a motion blur manually. We do this by having an
+array to store the sequence of last ship positions. Then
+we draw all of them with progressively higher opacity.
