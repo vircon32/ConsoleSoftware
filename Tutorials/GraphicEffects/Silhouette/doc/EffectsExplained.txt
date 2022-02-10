@@ -1,0 +1,21 @@
+In this tutorial we are only applying 1 effect, which
+is turning an image into its own silhouette. Button A
+allows to toggle between day scene (regular images)
+and night scene (drawn with silhouette effect).
+
+=============================
+   IMAGE SILHOUETTE EFFECT
+=============================
+Drawing the whole image as black is easy: just use
+black as the multiply color and draw the needed region.
+
+To achieve the light border effect we first draw that
+same region 4 times using additive blending. Each time
+we offset the image 1 pixel in each of the 4 directions
+(up,down,left,right). That will produce the effect of
+expanding the whole original contour 1 pixel.
+
+Since most contour pixels will overlap in those 4 times
+the region is drawn, the lighting effect is amplified.
+Still, this method would not work with images that
+have a contour that is black or very dark.
