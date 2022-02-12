@@ -1,0 +1,21 @@
+In this tutorial we are only applying 1 effect, which
+is changing the overall color of an image. Buttons A,
+B, X and Y let you cycle through the available colors
+for each character part.
+
+=============================
+     PALETTE SWAP EFFECT
+=============================
+This is not really a palette swap as was done in old
+systems, since Vircon32 does not work with palettes
+at all. To mimic the effect we decompose an image into
+different parts so that each of them can be assigned
+a color independently.
+
+To achieve the color change we only need that each of
+the image parts in our texture is saved in mainly
+white color, perhaps with some shading in its darker
+parts. The reason is that we will be using the GPU's
+multiply color feature to control that region's color.
+This is based on the fact that white*color = that same
+color when multiply is applied.
