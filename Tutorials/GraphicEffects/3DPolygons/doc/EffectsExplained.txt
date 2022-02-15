@@ -1,0 +1,50 @@
+In this tutorial we are showing a technique (rather
+than an effect) that enables the programmer to render
+3D polygons in a console like Vircon32, which has
+no graphic functions to draw 3D at all.
+
+=============================
+   3D POLYGONS TECHNIQUE
+=============================
+In this example we are basically implementing a very
+simplified 3D rendered in software. This program
+only uses a texture with a single white line, and
+to draw polygons it will decompose them in scanlines
+of 1 pixel each. By redefining a segment of the same
+line each time and drawing it at different heights
+and colors it is able to form each polygon.
+
+Explaining the full detail of how a software 3D
+engine is implemented is beyond the scope of this
+tutorial, but you will find plenty of comments in
+the program's code.
+
+================================
+  LIMITATIONS OF THE TECHNIQUE
+================================
+This technique cannot produce textured polygons or
+perform per-pixel shading methods such as Phong or
+Goraud, because of the limitations of the console.
+
+=============================
+  LIMITATIONS OF THE ENGINE
+=============================
+Our engine is making use of the fact that our object
+is always at the same position. Because of this, its
+polygons will never leave the screen or go out of
+camera bounds, and we can afford to not implement
+any kind of 2D or 3D clipping to adjust polygons.
+
+=============================
+    NOTE ON OPTIMIZATION
+=============================
+This example is not particularly optimized. Even
+drawing just this object with no clipping, you can
+see how CPU usage reaches 90% at some points. It is
+possible to achieve a more optimized result with
+various techniques, but this tutorial was written
+in this way to make the code more readable.
+
+Still, to make a fully optimized engine it would
+be necessary to use assembly language to optimize
+key parts of the calculation and drawing process.

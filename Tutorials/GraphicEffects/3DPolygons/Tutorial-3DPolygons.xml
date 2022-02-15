@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Effects tutorial: 3D Polygons" version="1.0" />
+    <binary path="obj\Tutorial-3DPolygons.vbin" />
+    <textures>
+        <texture path="obj\Texture3DPolygons.vtex" />
+    </textures>
+    <sounds>
+    </sounds>
+</rom-definition>
