@@ -16,7 +16,7 @@ void main()
     define_region_center( 0,0,  139,99 );
     
     // clear the screen in some visible color
-    clear_screen( color_purple );
+    clear_screen( color_magenta );
     
     // draw our region at the center of the screen
     draw_region_at( 640/2, 360/2 );

@@ -1,5 +1,5 @@
 /* *****************************************************************************
-*  Vircon32 standard library: "string.h"          File version: 2021/03/02     *
+*  Vircon32 standard library: "string.h"          File version: 2022/02/25     *
 *  --------------------------------------------------------------------------- *
 *  This header is part of the Vircon32 C programming tools                     *
 *  --------------------------------------------------------------------------- *
@@ -303,7 +303,7 @@ void strncat( int* initial_text, int* added_text, int max_characters )
 // only in the case of base 10, value is taken as signed
 void itoa( int value, int* result_text, int base )
 {
-    int* digits = "0123456789ABCDEF";
+    int[ 16+1 ] hex_characters = "0123456789ABCDEF";
     int[ 33 ] reversed_digits;
     
     // do nothing if base is not in range [2-16]
@@ -323,7 +323,7 @@ void itoa( int value, int* result_text, int base )
     
     do
     {
-        *next_digit = digits[ value % base ];
+        *next_digit = hex_characters[ value % base ];
         ++next_digit;
         
         value /= base;

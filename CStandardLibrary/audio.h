@@ -1,5 +1,5 @@
 /* *****************************************************************************
-*  Vircon32 standard library: "audio.h"           File version: 2021/02/18     *
+*  Vircon32 standard library: "audio.h"           File version: 2022/02/25     *
 *  --------------------------------------------------------------------------- *
 *  This header is part of the Vircon32 C programming tools                     *
 *  --------------------------------------------------------------------------- *
@@ -52,7 +52,6 @@ int get_selected_sound()
     {
         "in R0, SPU_SelectedSound"
     }
-    
 }
 
 // -----------------------------------------------------------------------------
@@ -187,7 +186,25 @@ int get_channel_state( int channel_id )
 // =============================================================================
 
 
-// (pending)
+// range is 0 to 1
+void set_global_volume( float volume )
+{
+    asm
+    {
+        "mov R0, {volume}"
+        "out SPU_GlobalVolume, R0"
+    }
+}
+
+// -----------------------------------------------------------------------------
+
+float get_global_volume()
+{
+    asm
+    {
+        "in R0, SPU_GlobalVolume"
+    }    
+}
 
 
 // =============================================================================

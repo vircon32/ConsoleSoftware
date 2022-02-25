@@ -1,5 +1,5 @@
 /* *****************************************************************************
-*  Vircon32 standard library: "video.h"           File version: 2022/01/05     *
+*  Vircon32 standard library: "video.h"           File version: 2022/02/25     *
 *  --------------------------------------------------------------------------- *
 *  This header is part of the Vircon32 C programming tools                     *
 *  --------------------------------------------------------------------------- *
@@ -45,8 +45,10 @@
 #define color_green      0xFF00FF00
 #define color_blue       0xFFFF0000
 #define color_yellow     0xFF00FFFF
-#define color_purple     0xFFFF00FF
+#define color_magenta    0xFFFF00FF
 #define color_cyan       0xFFFFFF00
+#define color_orange     0xFF0080FF
+#define color_brown      0xFF204080
 
 // -----------------------------------------------------------------------------
 
@@ -72,6 +74,34 @@ int make_color_rgb( int r, int g, int b )
 int make_color_rgba( int r, int g, int b, int a )
 {
     return (a << 24) | (b << 16) | (g << 8) | r;
+}
+
+// -----------------------------------------------------------------------------
+
+// returned range is [0-255]
+int get_color_red( int color )
+{
+    return color & 255;
+}
+// -----------------------------------------------------------------------------
+
+int get_color_green( int color )
+{
+    return (color >> 8) & 255;
+}
+
+// -----------------------------------------------------------------------------
+
+int get_color_blue( int color )
+{
+    return (color >> 16) & 255;
+}
+
+// -----------------------------------------------------------------------------
+
+int get_color_alpha( int color )
+{
+    return (color >> 24) & 255;
 }
 
 

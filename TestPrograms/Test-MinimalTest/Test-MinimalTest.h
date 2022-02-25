@@ -4,7 +4,7 @@
 
 
 // colors we will use
-#define color_purple  0xFFFF00FF
+#define color_magenta  0xFFFF00FF
 
 // -----------------------------------------------------------------------------
 

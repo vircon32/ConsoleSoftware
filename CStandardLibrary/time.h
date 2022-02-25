@@ -1,5 +1,5 @@
 /* *****************************************************************************
-*  Vircon32 standard library: "time.h"            File version: 2021/10/31     *
+*  Vircon32 standard library: "time.h"            File version: 2022/02/25     *
 *  --------------------------------------------------------------------------- *
 *  This header is part of the Vircon32 C programming tools                     *
 *  --------------------------------------------------------------------------- *
@@ -112,19 +112,7 @@ void translate_date( int date, date_info* translated )
     int days_in_year = date & 0x0000FFFF;
     
     // define the days of each month
-    int[ 12 ] month_days; // = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
-    month_days[  0 ] = 31;
-    month_days[  1 ] = 28;
-    month_days[  2 ] = 31;
-    month_days[  3 ] = 30;
-    month_days[  4 ] = 31;
-    month_days[  5 ] = 30;
-    month_days[  6 ] = 31;
-    month_days[  7 ] = 31;
-    month_days[  8 ] = 30;
-    month_days[  9 ] = 31;
-    month_days[ 10 ] = 30;
-    month_days[ 11 ] = 31;
+    int[ 12 ] month_days = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
     
     // take leap years into account
     bool is_leap_year = ((translated->year % 4) == 0) && ((translated->year % 100) != 0);
