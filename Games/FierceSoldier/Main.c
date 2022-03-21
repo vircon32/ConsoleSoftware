@@ -50,11 +50,11 @@ void main( void )
     for( int i = 0; i < 15; i++ )
     {
         select_channel( i );
-        set_channel_volume( 0.3 );
+        set_channel_volume( 0.275 );
     }
     
     select_channel( ChannelMusic );
-    set_channel_volume( 0.35 );
+    set_channel_volume( 0.32 );
     
     // ------------------------------------
     // PART 3: GAME INITIALIZATIONS
