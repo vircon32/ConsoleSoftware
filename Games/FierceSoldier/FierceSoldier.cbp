@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="FierceSoldier" />
+		<Option pch_mode="2" />
+		<Option compiler="vircon32_c_compiler" />
+		<Option virtualFolders="LevelObjects/" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Run.bat" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/" />
+				<Option type="0" />
+				<Option compiler="vircon32_c_compiler" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<ExtraCommands>
+			<Add after="make.bat" />
+		</ExtraCommands>
+		<Unit filename="Box.h" />
+		<Unit filename="Definitions.h" />
+		<Unit filename="DrawFunctions.h" />
+		<Unit filename="FontLarge.h" />
+		<Unit filename="FontSmall.h" />
+		<Unit filename="GameLogic.h" />
+		<Unit filename="LevelMap.h" />
+		<Unit filename="Levels.h" />
+		<Unit filename="Main.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="Physics.h" />
+		<Unit filename="Player.h" />
+		<Unit filename="SceneEnding.h" />
+		<Unit filename="SceneGameOver.h" />
+		<Unit filename="SceneGameplay.h" />
+		<Unit filename="SceneIntro.h" />
+		<Unit filename="SceneTitle.h" />
+		<Unit filename="TextureGameplay.h" />
+		<Unit filename="TextureRegions.h" />
+		<Unit filename="TextureStory.h" />
+		<Unit filename="TextureTitle.h" />
+		<Unit filename="TileProperties.h" />
+		<Unit filename="levelobjects/Boss1.h">
+			<Option virtualFolder="LevelObjects/" />
+		</Unit>
+		<Unit filename="levelobjects/Boss2.h">
+			<Option virtualFolder="LevelObjects/" />
+		</Unit>
+		<Unit filename="levelobjects/Boss3.h">
+			<Option virtualFolder="LevelObjects/" />
+		</Unit>
+		<Unit filename="levelobjects/CannonBullet.h">
+			<Option virtualFolder="LevelObjects/" />
+		</Unit>
+		<Unit filename="levelobjects/EnemyShot.h">
+			<Option virtualFolder="LevelObjects/" />
+		</Unit>
+		<Unit filename="levelobjects/Highlight.h">
+			<Option virtualFolder="LevelObjects/" />
+		</Unit>
+		<Unit filename="levelobjects/Launcher.h">
+			<Option virtualFolder="LevelObjects/" />
+		</Unit>
+		<Unit filename="levelobjects/Missile.h">
+			<Option virtualFolder="LevelObjects/" />
+		</Unit>
+		<Unit filename="levelobjects/PlayerShot.h">
+			<Option virtualFolder="LevelObjects/" />
+		</Unit>
+		<Unit filename="levelobjects/Soldier.h">
+			<Option virtualFolder="LevelObjects/" />
+		</Unit>
+		<Unit filename="levelobjects/Turret.h">
+			<Option virtualFolder="LevelObjects/" />
+		</Unit>
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

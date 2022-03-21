@@ -1,0 +1,8 @@
+This music is adapted from "Electronic E System is Down", by Frank Nora.
+Downloaded from https://gamesounds.xyz as public domain.
+
+This version was cut to the first 2 minutes aproximately, and prepared to loop.
+
+The cut points in samples were:
+start: 353170
+end: 5426074

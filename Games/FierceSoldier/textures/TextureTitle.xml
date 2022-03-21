@@ -1,0 +1,7 @@
+<texture-regions>
+    <texture name="TextureTitle" path="TextureTitle.png"/>
+    <region name="TitleBackground" left="1" top="1" right="640" bottom="184" hotspot-x="1" hotspot-y="184"/>
+    <matrix columns = "2" rows="1" separation="1">
+        <region name="Logo" left="1" top="188" right="337" bottom="355" hotspot-x="1" hotspot-y="188"/>
+    </matrix>
+</texture-regions>

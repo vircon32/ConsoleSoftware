@@ -1,0 +1,55 @@
+<texture-regions>
+    <texture name="TextureGameplay" path="TextureGameplay.png"/>
+    <region name="PalmTreeTall" left="1" top="244" right="120" bottom="403" hotspot-x="41" hotspot-y="364"/>
+    <region name="PalmTreeShort" left="124" top="244" right="243" bottom="363" hotspot-x="164" hotspot-y="324"/>
+    <region name="BushLarge" left="247" top="244" right="326" bottom="323" hotspot-x="267" hotspot-y="284"/>
+    <region name="BushSmall" left="124" top="367" right="243" bottom="405" hotspot-x="164" hotspot-y="366"/>
+    <region name="GUIFrame" left="247" top="327" right="317" bottom="363" hotspot-x="247" hotspot-y="327"/>
+    <region name="PlayerDeath" left="331" top="356" right="414" bottom="398" hotspot-x="380" hotspot-y="385"/>
+    <region name="PlayerVictory" left="448" top="269" right="492" bottom="385" hotspot-x="475" hotspot-y="384"/>
+    <region name="BossWheel" left="421" top="487" right="467" bottom="533" hotspot-x="444" hotspot-y="510"/>
+    <region name="BossWheelBlue" left="471" top="487" right="517" bottom="533" hotspot-x="494" hotspot-y="510"/>
+    <region name="Boss1" left="241" top="484" right="417" bottom="578" hotspot-x="256" hotspot-y="596"/>
+    <region name="Boss2" left="235" top="582" right="361" bottom="720" hotspot-x="250" hotspot-y="738"/>
+    <region name="Boss3" left="365" top="582" right="491" bottom="720" hotspot-x="380" hotspot-y="738"/>
+    <region name="CannonBullet" left="424" top="356" right="444" bottom="376" hotspot-x="434" hotspot-y="366"/>
+    <region name="MissileLauncher" left="119" top="736" right="192" bottom="810" hotspot-x="147" hotspot-y="810"/>
+    <region name="TurretBase" left="196" top="736" right="255" bottom="795" hotspot-x="224" hotspot-y="764"/>
+    <region name="TurretCannon" left="259" top="724" right="307" bottom="749" hotspot-x="271" hotspot-y="736"/>
+    <matrix columns = "13" rows="6" separation="0">
+        <region name="Tileset" left="1" top="1" right="40" bottom="40" hotspot-x="1" hotspot-y="1"/>
+    </matrix>
+    <matrix columns = "10" rows="1" separation="1">
+        <region name="Numbers" left="330" top="244" right="345" bottom="265" hotspot-x="330" hotspot-y="244"/>
+    </matrix>
+    <matrix columns = "6" rows="1" separation="1">
+        <region name="Highlight" left="1" top="409" right="72" bottom="480" hotspot-x="36" hotspot-y="444"/>
+    </matrix>
+    <matrix columns = "2" rows="1" separation="1">
+        <region name="PlayerStanding" left="330" top="269" right="386" bottom="352" hotspot-x="349" hotspot-y="351"/>
+    </matrix>
+    <matrix columns = "2" rows="1" separation="1">
+        <region name="PlayerDuck" left="117" top="484" right="176" bottom="547" hotspot-x="142" hotspot-y="546"/>
+    </matrix>
+    <matrix columns = "2" rows="1" separation="1">
+        <region name="PlayerJump" left="1" top="484" right="56" bottom="560" hotspot-x="20" hotspot-y="563"/>
+    </matrix>
+    <matrix columns = "4" rows="2" separation="1">
+        <region name="PlayerWalk" left="1" top="564" right="57" bottom="647" hotspot-x="21" hotspot-y="646"/>
+    </matrix>
+    <matrix columns = "1" rows="2" separation="1">
+        <region name="PlayerBullet" left="247" top="367" right="255" bottom="375" hotspot-x="251" hotspot-y="371"/>
+    </matrix>
+    <matrix columns = "1" rows="2" separation="1">
+        <region name="EnemyBullet" left="259" top="367" right="267" bottom="375" hotspot-x="263" hotspot-y="371"/>
+    </matrix>
+    <matrix columns = "2" rows="1" separation="1">
+        <region name="BossCannon" left="441" top="389" right="479" bottom="425" hotspot-x="404" hotspot-y="407"/>
+    </matrix>
+    <matrix columns = "1" rows="2" separation="1">
+        <region name="Missile" left="441" top="429" right="510" bottom="455" hotspot-x="501" hotspot-y="442"/>
+    </matrix>
+    <matrix columns = "2" rows="1" separation="1">
+        <region name="Soldier" left="1" top="736" right="57" bottom="819" hotspot-x="39" hotspot-y="818"/>
+    </matrix>
+</texture-regions>

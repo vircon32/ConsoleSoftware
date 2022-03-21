@@ -1,0 +1,10 @@
+<texture-regions>
+    <texture name="TextureStory" path="TextureStory.png"/>
+    <region name="SlideFrame" left="1" top="546" right="412" bottom="737" hotspot-x="7" hotspot-y="552"/>
+    <matrix columns = "1" rows="3" separation="1">
+        <region name="IntroSlides" left="1" top="1" right="400" bottom="180" hotspot-x="1" hotspot-y="1"/>
+    </matrix>
+    <matrix columns = "1" rows="3" separation="1">
+        <region name="EndingSlides" left="402" top="1" right="801" bottom="180" hotspot-x="402" hotspot-y="1"/>
+    </matrix>
+</texture-regions>

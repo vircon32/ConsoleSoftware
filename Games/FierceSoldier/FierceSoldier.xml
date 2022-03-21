@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Fierce Soldier" version="1.0" />
+    <binary path="obj/Main.vbin" />
+    <textures>
+        <texture path="obj/TextureTitle.vtex" />
+        <texture path="obj/TextureStory.vtex" />
+        <texture path="obj/TextureGameplay.vtex" />
+        <texture path="obj/TextureBGLevel1.vtex" />
+        <texture path="obj/TextureBGLevel2.vtex" />
+        <texture path="obj/TextureBGLevel3.vtex" />
+        <texture path="obj/TextureFont11x16.vtex" />
+        <texture path="obj/TextureFont22x32.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/MusicTitle.vsnd" />
+        <sound path="obj/MusicStory.vsnd" />
+        <sound path="obj/MusicGameplay.vsnd" />
+        <sound path="obj/SoundStartGame.vsnd" />
+        <sound path="obj/SoundStoryLetter.vsnd" />
+        <sound path="obj/SoundJump.vsnd" />
+        <sound path="obj/SoundLand.vsnd" />
+        <sound path="obj/SoundShoot.vsnd" />
+        <sound path="obj/SoundDeath.vsnd" />
+        <sound path="obj/SoundLevelClear.vsnd" />
+        <sound path="obj/SoundPause.vsnd" />
+        <sound path="obj/SoundEnemyShoot.vsnd" />
+        <sound path="obj/SoundEnemyHit.vsnd" />
+        <sound path="obj/SoundEnemyDeath.vsnd" />
+        <sound path="obj/SoundExplosionSmall.vsnd" />
+        <sound path="obj/SoundExplosionLarge.vsnd" />
+        <sound path="obj/SoundMissile.vsnd" />
+    </sounds>
+</rom-definition>
