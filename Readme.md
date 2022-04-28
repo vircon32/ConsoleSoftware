@@ -19,7 +19,7 @@ In general, these projects have been written following a clear structure and usi
 ----------------------------------
 ### Where to learn about Vircon32?
 
-If you are not familiar with Vircon32, a 32-bit virtual game console, you can visit its website [www.vircon32.com](http://www.vircon32.com "Vircon32 Homepage") for more information. There you will also find everything you may need to try ouy the console and to make games for it.
+If you are not familiar with Vircon32, a 32-bit virtual game console, you can visit its website [www.vircon32.com](http://www.vircon32.com "Vircon32 Homepage") for more information. There you will also find everything you may need to try out the console and to make games for it.
 
 --------------------------------------------
 ### How to build these programs from source?
