@@ -15,32 +15,32 @@ echo.
 echo Import the Tiled tile maps
 echo --------------------------
 tiled2vircon maps\ClassicLevels.tmx -o obj\ || goto :failed
-tiled2vircon maps\TripleLevels.tmx -o obj\ || goto :failed
+tiled2vircon maps\TripleLevels.tmx  -o obj\ || goto :failed
 
 echo.
 echo Convert the PNG textures
 echo --------------------------
-png2vircon textures\TextureTitle.png -o obj\TextureTitle.vtex || goto :failed
-png2vircon textures\TextureMenus.png -o obj\TextureMenus.vtex || goto :failed
-png2vircon textures\TextureGameplay.png -o obj\TextureGameplay.vtex || goto :failed
-png2vircon textures\TextureCutscenes.png -o obj\TextureCutscenes.vtex || goto :failed
+png2vircon textures\TextureTitle.png      -o obj\TextureTitle.vtex      || goto :failed
+png2vircon textures\TextureMenus.png      -o obj\TextureMenus.vtex      || goto :failed
+png2vircon textures\TextureGameplay.png   -o obj\TextureGameplay.vtex   || goto :failed
+png2vircon textures\TextureCutscenes.png  -o obj\TextureCutscenes.vtex  || goto :failed
 png2vircon textures\TextureCharacter1.png -o obj\TextureCharacter1.vtex || goto :failed
 png2vircon textures\TextureCharacter2.png -o obj\TextureCharacter2.vtex || goto :failed
 png2vircon textures\TextureCharacter3.png -o obj\TextureCharacter3.vtex || goto :failed
-png2vircon textures\TextureWorld1.png -o obj\TextureWorld1.vtex || goto :failed
-png2vircon textures\TextureWorld2.png -o obj\TextureWorld2.vtex || goto :failed
-png2vircon textures\TextureWorld3.png -o obj\TextureWorld3.vtex || goto :failed
-png2vircon textures\TextureWorld4.png -o obj\TextureWorld4.vtex || goto :failed
-png2vircon textures\TextureWorld5.png -o obj\TextureWorld5.vtex || goto :failed
+png2vircon textures\TextureWorld1.png     -o obj\TextureWorld1.vtex     || goto :failed
+png2vircon textures\TextureWorld2.png     -o obj\TextureWorld2.vtex     || goto :failed
+png2vircon textures\TextureWorld3.png     -o obj\TextureWorld3.vtex     || goto :failed
+png2vircon textures\TextureWorld4.png     -o obj\TextureWorld4.vtex     || goto :failed
+png2vircon textures\TextureWorld5.png     -o obj\TextureWorld5.vtex     || goto :failed
 
 echo.
 echo Convert the WAV sounds
 echo --------------------------
-wav2vircon music\MusicWorld1.wav   -o obj\MusicWorld1.vsnd   || goto :failed
-wav2vircon music\MusicWorld2.wav   -o obj\MusicWorld2.vsnd   || goto :failed
-wav2vircon music\MusicWorld3.wav   -o obj\MusicWorld3.vsnd   || goto :failed
-wav2vircon music\MusicWorld4.wav   -o obj\MusicWorld4.vsnd   || goto :failed
-wav2vircon music\MusicWorld5.wav   -o obj\MusicWorld5.vsnd   || goto :failed
+wav2vircon music\MusicWorld1.wav -o obj\MusicWorld1.vsnd || goto :failed
+wav2vircon music\MusicWorld2.wav -o obj\MusicWorld2.vsnd || goto :failed
+wav2vircon music\MusicWorld3.wav -o obj\MusicWorld3.vsnd || goto :failed
+wav2vircon music\MusicWorld4.wav -o obj\MusicWorld4.vsnd || goto :failed
+wav2vircon music\MusicWorld5.wav -o obj\MusicWorld5.vsnd || goto :failed
 
 wav2vircon sounds\SoundTitleBubble.wav    -o obj\SoundTitleBubble.vsnd    || goto :failed
 wav2vircon sounds\SoundTitleFanfare.wav   -o obj\SoundTitleFanfare.vsnd   || goto :failed

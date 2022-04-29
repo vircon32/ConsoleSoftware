@@ -8,11 +8,13 @@ if not exist bin mkdir bin
 echo.
 echo Compile the C code
 echo --------------------------
+REM compilation of a BIOS requires argument -b
 compile StandardBios.c -o obj\StandardBios.asm -b || goto :failed
 
 echo.
 echo Assemble the ASM code
 echo --------------------------
+REM assembly of a BIOS requires argument -b
 assemble obj\StandardBios.asm -o obj\StandardBios.vbin -b || goto :failed
 
 echo.

@@ -8,6 +8,7 @@ if not exist bin mkdir bin
 echo.
 echo Assemble the ASM code
 echo --------------------------
+REM assembly of a BIOS requires argument -b
 assemble Bios-JumpWithCheck.asm -o obj/Bios-JumpWithCheck.vbin -b || goto :failed
 
 echo.
@@ -24,11 +25,6 @@ echo.
 echo Pack the ROM
 echo --------------------------
 packrom Bios-JumpWithCheck.xml -o bin/Bios-JumpWithCheck.v32 || goto :failed
-
-echo.
-echo Copy ROM to emulator BIOS folder
-echo ----------------------------------
-copy /Y bin/Bios-JumpWithCheck.v32 "../../../Emulator/Binaries/Bios" || goto :failed
 goto :succeeded
 
 :failed
