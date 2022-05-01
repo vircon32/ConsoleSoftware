@@ -29,17 +29,17 @@ void main( void )
     // -----------------------------------------------
     // PART 1: DEFINE OUR TEXTURE REGIONS
     
-    // define our region as number 0 (the first)
-    // in texture 0 (the only one in our ROM)
+    // ROM texture numbers begin from 0, so select
+    // our texture (the only one present in our ROM)
     select_texture( 0 );
     
-    // define our fixed background region
-    // to be drawn always at (0,0)
+    // within that texture, define our fixed background
+    // region that will be drawn always at pixel (0,0)
     select_region( RegionBackground );
     define_region_topleft( 0,0,  639,359 );
     
-    // we have a 4x1 matrix of robot regions
-    // that we will define with consecutive IDs
+    // we also have a 4x1 matrix of robot regions
+    // that we will define using consecutive IDs
     // and with hotspot near the bottom center
     define_region_matrix( RegionRobotRight,  1,361,  66,441,  33,417,  4,1,  1 );
     
@@ -67,17 +67,24 @@ void main( void )
         select_region( RegionBackground );
         draw_region_at( 0, 0 );
         
-        // the robot will move in the direction
-        // that we are currently pressing
+        // we want to know the direction being
+        // pressed by the player; the function
+        // used for that takes as parameters
+        // our variables and uses them to store
+        // is outputs; that way it is able to
+        // return 2 values
         int DirectionX, DirectionY;
         gamepad_direction( &DirectionX, &DirectionY );
         
+        // now make the robot move in that direction
         RobotX += RobotSpeed * DirectionX;
         RobotY += RobotSpeed * DirectionY;
         
         // our robot can move in 8 directions, but
-        // we have not drawn the diagonals. So we
-        // give priority to left and right
+        // we have only drawn the robot facing in 4
+        // directions (and not the diagonals). So
+        // for those cases we draw the robot facing
+        // either left or right
         if( DirectionX > 0 )
           RobotImage = RegionRobotRight;
       
