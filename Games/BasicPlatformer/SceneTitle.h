@@ -4,7 +4,7 @@
 
 
 // stored in rom as a 2D array
-embedded int[ 9 ][ 16 ] MapTitle = "obj\\LevelTitle.vmap";
+embedded int[ 9 ][ 16 ] MapTitle = "obj/LevelTitle.vmap";
 
 
 // ---------------------------------------------------------

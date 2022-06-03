@@ -70,7 +70,7 @@
 // Our tile map is loaded from an external file,
 // and will be stored as a 2D array in cardtidge ROM.
 // Find out more about this in the previous tutorial.
-embedded int[ MapTilesInY ][ MapTilesInX ] TileMap = "obj\\RobotLab.vmap";
+embedded int[ MapTilesInY ][ MapTilesInX ] TileMap = "obj/RobotLab.vmap";
 
 // position of our robot in pixels, relative to map's
 // top-left corner; initially we place the robot at the

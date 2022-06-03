@@ -7,14 +7,14 @@
 // these arrays have the form [ height ][ width ]
 // in order for the levels to be stored in the
 // usual order (left to right and top to bottom)
-embedded int[ 9 ][ 80 ] Level01Map = "obj\\Level01-Map.vmap";
-embedded int[ 9 ][ 80 ] Level01Events = "obj\\Level01-Events.vmap";
+embedded int[ 9 ][ 80 ] Level01Map = "obj/Level01-Map.vmap";
+embedded int[ 9 ][ 80 ] Level01Events = "obj/Level01-Events.vmap";
 
-embedded int[ 9 ][ 80 ] Level02Map = "obj\\Level02-Map.vmap";
-embedded int[ 9 ][ 80 ] Level02Events = "obj\\Level02-Events.vmap";
+embedded int[ 9 ][ 80 ] Level02Map = "obj/Level02-Map.vmap";
+embedded int[ 9 ][ 80 ] Level02Events = "obj/Level02-Events.vmap";
 
-embedded int[ 9 ][ 80 ] Level03Map = "obj\\Level03-Map.vmap";
-embedded int[ 9 ][ 80 ] Level03Events = "obj\\Level03-Events.vmap";
+embedded int[ 9 ][ 80 ] Level03Map = "obj/Level03-Map.vmap";
+embedded int[ 9 ][ 80 ] Level03Events = "obj/Level03-Events.vmap";
 
 // level is formed by the map itself and additional data;
 // since not all levels have the same size,we need to have

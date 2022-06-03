@@ -1,9 +1,9 @@
 // include local headers
-#include "headers\\bios-audio.h"
-#include "headers\\bios-video.h"
-#include "headers\\bios-time.h"
-#include "headers\\bios-string.h"
-#include "headers\\bios-misc.h"
+#include "headers/bios-audio.h"
+#include "headers/bios-video.h"
+#include "headers/bios-time.h"
+#include "headers/bios-string.h"
+#include "headers/bios-misc.h"
 
 // main regions
 #define first_region_font      0

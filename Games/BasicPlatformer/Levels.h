@@ -9,40 +9,40 @@
 // usual order (left to right and top to bottom)
 
 // world 1 (levels 01 to 10)
-embedded int[  9 ][ 16 ] Level01 = "obj\\Level01.vmap";
-embedded int[  9 ][ 29 ] Level02 = "obj\\Level02.vmap";
-embedded int[ 16 ][ 24 ] Level03 = "obj\\Level03.vmap";
-embedded int[ 15 ][ 28 ] Level04 = "obj\\Level04.vmap";
-embedded int[ 15 ][ 35 ] Level05 = "obj\\Level05.vmap";
-embedded int[ 13 ][ 37 ] Level06 = "obj\\Level06.vmap";
-embedded int[ 19 ][ 24 ] Level07 = "obj\\Level07.vmap";
-embedded int[ 13 ][ 30 ] Level08 = "obj\\Level08.vmap";
-embedded int[ 20 ][ 27 ] Level09 = "obj\\Level09.vmap";
-embedded int[ 20 ][ 27 ] Level10 = "obj\\Level10.vmap";
+embedded int[  9 ][ 16 ] Level01 = "obj/Level01.vmap";
+embedded int[  9 ][ 29 ] Level02 = "obj/Level02.vmap";
+embedded int[ 16 ][ 24 ] Level03 = "obj/Level03.vmap";
+embedded int[ 15 ][ 28 ] Level04 = "obj/Level04.vmap";
+embedded int[ 15 ][ 35 ] Level05 = "obj/Level05.vmap";
+embedded int[ 13 ][ 37 ] Level06 = "obj/Level06.vmap";
+embedded int[ 19 ][ 24 ] Level07 = "obj/Level07.vmap";
+embedded int[ 13 ][ 30 ] Level08 = "obj/Level08.vmap";
+embedded int[ 20 ][ 27 ] Level09 = "obj/Level09.vmap";
+embedded int[ 20 ][ 27 ] Level10 = "obj/Level10.vmap";
 
 // world 2 (levels 11 to 20)
-embedded int[ 14 ][ 32 ] Level11 = "obj\\Level11.vmap";
-embedded int[ 16 ][ 28 ] Level12 = "obj\\Level12.vmap";
-embedded int[ 17 ][ 29 ] Level13 = "obj\\Level13.vmap";
-embedded int[ 13 ][ 34 ] Level14 = "obj\\Level14.vmap";
-embedded int[ 16 ][ 33 ] Level15 = "obj\\Level15.vmap";
-embedded int[ 14 ][ 38 ] Level16 = "obj\\Level16.vmap";
-embedded int[ 22 ][ 31 ] Level17 = "obj\\Level17.vmap";
-embedded int[ 17 ][ 31 ] Level18 = "obj\\Level18.vmap";
-embedded int[ 11 ][ 39 ] Level19 = "obj\\Level19.vmap";
-embedded int[ 18 ][ 36 ] Level20 = "obj\\Level20.vmap";
+embedded int[ 14 ][ 32 ] Level11 = "obj/Level11.vmap";
+embedded int[ 16 ][ 28 ] Level12 = "obj/Level12.vmap";
+embedded int[ 17 ][ 29 ] Level13 = "obj/Level13.vmap";
+embedded int[ 13 ][ 34 ] Level14 = "obj/Level14.vmap";
+embedded int[ 16 ][ 33 ] Level15 = "obj/Level15.vmap";
+embedded int[ 14 ][ 38 ] Level16 = "obj/Level16.vmap";
+embedded int[ 22 ][ 31 ] Level17 = "obj/Level17.vmap";
+embedded int[ 17 ][ 31 ] Level18 = "obj/Level18.vmap";
+embedded int[ 11 ][ 39 ] Level19 = "obj/Level19.vmap";
+embedded int[ 18 ][ 36 ] Level20 = "obj/Level20.vmap";
 
 // world 3 (levels 21 to 30)
-embedded int[ 16 ][ 36 ] Level21 = "obj\\Level21.vmap";
-embedded int[ 16 ][ 37 ] Level22 = "obj\\Level22.vmap";
-embedded int[ 26 ][ 24 ] Level23 = "obj\\Level23.vmap";
-embedded int[ 31 ][ 16 ] Level24 = "obj\\Level24.vmap";
-embedded int[ 18 ][ 64 ] Level25 = "obj\\Level25.vmap";
-embedded int[ 17 ][ 33 ] Level26 = "obj\\Level26.vmap";
-embedded int[ 16 ][ 32 ] Level27 = "obj\\Level27.vmap";
-embedded int[ 14 ][ 36 ] Level28 = "obj\\Level28.vmap";
-embedded int[ 19 ][ 25 ] Level29 = "obj\\Level29.vmap";
-embedded int[ 17 ][ 26 ] Level30 = "obj\\Level30.vmap";
+embedded int[ 16 ][ 36 ] Level21 = "obj/Level21.vmap";
+embedded int[ 16 ][ 37 ] Level22 = "obj/Level22.vmap";
+embedded int[ 26 ][ 24 ] Level23 = "obj/Level23.vmap";
+embedded int[ 31 ][ 16 ] Level24 = "obj/Level24.vmap";
+embedded int[ 18 ][ 64 ] Level25 = "obj/Level25.vmap";
+embedded int[ 17 ][ 33 ] Level26 = "obj/Level26.vmap";
+embedded int[ 16 ][ 32 ] Level27 = "obj/Level27.vmap";
+embedded int[ 14 ][ 36 ] Level28 = "obj/Level28.vmap";
+embedded int[ 19 ][ 25 ] Level29 = "obj/Level29.vmap";
+embedded int[ 17 ][ 26 ] Level30 = "obj/Level30.vmap";
 
 // level is formed by the map itself and additional data;
 // since not all levels have the same size,we need to have

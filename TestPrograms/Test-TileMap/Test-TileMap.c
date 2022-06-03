@@ -44,7 +44,7 @@
 
 
 // external variables in rom
-embedded int[ MapTilesY ][ MapTilesX ] TileMap = "obj\\TileMapLayer1.vmap";
+embedded int[ MapTilesY ][ MapTilesX ] TileMap = "obj/TileMapLayer1.vmap";
 
 
 // ---------------------------------------------------------

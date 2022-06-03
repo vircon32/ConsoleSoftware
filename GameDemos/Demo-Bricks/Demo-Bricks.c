@@ -67,8 +67,8 @@
 
 
 // external variables in rom
-embedded int[ ScreenTilesY ][ ScreenTilesX ] MapScenery = "obj\\TileMapScenery.vmap";
-embedded int[ BricksInY ][ BricksInX ] MapBricks = "obj\\TileMapBricks.vmap";
+embedded int[ ScreenTilesY ][ ScreenTilesX ] MapScenery = "obj/TileMapScenery.vmap";
+embedded int[ BricksInY ][ BricksInX ] MapBricks = "obj/TileMapBricks.vmap";
 
 // we need a copy of the brick layout in ram so
 // that bricks can be removed (rom is read-only)

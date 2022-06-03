@@ -68,7 +68,7 @@
 // it exports every layer to a different file, using
 // the name of that layer as output file name (in
 // this case, the Tiled layer is called "RobotLab").
-embedded int[ MapTilesInY ][ MapTilesInX ] TileMap = "obj\\RobotLab.vmap";
+embedded int[ MapTilesInY ][ MapTilesInX ] TileMap = "obj/RobotLab.vmap";
 
 // position of our robot in pixels, relative to map's
 // top-left corner; initially we place the robot at the
