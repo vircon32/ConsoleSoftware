@@ -1,0 +1,88 @@
+<texture-regions>
+    <texture name="TextureMineSweeper" path="TextureMineSweeper.png"/>
+    <region name="UpperBoard" left="1" top="1" right="640" bottom="35" hotspot-x="1" hotspot-y="1"/>
+    <region name="FrameBottomHard" left="1" top="39" right="601" bottom="42" hotspot-x="1" hotspot-y="39"/>
+    <region name="FrameTopEasy" left="1" top="46" right="317" bottom="47" hotspot-x="1" hotspot-y="46"/>
+    <region name="FrameBottomEasy" left="1" top="51" right="317" bottom="56" hotspot-x="1" hotspot-y="51"/>
+    <region name="FrameBottomMedium" left="1" top="60" right="321" bottom="63" hotspot-x="1" hotspot-y="60"/>
+    <region name="FrameRightHard" left="39" top="67" right="42" bottom="391" hotspot-x="42" hotspot-y="391"/>
+    <region name="FrameLeftEasy" left="206" top="67" right="209" bottom="391" hotspot-x="206" hotspot-y="67"/>
+    <region name="FrameRightEasy" left="213" top="67" right="216" bottom="391" hotspot-x="213" hotspot-y="67"/>
+    <region name="FrameLeftMedium" left="381" top="67" right="382" bottom="391" hotspot-x="381" hotspot-y="67"/>
+    <region name="FrameRightMedium" left="386" top="67" right="387" bottom="391" hotspot-x="386" hotspot-y="67"/>
+    <region name="InstructionsLeftHard" left="1" top="67" right="35" bottom="391" hotspot-x="1" hotspot-y="391"/>
+    <region name="InstructionsLeftEasy" left="46" top="67" right="202" bottom="391" hotspot-x="46" hotspot-y="391"/>
+    <region name="InstructionsRightEasy" left="220" top="67" right="377" bottom="391" hotspot-x="377" hotspot-y="391"/>
+    <region name="DialogWin" left="391" top="46" right="665" bottom="162" hotspot-x="528" hotspot-y="102"/>
+    <region name="DialogLose" left="391" top="166" right="665" bottom="282" hotspot-x="528" hotspot-y="222"/>
+    <region name="DialogQuit" left="391" top="286" right="665" bottom="389" hotspot-x="528" hotspot-y="329"/>
+    <region name="TitleGradient" left="669" top="1" right="669" bottom="360" hotspot-x="669" hotspot-y="1"/>
+    <region name="TitleLetters" left="1" top="395" right="343" bottom="497" hotspot-x="176" hotspot-y="395"/>
+    <region name="TitleLogo" left="1" top="501" right="343" bottom="652" hotspot-x="176" hotspot-y="501"/>
+    <region name="2022" left="347" top="566" right="407" bottom="581" hotspot-x="347" hotspot-y="581"/>
+    <region name="Carra" left="411" top="566" right="469" bottom="581" hotspot-x="469" hotspot-y="581"/>
+    <region name="TextChooseMode" left="347" top="395" right="607" bottom="426" hotspot-x="347" hotspot-y="395"/>
+    <region name="TextPressStart" left="347" top="430" right="570" bottom="461" hotspot-x="459" hotspot-y="430"/>
+    <region name="ExplosionSmall" left="615" top="677" right="633" bottom="756" hotspot-x="624" hotspot-y="718"/>
+    <region name="ExplosionLarge" left="637" top="617" right="669" bottom="756" hotspot-x="653" hotspot-y="689"/>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="TilesCoveredLarge" left="1" top="656" right="37" bottom="692" hotspot-x="1" hotspot-y="656"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="TilesRevealedLarge" left="155" top="656" right="191" bottom="692" hotspot-x="155" hotspot-y="656"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="TilesCoveredSmall" left="223" top="736" right="243" bottom="756" hotspot-x="223" hotspot-y="736"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="TilesRevealedSmall" left="313" top="736" right="333" bottom="756" hotspot-x="313" hotspot-y="736"/>
+    </matrix>
+    <matrix columns = "10" rows="1" separation="1">
+        <region name="IconsLarge" left="1" top="696" right="37" bottom="732" hotspot-x="1" hotspot-y="696"/>
+    </matrix>
+    <matrix columns = "10" rows="1" separation="1">
+        <region name="IconsSmall" left="1" top="736" right="21" bottom="756" hotspot-x="1" hotspot-y="736"/>
+    </matrix>
+    <matrix columns = "10" rows="1" separation="1">
+        <region name="NumbersDigital" left="347" top="615" right="359" bottom="635" hotspot-x="347" hotspot-y="615"/>
+    </matrix>
+    <matrix columns = "8" rows="1" separation="1">
+        <region name="CursorMenu" left="349" top="639" right="372" bottom="662" hotspot-x="372" hotspot-y="650"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="CursorLarge" left="383" top="688" right="423" bottom="728" hotspot-x="385" hotspot-y="690"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="CursorSmall" left="427" top="732" right="451" bottom="756" hotspot-x="429" hotspot-y="734"/>
+    </matrix>
+    <matrix columns = "5" rows="1" separation="1">
+        <region name="Smileys" left="347" top="585" right="373" bottom="611" hotspot-x="347" hotspot-y="585"/>
+    </matrix>
+    <matrix columns = "1" rows="3" separation="1">
+        <region name="MenuOptions" left="347" top="465" right="479" bottom="496" hotspot-x="347" hotspot-y="465"/>
+    </matrix>
+    <matrix columns = "1" rows="3" separation="1">
+        <region name="ModeIndicators" left="483" top="465" right="549" bottom="478" hotspot-x="483" hotspot-y="465"/>
+    </matrix>
+    <matrix columns = "1" rows="4" separation="1">
+        <region name="RevealLarge" left="613" top="393" right="665" bottom="445" hotspot-x="621" hotspot-y="401"/>
+    </matrix>
+    <matrix columns = "1" rows="4" separation="1">
+        <region name="RevealSmall" left="579" top="430" right="609" bottom="460" hotspot-x="584" hotspot-y="435"/>
+    </matrix>
+    <matrix columns = "1" rows="3" separation="1">
+        <region name="FlagLarge" left="489" top="513" right="525" bottom="549" hotspot-x="489" hotspot-y="513"/>
+    </matrix>
+    <matrix columns = "1" rows="3" separation="1">
+        <region name="UnflagLarge" left="529" top="513" right="565" bottom="549" hotspot-x="529" hotspot-y="513"/>
+    </matrix>
+    <matrix columns = "1" rows="3" separation="1">
+        <region name="FlagSmall" left="569" top="692" right="589" bottom="712" hotspot-x="569" hotspot-y="692"/>
+    </matrix>
+    <matrix columns = "1" rows="3" separation="1">
+        <region name="UnflagSmall" left="591" top="692" right="611" bottom="712" hotspot-x="591" hotspot-y="692"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="TilesCoveredLarge2" left="1" top="760" right="39" bottom="798" hotspot-x="1" hotspot-y="760"/>
+    </matrix>
+</texture-regions>

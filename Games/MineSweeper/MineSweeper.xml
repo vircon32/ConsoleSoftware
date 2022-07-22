@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="MineSweeper" version="1.0" />
+    <binary path="obj/Main.vbin" />
+    <textures>
+        <texture path="obj/TextureMineSweeper.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/MusicTitle.vsnd" />
+        <sound path="obj/MusicGameplay.vsnd" />
+        
+        <sound path="obj/SoundTitleStart.vsnd" />
+        <sound path="obj/SoundQuitGame.vsnd" />
+        <sound path="obj/SoundMenuMove.vsnd" />
+        <sound path="obj/SoundMenuAccept.vsnd" />
+        <sound path="obj/SoundMenuCancel.vsnd" />
+        <sound path="obj/SoundAddFlag.vsnd" />
+        <sound path="obj/SoundRemoveFlag.vsnd" />
+        <sound path="obj/SoundReveal.vsnd" />
+        <sound path="obj/SoundExplosion.vsnd" />
+        <sound path="obj/SoundWin.vsnd" />
+        <sound path="obj/SoundLose.vsnd" />
+    </sounds>
+</rom-definition>
