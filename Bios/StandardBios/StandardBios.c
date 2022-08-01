@@ -1,9 +1,9 @@
-// include local headers
-#include "headers/bios-audio.h"
-#include "headers/bios-video.h"
-#include "headers/bios-time.h"
-#include "headers/bios-string.h"
-#include "headers/bios-misc.h"
+// include Vircon libraries
+#include "audio.h"
+#include "video.h"
+#include "time.h"
+#include "string.h"
+#include "misc.h"
 
 // main regions
 #define first_region_font      0
@@ -39,7 +39,7 @@ void draw_message_screen( int* title, int* message )
     
     // write title
     set_multiply_color( error_colors_title );
-    print( 49, 37, title );
+    print_at( 49, 37, title );
     
     // draw horizontal line
     select_region( region_white_square );
@@ -49,7 +49,7 @@ void draw_message_screen( int* title, int* message )
     
     // write message
     set_multiply_color( error_colors_message );
-    print( 49, 95, message );
+    print_at( 49, 95, message );
 }
 
 // ---------------------------------------------------------
@@ -58,7 +58,7 @@ void print_hex_value( int x, int y, int* name, int value )
 {
     // convert the number to hex
     int[ 10 ] hex_string;
-    itoa16( value, hex_string );
+    itoa( value, hex_string, 16 );
     
     // join all text parts
     int[ 60 ] text;
@@ -67,7 +67,17 @@ void print_hex_value( int x, int y, int* name, int value )
     strcat( text, hex_string );
     
     // print the text
-    print( x, y, text );
+    print_at( x, y, text );
+}
+
+// ---------------------------------------------------------
+
+bool cartridge_connected()
+{
+    asm
+    {
+        "in R0, CAR_Connected"
+    }
 }
 
 // ---------------------------------------------------------
@@ -276,7 +286,7 @@ void main( void )
     select_texture( -1 );
     
     // all characters of the text font
-    define_region_matrix( first_region_font,  1,22,  10,20,  32,8,  0 );
+    define_region_matrix( first_region_font,  1,22,  10,41,  1,22,  32,8,  0 );
     
     // logo letters
     select_region( region_logo_letters );
@@ -453,9 +463,9 @@ void main( void )
         exit();
     }
     
-    // restore any parameters we used to default
+    // ensure that any video parameters we might have used
+    // are restored to their expected defaults at startup
     set_multiply_color( color_white );
-    clear_screen( color_black );
     select_region( 0 );
     
     // jump to first position in cartridge program rom
