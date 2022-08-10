@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="Solitaire" />
+		<Option pch_mode="2" />
+		<Option compiler="vircon32_c_compiler" />
+		<Build>
+			<Target title="Release">
+				<Option output="bin/Run.bat" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/" />
+				<Option type="0" />
+				<Option compiler="vircon32_c_compiler" />
+				<Compiler>
+					<Add option="-O2" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<ExtraCommands>
+			<Add after="make.bat" />
+		</ExtraCommands>
+		<Unit filename="Definitions.h" />
+		<Unit filename="DrawFunctions.h" />
+		<Unit filename="GameLogic.h" />
+		<Unit filename="Main.c">
+			<Option compilerVar="CC" />
+			<Option compile="0" />
+			<Option link="0" />
+		</Unit>
+		<Unit filename="SceneGameplay.h" />
+		<Unit filename="SceneQuitGame.h" />
+		<Unit filename="SceneTitle.h" />
+		<Unit filename="SceneWin.h" />
+		<Unit filename="TextureSolitaire.h" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

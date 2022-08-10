@@ -1,0 +1,42 @@
+<texture-regions>
+    <texture name="TextureSolitaire" path="TextureSolitaire.png"/>
+    <region name="TableMat" left="1" top="381" right="640" bottom="740" hotspot-x="1" hotspot-y="381"/>
+    <region name="CardBack" left="900" top="1" right="967" bottom="94" hotspot-x="933" hotspot-y="1"/>
+    <region name="CardShadow" left="900" top="98" right="967" bottom="191" hotspot-x="933" hotspot-y="98"/>
+    <region name="CardEdgeDark" left="971" top="98" right="977" bottom="191" hotspot-x="943" hotspot-y="98"/>
+    <region name="CardSide" left="971" top="1" right="972" bottom="94" hotspot-x="971" hotspot-y="1"/>
+    <region name="CardLight" left="900" top="195" right="967" bottom="288" hotspot-x="933" hotspot-y="195"/>
+    <region name="CardEdgeLight" left="971" top="195" right="977" bottom="288" hotspot-x="1004" hotspot-y="195"/>
+    <region name="WinHighlight" left="506" top="851" right="581" bottom="952" hotspot-x="543" hotspot-y="855"/>
+    <region name="DialogWin" left="1" top="744" right="275" bottom="860" hotspot-x="138" hotspot-y="803"/>
+    <region name="DialogQuit" left="279" top="744" right="553" bottom="847" hotspot-x="416" hotspot-y="790"/>
+    <region name="DialogWrongPick" left="644" top="625" right="879" bottom="693" hotspot-x="761" hotspot-y="664"/>
+    <region name="DialogWrongDrop" left="644" top="697" right="879" bottom="765" hotspot-x="761" hotspot-y="736"/>
+    <region name="HandInfo" left="891" top="862" right="981" bottom="913" hotspot-x="891" hotspot-y="862"/>
+    <region name="TitleMat" left="644" top="383" right="981" bottom="621" hotspot-x="644" hotspot-y="383"/>
+    <region name="Logo" left="279" top="851" right="495" bottom="917" hotspot-x="279" hotspot-y="851"/>
+    <region name="PressStart" left="279" top="921" right="502" bottom="952" hotspot-x="279" hotspot-y="921"/>
+    <region name="TextNothing" left="557" top="788" right="631" bottom="803" hotspot-x="557" hotspot-y="788"/>
+    <region name="Text1Card" left="557" top="807" right="616" bottom="822" hotspot-x="557" hotspot-y="807"/>
+    <region name="TextNCards" left="635" top="788" right="685" bottom="803" hotspot-x="635" hotspot-y="788"/>
+    <region name="2022" left="620" top="807" right="680" bottom="822" hotspot-x="620" hotspot-y="807"/>
+    <region name="Carra" left="684" top="807" right="742" bottom="822" hotspot-x="742" hotspot-y="807"/>
+    <matrix columns = "13" rows="4" separation="1">
+        <region name="CardFronts" left="1" top="1" right="68" bottom="94" hotspot-x="34" hotspot-y="1"/>
+    </matrix>
+    <matrix columns = "1" rows="5" separation="1">
+        <region name="Actions" left="891" top="625" right="981" bottom="670" hotspot-x="891" hotspot-y="625"/>
+    </matrix>
+    <matrix columns = "8" rows="1" separation="1">
+        <region name="CursorDialog" left="689" top="769" right="712" bottom="792" hotspot-x="712" hotspot-y="780"/>
+    </matrix>
+    <matrix columns = "10" rows="1" separation="1">
+        <region name="Digits" left="557" top="769" right="567" bottom="784" hotspot-x="557" hotspot-y="769"/>
+    </matrix>
+    <matrix columns = "2" rows="1" separation="1">
+        <region name="CursorCard" left="1" top="864" right="72" bottom="961" hotspot-x="36" hotspot-y="866"/>
+    </matrix>
+    <matrix columns = "1" rows="2" separation="1">
+        <region name="CursorStack" left="149" top="864" right="220" bottom="895" hotspot-x="184" hotspot-y="866"/>
+    </matrix>
+</texture-regions>
