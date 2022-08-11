@@ -5,19 +5,33 @@
 #include "string.h"
 #include "misc.h"
 
-// main regions
+
+// ---------------------------------------------------------
+//     GENERAL DEFINITIONS
+// ---------------------------------------------------------
+
+
+// BIOS-required regions; these
+// may safely be used by programs
 #define first_region_font      0
-#define region_logo_letters  256
-#define region_logo_line     257
-#define region_subtitle      258
-#define region_logo_temp     300
-#define region_console       260
-#define region_gamepad       261
-#define region_cartridge     262
-#define region_memory_card   263
-#define region_large_arrow   264
-#define region_small_arrow   265
-#define region_white_square  270
+#define region_white_pixel   256
+
+// other non-required regions, used
+// to draw the logo and error screens
+#define region_logo_letters  300
+#define region_logo_line     301
+#define region_subtitle      302
+#define region_console       303
+#define region_gamepad       304
+#define region_cartridge     305
+#define region_memory_card   306
+#define region_large_arrow   307
+#define region_small_arrow   308
+#define region_white_square  309
+
+// an auxiliary region that will keep
+// being redefined for logo animation
+#define region_logo_temp     400
 
 // colors for error screens
 #define error_colors_background  0xFF8D4130
@@ -287,6 +301,10 @@ void main( void )
     
     // all characters of the text font
     define_region_matrix( first_region_font,  1,22,  10,41,  1,22,  32,8,  0 );
+    
+    // white pixel
+    select_region( region_white_pixel );
+    define_region_topleft( 469,29,  469,29 );
     
     // logo letters
     select_region( region_logo_letters );
