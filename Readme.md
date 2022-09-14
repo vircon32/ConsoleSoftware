@@ -1,8 +1,8 @@
 # Vircon32: Console software
 
-This is a general repository containing all Vircon32 sources for any software running on the console itself.
+This is a general repository containing sources for all "official" console software, written by the Vircon32 creator. These projects have been written following a clear structure and using many comments. That way they can serve as practical examples for anyone wanting to learn how to create games for Vircon32.
 
-This includes:
+This includes any software running on the console itself:
 - Games
 - Demos
 - Tutorials and examples
@@ -14,7 +14,10 @@ However, it does not include any PC software related to Vircon32 such as the fol
 - The C compiler's standard library
   (it DOES run on the console, but it is part of the compiler)
 
-In general, these projects have been written following a clear structure and using many comments. That way they can serve as practical examples for anyone wanting to learn how to create games for Vircon32.
+----------------------------------
+### How to contribute
+
+If you want to publish your own games or content for the console, please do not make pull requests for this repository. Instead, do them at [https://github.com/vircon32/ComputerSoftware](CommunityContent). That repository is meant to receive contributions by other people. That way we can keep this for "official" console software that will demanded more polish in general.
 
 ----------------------------------
 ### Where to learn about Vircon32?
