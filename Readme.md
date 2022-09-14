@@ -17,7 +17,7 @@ However, it does not include any PC software related to Vircon32 such as the fol
 ----------------------------------
 ### How to contribute
 
-If you want to publish your own games or content for the console, please do not make pull requests for this repository. Instead, do them at [https://github.com/vircon32/ComputerSoftware](CommunityContent). That repository is meant to receive contributions by other people. That way we can keep this for "official" console software that will demanded more polish in general.
+If you want to publish your own games or content for the console, please do not make pull requests for this repository. Instead, do them at [CommunityContent](https://github.com/vircon32/ComputerSoftware). That repository is meant to receive contributions by other people. That way we can keep this for "official" console software that will demanded more polish in general.
 
 ----------------------------------
 ### Where to learn about Vircon32?
@@ -27,4 +27,4 @@ If you are not familiar with Vircon32, a 32-bit virtual game console, you can vi
 --------------------------------------------
 ### How to build these programs from source?
 
-These Vircon32 programs can be built using the development tools available at the [https://github.com/vircon32/ComputerSoftware](ComputerSoftware repository).
+These Vircon32 programs can be built using the development tools available at the [ComputerSoftware repository](https://github.com/vircon32/ComputerSoftware).
