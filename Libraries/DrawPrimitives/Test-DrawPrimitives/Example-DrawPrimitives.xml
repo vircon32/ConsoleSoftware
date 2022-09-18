@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Example: Draw primitives" version="1.0" />
+    <binary path="obj\Example-DrawPrimitives.vbin" />
+    <textures />
+    <sounds />
+</rom-definition>
