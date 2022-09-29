@@ -1,0 +1,14 @@
+<texture-regions>
+    <texture name="TexturePiano" path="TexturePiano.png"/>
+    <region name="Controls" left="1" top="1" right="269" bottom="115" hotspot-x="1" hotspot-y="1"/>
+    <region name="StatePanel" left="1" top="119" right="239" bottom="233" hotspot-x="1" hotspot-y="119"/>
+    <region name="WhiteKey" left="243" top="119" right="269" bottom="214" hotspot-x="243" hotspot-y="119"/>
+    <region name="WhiteKeyPressed" left="271" top="119" right="297" bottom="214" hotspot-x="271" hotspot-y="119"/>
+    <region name="BlackKey" left="243" top="218" right="260" bottom="275" hotspot-x="243" hotspot-y="218"/>
+    <region name="BlackKeyPressed" left="262" top="218" right="279" bottom="275" hotspot-x="262" hotspot-y="218"/>
+    <region name="Arrow" left="144" top="237" right="169" bottom="267" hotspot-x="149" hotspot-y="267"/>
+    <region name="VolumeSlider" left="173" top="237" right="182" bottom="252" hotspot-x="173" hotspot-y="237"/>
+    <matrix columns = "3" rows="1" separation="1">
+        <region name="PlayButtons" left="1" top="237" right="46" bottom="282" hotspot-x="1" hotspot-y="237"/>
+    </matrix>
+</texture-regions>
