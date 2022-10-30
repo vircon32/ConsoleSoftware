@@ -110,7 +110,7 @@ void main( void )
         // read inputs from the first gamepad
         select_gamepad( 0 );
         
-        // move camera as indicated by player
+        // move player character as pressed by player
         int DeltaX, DeltaY;
         gamepad_direction( &DeltaX, &DeltaY );
         
