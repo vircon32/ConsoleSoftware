@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <rom-definition version="1.0">
     <rom type="cartridge" title="Test: Gamepads" version="1.0" />
-    <binary path="obj\Test-Gamepads.vbin" />
+    <binary path="obj/Test-Gamepads.vbin" />
     <textures>
-        <texture path="obj\Texture-Gamepad.vtex" />
+        <texture path="obj/Texture-Gamepad.vtex" />
     </textures>
     <sounds />
 </rom-definition>

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <rom-definition version="1.0">
     <rom type="cartridge" title="Code::Blocks test program" version="1.0" />
-    <binary path="obj\CodeBlocksTest.vbin" />
+    <binary path="obj/CodeBlocksTest.vbin" />
     <textures>
-        <texture path="obj\Texture-ColorsWithAlpha.vtex" />
+        <texture path="obj/Texture-ColorsWithAlpha.vtex" />
     </textures>
     <sounds>
-        <sound path="obj\Sound-SoftSynth.vsnd" />
+        <sound path="obj/Sound-SoftSynth.vsnd" />
     </sounds>
 </rom-definition>

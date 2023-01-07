@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <rom-definition version="1.0">
     <rom type="cartridge" title="Tutorial 01A: Hello world" version="1.0" />
-    <binary path="obj\Tutorial01A-HelloWorld.vbin" />
+    <binary path="obj/Tutorial01A-HelloWorld.vbin" />
     <textures />
     <sounds />
 </rom-definition>

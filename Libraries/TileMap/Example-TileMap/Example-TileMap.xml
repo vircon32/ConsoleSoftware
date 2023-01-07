@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <rom-definition version="1.0">
     <rom type="cartridge" title="Example: Tilemap" version="1.0" />
-    <binary path="obj\Example-TileMap.vbin" />
+    <binary path="obj/Example-TileMap.vbin" />
     <textures>
-        <texture path="obj\TextureTiles.vtex" />
+        <texture path="obj/TextureTiles.vtex" />
     </textures>
     <sounds />
 </rom-definition>

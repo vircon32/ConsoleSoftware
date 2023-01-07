@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <rom-definition version="1.0">
     <rom type="cartridge" title="Tutorial 02: Building strings" version="1.0" />
-    <binary path="obj\Tutorial02-BuildingStrings.vbin" />
+    <binary path="obj/Tutorial02-BuildingStrings.vbin" />
     <textures />
     <sounds />
 </rom-definition>

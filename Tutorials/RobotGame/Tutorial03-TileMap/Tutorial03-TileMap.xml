@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <rom-definition version="1.0">
     <rom type="cartridge" title="Tutorial 03: Tile map" version="1.0" />
-    <binary path="obj\Tutorial03-TileMap.vbin" />
+    <binary path="obj/Tutorial03-TileMap.vbin" />
     <textures>
-        <texture path="obj\Texture-RobotLab.vtex" />
+        <texture path="obj/Texture-RobotLab.vtex" />
     </textures>
     <sounds />
 </rom-definition>

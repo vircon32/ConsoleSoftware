@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <rom-definition version="1.0">
     <rom type="cartridge" title="Effects tutorial: Palette swap" version="1.0" />
-    <binary path="obj\Tutorial-PaletteSwap.vbin" />
+    <binary path="obj/Tutorial-PaletteSwap.vbin" />
     <textures>
-        <texture path="obj\TexturePaletteSwap.vtex" />
+        <texture path="obj/TexturePaletteSwap.vtex" />
     </textures>
     <sounds>
     </sounds>
