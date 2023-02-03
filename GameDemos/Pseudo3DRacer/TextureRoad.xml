@@ -1,0 +1,15 @@
+<texture-regions>
+    <texture name="TextureRoad" path="TextureRoad.png"/>
+    <region name="Clouds" left="1" top="1" right="640" bottom="63" hotspot-x="1" hotspot-y="63"/>
+    <region name="Road" left="1" top="67" right="512" bottom="578" hotspot-x="193" hotspot-y="67"/>
+    <region name="Background" left="516" top="67" right="516" bottom="426" hotspot-x="516" hotspot-y="67"/>
+    <region name="CarBehind" left="520" top="67" right="633" bottom="174" hotspot-x="583" hotspot-y="170"/>
+    <region name="CarSide" left="520" top="178" right="653" bottom="282" hotspot-x="593" hotspot-y="276"/>
+    <region name="CarSemiside" left="520" top="286" right="637" bottom="394" hotspot-x="592" hotspot-y="391"/>
+    <region name="RoadObject1" left="520" top="398" right="621" bottom="438" hotspot-x="570" hotspot-y="411"/>
+    <region name="RoadObject2" left="516" top="442" right="602" bottom="492" hotspot-x="520" hotspot-y="465"/>
+    <region name="RoadObject3" left="516" top="496" right="593" bottom="531" hotspot-x="554" hotspot-y="512"/>
+    <region name="RoadObject4" left="516" top="535" right="590" bottom="548" hotspot-x="555" hotspot-y="536"/>
+    <region name="MountainSmall" left="637" top="117" right="728" bottom="172" hotspot-x="684" hotspot-y="157"/>
+    <region name="Mountain" left="644" top="1" right="825" bottom="113" hotspot-x="738" hotspot-y="88"/>
+</texture-regions>

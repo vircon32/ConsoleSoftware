@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Pseudo-3D racer demo" version="1.0" />
+    <binary path="obj/Pseudo3DRacer.vbin" />
+    <textures>
+        <texture path="obj/TextureRoad.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/SoundRoad.vsnd" />
+        <sound path="obj/SoundEngine.vsnd" />
+    </sounds>
+</rom-definition>
