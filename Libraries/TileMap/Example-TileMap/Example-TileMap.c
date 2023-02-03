@@ -26,6 +26,9 @@
 #define MapTilesX 32
 #define MapTilesY 18
 
+// speed of our character
+#define CharSpeed 2
+
 
 // ---------------------------------------------------------
 //   GLOBAL VARIABLES
@@ -114,8 +117,8 @@ void main( void )
         int DeltaX, DeltaY;
         gamepad_direction( &DeltaX, &DeltaY );
         
-        PlayerX += 2 * DeltaX;
-        PlayerY += 2 * DeltaY;
+        PlayerX += CharSpeed * DeltaX;
+        PlayerY += CharSpeed * DeltaY;
         
         // make camera follow the player
         LandMap.camera_x = PlayerX;
