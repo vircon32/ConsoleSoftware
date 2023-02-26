@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="RPG concept" version="1.0" />
+    <binary path="obj/RPGConcept.vbin" />
+    <textures>
+        <texture path="obj/TextureRPG.vtex" />
+        <texture path="obj/TextureDialogFont.vtex" />
+    </textures>
+    <sounds />
+</rom-definition>

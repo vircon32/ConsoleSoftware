@@ -1,0 +1,41 @@
+<texture-regions>
+    <texture name="TextureRPG" path="TextureRPG.png"/>
+    <region name="Tree" left="1" top="1" right="91" bottom="151" hotspot-x="46" hotspot-y="139"/>
+    <region name="ShadowTree" left="1" top="155" right="91" bottom="185" hotspot-x="46" hotspot-y="168"/>
+    <region name="ShadowPerson" left="57" top="189" right="91" bottom="201" hotspot-x="74" hotspot-y="194"/>
+    <region name="FramePortrait" left="163" top="232" right="265" bottom="334" hotspot-x="163" hotspot-y="232"/>
+    <region name="FrameNameLeft" left="269" top="232" right="281" bottom="264" hotspot-x="269" hotspot-y="232"/>
+    <region name="FrameNameCenter" left="285" top="232" right="285" bottom="264" hotspot-x="285" hotspot-y="232"/>
+    <region name="FrameTextLeft" left="269" top="268" right="281" bottom="335" hotspot-x="269" hotspot-y="268"/>
+    <region name="FrameTextCenter" left="285" top="268" right="285" bottom="335" hotspot-x="285" hotspot-y="268"/>
+    <matrix columns = "3" rows="1" separation="1">
+        <region name="PlayerWalkDown" left="95" top="1" right="125" bottom="74" hotspot-x="110" hotspot-y="72"/>
+    </matrix>
+    <matrix columns = "3" rows="1" separation="1">
+        <region name="PlayerWalkUp" left="95" top="78" right="125" bottom="151" hotspot-x="110" hotspot-y="147"/>
+    </matrix>
+    <matrix columns = "3" rows="1" separation="1">
+        <region name="PlayerWalkRight" left="95" top="155" right="125" bottom="228" hotspot-x="112" hotspot-y="228"/>
+    </matrix>
+    <matrix columns = "3" rows="1" separation="1">
+        <region name="PeasantWalkDown" left="193" top="2" right="225" bottom="74" hotspot-x="209" hotspot-y="72"/>
+    </matrix>
+    <matrix columns = "3" rows="1" separation="1">
+        <region name="PeasantWalkUp" left="193" top="79" right="225" bottom="151" hotspot-x="209" hotspot-y="147"/>
+    </matrix>
+    <matrix columns = "3" rows="1" separation="1">
+        <region name="PeasantWalkRight" left="193" top="155" right="225" bottom="227" hotspot-x="211" hotspot-y="227"/>
+    </matrix>
+    <matrix columns = "2" rows="1" separation="1">
+        <region name="PortraitPeasant" left="1" top="232" right="79" bottom="310" hotspot-x="1" hotspot-y="232"/>
+    </matrix>
+    <matrix columns = "2" rows="1" separation="1">
+        <region name="PortraitPlayer" left="1" top="314" right="79" bottom="392" hotspot-x="1" hotspot-y="314"/>
+    </matrix>
+    <matrix columns = "8" rows="1" separation="1">
+        <region name="CursorDown" left="163" top="369" right="186" bottom="392" hotspot-x="163" hotspot-y="369"/>
+    </matrix>
+    <matrix columns = "3" rows="6" separation="0">
+        <region name="Tiles" left="297" top="1" right="336" bottom="40" hotspot-x="297" hotspot-y="1"/>
+    </matrix>
+</texture-regions>
