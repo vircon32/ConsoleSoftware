@@ -1,0 +1,23 @@
+In this tutorial we are applying particle effects,
+consisting on creating and simulating a series of
+water drops. A text on screen will tell us the total
+amount of drops on the scene at any given moment.
+
+=============================
+   WATER PARTICLES EFFECT
+=============================
+This particle system uses dynamic memory to implement
+2 lists of water drops. These lists are updated and
+drawn every frame.
+
+On one hand, our tap will create large water drops
+every frame. These will be simulated applying gravity
+until they reach the floor. Every large drop that goes
+below floor level will be destroyed, and in its place
+a small drop bouncing up will be created.
+
+Small drops are kept in a separate list. They are
+created with a varying speed and angle, depending on
+their creation position and a random factor. Then they
+are simulated with gravity until they get below floor
+level and are destroyed.
