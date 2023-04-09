@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Tetris (demo)" version="1.0" />
+    <binary path="obj/Tetris.vbin" />
+    <textures>
+        <texture path="obj/TextureTitle.vtex" />
+        <texture path="obj/TextureGameplay.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/MusicTitle.vsnd" />
+        <sound path="obj/MusicGameplay.vsnd" />
+        <sound path="obj/SoundPressStart.vsnd" />
+        <sound path="obj/SoundMenuMove.vsnd" />
+        <sound path="obj/SoundMenuAccept.vsnd" />
+        <sound path="obj/SoundMenuCancel.vsnd" />
+        <sound path="obj/SoundGameOver.vsnd" />
+        <sound path="obj/SoundQuitGame.vsnd" />
+        <sound path="obj/SoundPieceMove.vsnd" />
+        <sound path="obj/SoundPieceRotate.vsnd" />
+        <sound path="obj/SoundPieceDrop.vsnd" />
+        <sound path="obj/SoundPieceLock.vsnd" />
+        <sound path="obj/SoundClear1Line.vsnd" />
+        <sound path="obj/SoundClear2Lines.vsnd" />
+        <sound path="obj/SoundClear3Lines.vsnd" />
+        <sound path="obj/SoundClear4Lines.vsnd" />
+        <sound path="obj/SoundBoardFall.vsnd" />
+        <sound path="obj/SoundLevelAdvance.vsnd" />
+    </sounds>
+</rom-definition>

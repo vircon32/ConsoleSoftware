@@ -1,0 +1,22 @@
+<texture-regions>
+    <texture name="TextureGameplay" path="TextureGameplay.png"/>
+    <region name="Background" left="0" top="0" right="639" bottom="359" hotspot-x="0" hotspot-y="0"/>
+    <region name="DialogGameOver" left="263" top="363" right="537" bottom="479" hotspot-x="400" hotspot-y="417"/>
+    <region name="DialogQuit" left="263" top="483" right="537" bottom="586" hotspot-x="400" hotspot-y="524"/>
+    <region name="TopLine" left="365" top="590" right="556" bottom="601" hotspot-x="365" hotspot-y="590"/>
+    <matrix columns = "16" rows="8" separation="0">
+        <region name="PieceTiles" left="1" top="363" right="16" bottom="378" hotspot-x="1" hotspot-y="363"/>
+    </matrix>
+    <matrix columns = "4" rows="2" separation="1">
+        <region name="Pieces" left="1" top="494" right="64" bottom="525" hotspot-x="1" hotspot-y="494"/>
+    </matrix>
+    <matrix columns = "10" rows="1" separation="1">
+        <region name="DigitsLevel" left="1" top="562" right="22" bottom="589" hotspot-x="1" hotspot-y="562"/>
+    </matrix>
+    <matrix columns = "10" rows="1" separation="1">
+        <region name="DigitsLines" left="1" top="593" right="15" bottom="613" hotspot-x="1" hotspot-y="593"/>
+    </matrix>
+    <matrix columns = "8" rows="1" separation="1">
+        <region name="CursorRight" left="163" top="593" right="186" bottom="616" hotspot-x="186" hotspot-y="604"/>
+    </matrix>
+</texture-regions>

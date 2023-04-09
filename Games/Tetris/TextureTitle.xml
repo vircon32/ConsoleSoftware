@@ -1,0 +1,15 @@
+<texture-regions>
+    <texture name="TextureTitle" path="TextureTitle.png"/>
+    <region name="PressStart" left="1" top="5" right="224" bottom="36" hotspot-x="112" hotspot-y="5"/>
+    <region name="ChooseLevel" left="1" top="59" right="261" bottom="90" hotspot-x="131" hotspot-y="59"/>
+    <region name="2023" left="1" top="40" right="62" bottom="55" hotspot-x="1" hotspot-y="55"/>
+    <region name="Carra" left="66" top="40" right="124" bottom="55" hotspot-x="124" hotspot-y="55"/>
+    <region name="MarginLeft" left="1" top="1" right="118" bottom="1" hotspot-x="1" hotspot-y="1"/>
+    <region name="MarginRight" left="120" top="1" right="237" bottom="1" hotspot-x="237" hotspot-y="1"/>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="Levels" left="1" top="94" right="56" bottom="137" hotspot-x="1" hotspot-y="94"/>
+    </matrix>
+    <matrix columns = "8" rows="1" separation="1">
+        <region name="CursorUp" left="1" top="141" right="24" bottom="164" hotspot-x="12" hotspot-y="141"/>
+    </matrix>
+</texture-regions>
