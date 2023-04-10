@@ -198,8 +198,11 @@ struct GameSession
     int LevelLines;
     int Score;
     
-    // random piece sequence
-    int CurrentSeed;
+    // random piece sequence; pieces are
+    // generated in batches with each of
+    // the 7, where only their order varies
+    int LastBagPosition;
+    PieceTypes[ 7 ] PieceBag;
     PieceTypes CurrentPiece;
     PieceTypes NextPiece;
     

@@ -3,16 +3,33 @@
 // ---------------------------------------------------------
 
 
-PieceTypes CreateRandomPiece()
+PieceTypes NextRandomPiece()
 {
-    // we use the seed stored in the game 
-    // session to ensure a continued sequence
-    srand( Game.CurrentSeed );
-    PieceTypes Piece = (PieceTypes)(1 + rand() % 7);
+    // first try to use current piece bag
+    if( Game.LastBagPosition < 6 )
+      return Game.PieceBag[ ++Game.LastBagPosition ];
     
-    // now save the next seed for next time
-    Game.CurrentSeed = rand();
-    return Piece;
+    // otherwise generate another bag;
+    // intialize with an ordered bag
+    for( int i = 0; i < 7; i++ )
+      Game.PieceBag[ i ] = (PieceTypes)(1 + i);
+    
+    // then shuffle it making 40 swaps within the bag
+    PieceTypes SwapPiece;
+    
+    for( int i = 0; i < 40; i++ )
+    {
+        int Position1 = rand() % 7;
+        int Position2 = rand() % 7;
+        
+        SwapPiece = Game.PieceBag[ Position1 ];
+        Game.PieceBag[ Position1 ] = Game.PieceBag[ Position2 ];
+        Game.PieceBag[ Position2 ] = SwapPiece;
+    }
+    
+    // and now return the first one
+    Game.LastBagPosition = 0;
+    return Game.PieceBag[ 0 ];
 }
 
 // ---------------------------------------------------------
@@ -37,14 +54,14 @@ void ResetGame()
     Game.ScoreBlinkCounter = 0;
     
     // generate and place current piece
-    Game.CurrentSeed = get_time();
-    Game.CurrentPiece = CreateRandomPiece();
+    Game.LastBagPosition = 7;
+    Game.CurrentPiece = NextRandomPiece();
     Game.PieceRotation = 0;
     Game.PieceX = 3;
     Game.PieceY = 1;
     
     // generate next piece
-    Game.NextPiece = CreateRandomPiece();
+    Game.NextPiece = NextRandomPiece();
 }
 
 // ---------------------------------------------------------
@@ -517,7 +534,7 @@ void Game_RunState_Locking()
         Game.PieceRotation = 0;
         
         // generate a new next piece
-        Game.NextPiece = CreateRandomPiece();
+        Game.NextPiece = NextRandomPiece();
         
         // check if some lines are cleared
         if( CountFullRows() > 0 )
