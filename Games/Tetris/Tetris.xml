@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <rom-definition version="1.0">
-    <rom type="cartridge" title="Tetris (demo)" version="1.0" />
+    <rom type="cartridge" title="Tetris" version="1.1" />
     <binary path="obj/Tetris.vbin" />
     <textures>
         <texture path="obj/TextureTitle.vtex" />
