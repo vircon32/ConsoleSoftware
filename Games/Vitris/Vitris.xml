@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <rom-definition version="1.0">
-    <rom type="cartridge" title="Tetris" version="1.1" />
-    <binary path="obj/Tetris.vbin" />
+    <rom type="cartridge" title="Vitris" version="1.1" />
+    <binary path="obj/Vitris.vbin" />
     <textures>
         <texture path="obj/TextureTitle.vtex" />
         <texture path="obj/TextureGameplay.vtex" />

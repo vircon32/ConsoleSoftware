@@ -13,12 +13,12 @@ tiled2vircon maps\PieceModels.tmx -o obj\ || goto :failed
 echo.
 echo Compile the C code
 echo --------------------------
-compile Main.c -o obj\Tetris.asm || goto :failed
+compile Main.c -o obj\Vitris.asm || goto :failed
 
 echo.
 echo Assemble the ASM code
 echo --------------------------
-assemble obj\Tetris.asm -o obj\Tetris.vbin || goto :failed
+assemble obj\Vitris.asm -o obj\Vitris.vbin || goto :failed
 
 echo.
 echo Convert the PNG textures
@@ -52,7 +52,7 @@ wav2vircon sounds\SoundLevelAdvance.wav -o obj\SoundLevelAdvance.vsnd || goto :f
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Tetris.xml -o bin\Tetris.v32 || goto :failed
+packrom Vitris.xml -o bin\Vitris.v32 || goto :failed
 goto :succeeded
 
 :failed

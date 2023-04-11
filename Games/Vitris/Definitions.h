@@ -185,7 +185,7 @@ enum GameStates
 
 // ---------------------------------------------------------
 
-// all data needed to run a tetris game
+// all data needed to run the game
 struct GameSession
 {
     // general state

@@ -1,5 +1,5 @@
 ======================================
-  GAME "TETRIS" FOR VIRCON32 CONSOLE
+  GAME "VITRIS" FOR VIRCON32 CONSOLE
 ======================================
 
   CREDITS:
@@ -15,6 +15,7 @@
     - Pipe background adapted from the original image created
       automatically by AI at hotpot.ai
     
+    Original game concept by Alekséi Pázhitnov.
     Everything else in this game was created by Carra.
     The Vircon32 console was designed and created by Carra.
  

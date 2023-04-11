@@ -52,10 +52,10 @@ void Title_DrawScene()
     
     // draw info texts
     select_region( Region2023 );
-    draw_region_at( 4, screen_height-5 );
+    draw_region_at( 26, screen_height-5 );
     
     select_region( RegionCarra );
-    draw_region_at( screen_width-5, screen_height-5 );
+    draw_region_at( screen_width-27, screen_height-5 );
     
     // draw title map
     tilemap_draw( &MapTitle );
