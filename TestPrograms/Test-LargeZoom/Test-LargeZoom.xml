@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Test: Large zoom" version="1.0" />
+    <binary path="obj/Test-LargeZoom.vbin" />
+    <textures>
+        <texture path="obj/TextureCheckers.vtex" />
+    </textures>
+    <sounds />
+</rom-definition>
