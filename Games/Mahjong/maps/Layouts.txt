@@ -1,0 +1,14 @@
+Layouts are up to 5 layers tall. Each layer is a grid of 16x8 tiles.
+
+Tile size (faces) is 30x40 px, but the layouts subdivide it into
+2x2 quarters of 15x20 px each. That way we can have tiles placed in
+intermediate positions respect to each other.
+
+To handle this, only the first quarter in the tilemap (i.e. the tile's
+top-left part) is used when reading the maps, and the other 3 quarters
+are secondary.
+
+
+Also, when drawn, there are extra features not drawn in the tile map:
+tile edges and shadows. This also causes each layer to be slightly
+displaced respect to the layer below.

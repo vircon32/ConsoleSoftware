@@ -1,0 +1,5 @@
+Tile faces:
+---------------
+Adapted from "Pixel Assets - Mahjong Tiles"
+by Blueeyedrat (https://blueeyedrat.itch.io).
+License allows commercial and non-commercial use.

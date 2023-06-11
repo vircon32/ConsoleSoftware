@@ -1,0 +1,61 @@
+<texture-regions>
+    <texture name="TextureMahjong" path="TextureMahjong.png"/>
+    <region name="TableMat" left="0" top="0" right="639" bottom="359" hotspot-x="0" hotspot-y="0"/>
+    <region name="2023" left="430" top="569" right="490" bottom="584" hotspot-x="430" hotspot-y="584"/>
+    <region name="Carra" left="430" top="588" right="488" bottom="603" hotspot-x="488" hotspot-y="603"/>
+    <region name="Logo" left="1" top="602" right="273" bottom="721" hotspot-x="1" hotspot-y="602"/>
+    <region name="LogoChinese" left="643" top="237" right="753" bottom="288" hotspot-x="643" hotspot-y="237"/>
+    <region name="PressStart" left="1" top="566" right="224" bottom="597" hotspot-x="1" hotspot-y="566"/>
+    <region name="BlackSlope" left="757" top="237" right="758" bottom="237" hotspot-x="757" hotspot-y="237"/>
+    <region name="DialogWin" left="513" top="363" right="787" bottom="479" hotspot-x="650" hotspot-y="421"/>
+    <region name="DialogQuit" left="513" top="483" right="787" bottom="586" hotspot-x="650" hotspot-y="528"/>
+    <region name="HintHighlight" left="724" top="295" right="771" bottom="352" hotspot-x="733" hotspot-y="304"/>
+    <region name="GUIShadow" left="798" top="332" right="896" bottom="332" hotspot-x="798" hotspot-y="332"/>
+    <region name="GUIRemainingTiles" left="798" top="336" right="896" bottom="387" hotspot-x="798" hotspot-y="387"/>
+    <region name="TileEdgeBottom" left="724" top="356" right="752" bottom="359" hotspot-x="724" hotspot-y="316"/>
+    <region name="TileEdgeLeft" left="717" top="317" right="720" bottom="359" hotspot-x="721" hotspot-y="316"/>
+    <region name="TileEdgeTop" left="761" top="243" right="790" bottom="243" hotspot-x="761" hotspot-y="244"/>
+    <region name="TileEdgeRight" left="793" top="247" right="793" bottom="286" hotspot-x="763" hotspot-y="247"/>
+    <region name="LayoutHighlight" left="607" top="725" right="762" bottom="830" hotspot-x="610" hotspot-y="728"/>
+    <region name="ChooseLayout" left="277" top="615" right="578" bottom="646" hotspot-x="427" hotspot-y="615"/>
+    <region name="SelectionHighlight" left="798" top="475" right="827" bottom="514" hotspot-x="798" hotspot-y="475"/>
+    <matrix columns = "18" rows="10" separation="0">
+        <region name="TileFronts" left="1" top="363" right="15" bottom="382" hotspot-x="1" hotspot-y="363"/>
+    </matrix>
+    <matrix columns = "8" rows="1" separation="1">
+        <region name="CursorDialog" left="228" top="569" right="251" bottom="592" hotspot-x="251" hotspot-y="580"/>
+    </matrix>
+    <matrix columns = "1" rows="7" separation="1">
+        <region name="Actions" left="798" top="1" right="896" bottom="46" hotspot-x="798" hotspot-y="1"/>
+    </matrix>
+    <matrix columns = "1" rows="2" separation="1">
+        <region name="TitleTiles" left="643" top="1" right="794" bottom="116" hotspot-x="695" hotspot-y="106"/>
+    </matrix>
+    <matrix columns = "2" rows="1" separation="1">
+        <region name="Selection" left="798" top="391" right="833" bottom="436" hotspot-x="801" hotspot-y="394"/>
+    </matrix>
+    <matrix columns = "2" rows="1" separation="1">
+        <region name="Target" left="798" top="440" right="828" bottom="471" hotspot-x="813" hotspot-y="456"/>
+    </matrix>
+    <matrix columns = "6" rows="1" separation="1">
+        <region name="PairAnimation" left="277" top="650" right="348" bottom="721" hotspot-x="312" hotspot-y="685"/>
+    </matrix>
+    <matrix columns = "10" rows="1" separation="1">
+        <region name="Digits" left="277" top="596" right="287" bottom="611" hotspot-x="277" hotspot-y="596"/>
+    </matrix>
+    <matrix columns = "1" rows="2" separation="1">
+        <region name="AlertTitles" left="274" top="363" right="509" bottom="402" hotspot-x="393" hotspot-y="402"/>
+    </matrix>
+    <matrix columns = "1" rows="4" separation="1">
+        <region name="AlertMessages" left="274" top="447" right="509" bottom="475" hotspot-x="393" hotspot-y="446"/>
+    </matrix>
+    <matrix columns = "4" rows="2" separation="1">
+        <region name="TileShadows" left="643" top="315" right="659" bottom="336" hotspot-x="643" hotspot-y="317"/>
+    </matrix>
+    <matrix columns = "1" rows="4" separation="1">
+        <region name="LayoutNames" left="717" top="655" right="864" bottom="670" hotspot-x="717" hotspot-y="670"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="LayoutImages" left="1" top="725" right="150" bottom="824" hotspot-x="1" hotspot-y="725"/>
+    </matrix>
+</texture-regions>

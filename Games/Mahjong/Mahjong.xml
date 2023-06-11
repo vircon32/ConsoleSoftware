@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Mahjong" version="1.0" />
+    <binary path="obj/Mahjong.vbin" />
+    <textures>
+        <texture path="obj/TextureMahjong.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/MusicTitle.vsnd" />
+        <sound path="obj/MusicGameplay.vsnd" />
+        <sound path="obj/SoundTitleLogo.vsnd" />
+        <sound path="obj/SoundPressStart.vsnd" />
+        <sound path="obj/SoundMenuMove.vsnd" />
+        <sound path="obj/SoundMenuAccept.vsnd" />
+        <sound path="obj/SoundMenuCancel.vsnd" />
+        <sound path="obj/SoundWin.vsnd" />
+        <sound path="obj/SoundQuitGame.vsnd" />
+        <sound path="obj/SoundSelectTile.vsnd" />
+        <sound path="obj/SoundUndoSelect.vsnd" />
+        <sound path="obj/SoundMatchTiles.vsnd" />
+        <sound path="obj/SoundUnmatchTiles.vsnd" />
+        <sound path="obj/SoundHighlight.vsnd" />
+        <sound path="obj/SoundTileCollide.vsnd" />
+        <sound path="obj/SoundWrongMove.vsnd" />
+
+    </sounds>
+</rom-definition>
