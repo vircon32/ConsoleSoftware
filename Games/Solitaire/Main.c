@@ -15,6 +15,7 @@
 
 // include all game scenes
 #include "SceneTitle.h"
+#include "SceneMenu.h"
 #include "SceneGameplay.h"
 #include "SceneQuitGame.h"
 #include "SceneWin.h"
@@ -73,6 +74,10 @@ void main( void )
         {
             case Scene_Title:
               Title_RunStateMachine();
+              break;
+            
+            case Scene_Menu:
+              Menu_RunStateMachine();
               break;
             
             case Scene_Gameplay:

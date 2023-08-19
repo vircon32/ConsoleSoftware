@@ -289,9 +289,9 @@ void Cursor_GetDrawPosition( CursorPosition* P, int* DrawX, int* DrawY )
     *DrawX = DrawnStackFirstX + DrawnStack.CardsMovedRight * DrawnStackStepX;
     
     // special case 3-A: when empty, it looks better
-    // to have the cursor at the full-card mark
+    // to have the cursor at the left draw position
     if( DrawnStack.FaceUpStack.NumberOfCards == 0 )
-      *DrawX = DrawnStackFirstX + 2 * DrawnStackStepX;
+      *DrawX = DrawnStackFirstX;
     
     // special case 3-B: when a drawn card is picked
     // it looks better to have the cursor at that place

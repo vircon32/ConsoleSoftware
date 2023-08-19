@@ -19,19 +19,23 @@
 #define RegionTitleMat  13
 #define RegionLogo  14
 #define RegionPressStart  15
-#define RegionTextNothing  16
-#define RegionText1Card  17
-#define RegionTextNCards  18
-#define Region2022  19
-#define RegionCarra  20
+#define RegionChooseMode  16
+#define RegionMenuSide  17
+#define RegionTextNothing  18
+#define RegionText1Card  19
+#define RegionTextNCards  20
+#define Region2022  21
+#define RegionCarra  22
 
 // define names for first region in region matrices
-#define FirstRegionCardFronts  21
-#define FirstRegionActions  73
-#define FirstRegionCursorDialog  78
-#define FirstRegionDigits  86
-#define FirstRegionCursorCard  96
-#define FirstRegionCursorStack  98
+#define FirstRegionCardFronts  23
+#define FirstRegionActions  75
+#define FirstRegionCursorDialog  80
+#define FirstRegionDigits  88
+#define FirstRegionCursorCard  98
+#define FirstRegionCursorStack  100
+#define FirstRegionModeTitles  102
+#define FirstRegionModeDescriptions  105
 
 // your initialization code must call this function
 void DefineRegions_TextureSolitaire() 
@@ -71,6 +75,10 @@ void DefineRegions_TextureSolitaire()
     define_region( 279,851,  495,917,  279,851 );
     select_region( RegionPressStart );
     define_region( 279,921,  502,952,  279,921 );
+    select_region( RegionChooseMode );
+    define_region( 585,930,  828,961,  585,930 );
+    select_region( RegionMenuSide );
+    define_region( 789,796,  887,796,  789,796 );
     select_region( RegionTextNothing );
     define_region( 557,788,  631,803,  557,788 );
     select_region( RegionText1Card );
@@ -89,6 +97,8 @@ void DefineRegions_TextureSolitaire()
     define_region_matrix( FirstRegionDigits, 557,769,  567,784,  557,769,  10,1,  1 );
     define_region_matrix( FirstRegionCursorCard, 1,864,  72,961,  36,866,  2,1,  1 );
     define_region_matrix( FirstRegionCursorStack, 149,864,  220,895,  184,866,  1,2,  1 );
+    define_region_matrix( FirstRegionModeTitles, 587,826,  716,857,  587,826,  1,3,  1 );
+    define_region_matrix( FirstRegionModeDescriptions, 720,826,  845,841,  720,826,  1,3,  1 );
 }
 
 // end include guard

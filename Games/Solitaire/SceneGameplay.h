@@ -53,7 +53,7 @@ void DropToCursor( CursorPosition* DropPosition )
         
         // update state of the displaced top cards
         // (we just unpicked the rightmost card)
-        if( DrawnStack.CardsMovedRight < 2 )
+        if( DrawnStack.CardsMovedRight < (DrawnCards - 1) )
           if( DrawnStack.FaceUpStack.NumberOfCards > (DrawnStack.CardsMovedRight+1) )
             DrawnStack.CardsMovedRight++;
     }
@@ -90,8 +90,9 @@ void Gameplay_ChangeState( int NewState )
     {
         play_sound( SoundDraw );
         
-        // send up to 3 top cards to the moving stack
-        int CardsToDraw = min( 3, DeckStack.NumberOfCards );
+        // send up to N top cards to the moving stack
+        // (depending on the game mode)
+        int CardsToDraw = min( DrawnCards, DeckStack.NumberOfCards );
         
         for( int i = 0; i < CardsToDraw; i++ )
           CardStack_TransferTop( &DeckStack, &MovingStack );
@@ -492,8 +493,8 @@ void Gameplay_RunState_Drawing()
     // when finished, actually draw cards
     if( Gameplay_ElapsedFrames >= 20 )
     {
-        int DrawnCards = MovingStack.NumberOfCards;
-        DrawnStack.CardsMovedRight = DrawnCards - 1;
+        int CardsBeingDrawn = MovingStack.NumberOfCards;
+        DrawnStack.CardsMovedRight = CardsBeingDrawn - 1;
         CardStack_TransferSubstack( &MovingStack, &DrawnStack.FaceUpStack, 0 );
         
         // go back

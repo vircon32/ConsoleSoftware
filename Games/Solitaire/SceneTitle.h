@@ -33,11 +33,8 @@ void Title_ChangeState( int NewState )
     
     // some transitions have specific actions
     if( NewState == Title_StartPressed )
-    {
-        stop_channel( ChannelMusic );
-        play_sound( SoundTitleStart );
-    }
-      
+      play_sound( SoundTitleStart );
+    
     else if( NewState == Title_Flash )
       play_sound( SoundTitleLogo );
       
@@ -253,8 +250,8 @@ void Title_RunState_StartPressed()
     // change scene when finished
     if( Title_ElapsedFrames >= 60 )
     {
-        GameScene = Scene_Gameplay;
-        GameState = Gameplay_Initialize;
+        GameScene = Scene_Menu;
+        GameState = Menu_Initialize;
     }
 }
 

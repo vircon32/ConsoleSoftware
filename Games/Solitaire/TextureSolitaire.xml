@@ -16,6 +16,8 @@
     <region name="TitleMat" left="644" top="383" right="981" bottom="621" hotspot-x="644" hotspot-y="383"/>
     <region name="Logo" left="279" top="851" right="495" bottom="917" hotspot-x="279" hotspot-y="851"/>
     <region name="PressStart" left="279" top="921" right="502" bottom="952" hotspot-x="279" hotspot-y="921"/>
+    <region name="ChooseMode" left="585" top="930" right="828" bottom="961" hotspot-x="585" hotspot-y="930"/>
+    <region name="RegionMenuSide" left="789" top="796" right="887" bottom="796" hotspot-x="789" hotspot-y="796"/>
     <region name="TextNothing" left="557" top="788" right="631" bottom="803" hotspot-x="557" hotspot-y="788"/>
     <region name="Text1Card" left="557" top="807" right="616" bottom="822" hotspot-x="557" hotspot-y="807"/>
     <region name="TextNCards" left="635" top="788" right="685" bottom="803" hotspot-x="635" hotspot-y="788"/>
@@ -38,5 +40,11 @@
     </matrix>
     <matrix columns = "1" rows="2" separation="1">
         <region name="CursorStack" left="149" top="864" right="220" bottom="895" hotspot-x="184" hotspot-y="866"/>
+    </matrix>
+    <matrix columns = "1" rows="3" separation="1">
+        <region name="ModeTitles" left="587" top="826" right="716" bottom="857" hotspot-x="587" hotspot-y="826"/>
+    </matrix>
+    <matrix columns = "1" rows="3" separation="1">
+        <region name="ModeDescriptions" left="720" top="826" right="845" bottom="841" hotspot-x="720" hotspot-y="826"/>
     </matrix>
 </texture-regions>
