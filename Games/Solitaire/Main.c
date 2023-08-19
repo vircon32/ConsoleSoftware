@@ -44,12 +44,13 @@ void main( void )
     
     select_sound( MusicGameplay );
     set_sound_loop( true );
+    set_sound_loop_start( 124999 );
     
     // configure channel volumes
     set_global_volume( 0.6 );
     
     select_channel( ChannelMusic );
-    set_channel_volume( 0.45 );
+    set_channel_volume( 0.6 );
     
     // ------------------------------------
     // PART 3: GAME INITIALIZATIONS

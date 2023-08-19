@@ -8,8 +8,9 @@
   CREDITS:
 ---------------------------
 
-    - Title and gameplay music, as well as the win tune
-      were created by FraynVGM
+    - Title music and win tune were created by FraynVGM
+    - Gameplay music adapted from "Bass meant jazz", by Kevin MacLeod
+      (downloaded as public domain from: https://freepd.com/misc.php)
     
     Everything else in this game was created by Carra.
     The Vircon32 console was designed and created by Carra.
