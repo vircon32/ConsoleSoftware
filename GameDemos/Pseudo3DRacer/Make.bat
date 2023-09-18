@@ -28,7 +28,7 @@ wav2vircon SoundEngine.wav -o obj\SoundEngine.vsnd || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Pseudo3DRacer.xml -o bin\Pseudo3DRacer.v32 || goto :failed
+packrom Pseudo3DRacer.xml -o "bin\Pseudo-3D Racer (Demo).v32" || goto :failed
 goto :succeeded
 
 :failed

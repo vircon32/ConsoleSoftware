@@ -19,7 +19,7 @@ assemble obj\Main.asm -o obj\Main.vbin || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom BasicPlatformer.xml -o bin\BasicPlatformer.v32 || goto :failed
+packrom BasicPlatformer.xml -o "bin\Basic Platformer.v32" || goto :failed
 goto :succeeded
 
 :failed

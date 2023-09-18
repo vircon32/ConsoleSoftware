@@ -27,7 +27,7 @@ wav2vircon Sound-SoftSynth.wav -o obj\Sound-SoftSynth.vsnd || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-MinimalTest.xml -o bin\Test-MinimalTest.v32 || goto :failed
+packrom Test-MinimalTest.xml -o "bin\Test - Minimal test.v32" || goto :failed
 goto :succeeded
 
 :failed

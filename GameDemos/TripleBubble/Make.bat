@@ -19,7 +19,7 @@ assemble obj\TripleBubble.asm -o obj\TripleBubble.vbin || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom TripleBubble.xml -o bin\TripleBubble.v32 || goto :failed
+packrom TripleBubble.xml -o "bin\Triple Bubble (Demo).v32" || goto :failed
 goto :succeeded
 
 :failed

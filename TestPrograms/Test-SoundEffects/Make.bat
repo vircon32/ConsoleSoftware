@@ -31,7 +31,7 @@ wav2vircon SoundPiano.wav -o obj\SoundPiano.vsnd || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-SoundEffects.xml -o bin\Test-SoundEffects.v32 || goto :failed
+packrom Test-SoundEffects.xml -o "bin\Test - Sound effects.v32" || goto :failed
 goto :succeeded
 
 :failed

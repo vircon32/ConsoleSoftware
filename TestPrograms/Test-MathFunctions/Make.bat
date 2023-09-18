@@ -22,7 +22,7 @@ png2vircon Texture-MathFunctions.png -o obj\Texture-MathFunctions.vtex || goto :
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-MathFunctions.xml -o bin\Test-MathFunctions.v32 || goto :failed
+packrom Test-MathFunctions.xml -o "bin\Test - Math functions.v32" || goto :failed
 goto :succeeded
 
 :failed

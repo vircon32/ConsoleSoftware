@@ -31,7 +31,7 @@ wav2vircon SoundBeep.wav -o obj\SoundBeep.vsnd || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Chip8Emulator.xml -o bin\Chip8Emulator.v32 || goto :failed
+packrom Chip8Emulator.xml -o "bin\Chip-8 Emulator.v32" || goto :failed
 goto :succeeded
 
 :failed

@@ -27,7 +27,7 @@ wav2vircon Sound-LampMoving.wav -o obj/Sound-LampMoving.vsnd || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-BlendingModes.xml -o bin/Test-BlendingModes.v32 || goto :failed
+packrom Test-BlendingModes.xml -o "bin/Test - Blending modes.v32" || goto :failed
 goto :succeeded
 
 :failed

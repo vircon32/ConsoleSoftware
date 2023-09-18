@@ -36,7 +36,7 @@ wav2vircon Sound-SoftSynth.wav -o obj/Sound-SoftSynth.vsnd || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-MinimalTest.xml -o bin/Test-MinimalTest.v32 || abort_build
+packrom Test-MinimalTest.xml -o "bin/Test - Minimal test.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

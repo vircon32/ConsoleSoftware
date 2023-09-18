@@ -28,7 +28,7 @@ png2vircon TextureDialogFont.png -o obj\TextureDialogFont.vtex || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom RPGConcept.xml -o bin\RPGConcept.v32 || goto :failed
+packrom RPGConcept.xml -o "bin\RPG Concept (Demo).v32" || goto :failed
 goto :succeeded
 
 :failed

@@ -37,7 +37,7 @@ wav2vircon Sound-PageComplete.wav -o obj/Sound-PageComplete.vsnd || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-RandomNumbers.xml -o bin/Test-RandomNumbers.v32 || abort_build
+packrom Test-RandomNumbers.xml -o "bin/Test - Random numbers.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

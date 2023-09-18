@@ -31,7 +31,7 @@ png2vircon Texture-Gamepad.png -o obj/Texture-Gamepad.vtex || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-Gamepads.xml -o bin/Test-Gamepads.v32 || abort_build
+packrom Test-Gamepads.xml -o "bin/Test - Gamepads.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

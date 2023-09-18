@@ -22,7 +22,7 @@ png2vircon Texture-Gamepad.png -o obj\Texture-Gamepad.vtex || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-Gamepads.xml -o bin\Test-Gamepads.v32 || goto :failed
+packrom Test-Gamepads.xml -o "bin\Test - Gamepads.v32" || goto :failed
 goto :succeeded
 
 :failed

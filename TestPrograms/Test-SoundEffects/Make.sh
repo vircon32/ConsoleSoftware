@@ -36,7 +36,7 @@ wav2vircon SoundPiano.wav -o obj/SoundPiano.vsnd  || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-SoundEffects.xml -o bin/Test-SoundEffects.v32 || abort_build
+packrom Test-SoundEffects.xml -o "bin/Test - Sound effects.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

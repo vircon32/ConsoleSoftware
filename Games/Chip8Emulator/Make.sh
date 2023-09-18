@@ -36,7 +36,7 @@ wav2vircon SoundBeep.wav -o obj/SoundBeep.vsnd  || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Chip8Emulator.xml -o bin/Chip8Emulator.v32 || abort_build
+packrom Chip8Emulator.xml -o "bin/Chip-8 Emulator.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

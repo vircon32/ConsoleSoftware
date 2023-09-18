@@ -28,7 +28,7 @@ assemble obj/TripleBubble.asm -o obj/TripleBubble.vbin || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom TripleBubble.xml -o bin/TripleBubble.v32 || abort_build
+packrom TripleBubble.xml -o "bin/Triple Bubble (Demo).v32" || abort_build
 
 echo.
 echo BUILD SUCCESSFUL

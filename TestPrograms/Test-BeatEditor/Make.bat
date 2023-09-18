@@ -30,7 +30,7 @@ wav2vircon SoundBell.wav -o obj/SoundBell.vsnd || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-BeatEditor.xml -o bin/Test-BeatEditor.v32 || goto :failed
+packrom Test-BeatEditor.xml -o "bin/Test - Beat editor.v32" || goto :failed
 goto :succeeded
 
 :failed

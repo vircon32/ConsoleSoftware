@@ -39,7 +39,7 @@ wav2vircon SoundBell.wav   -o obj/SoundBell.vsnd   || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-BeatEditor.xml -o bin/Test-BeatEditor.v32 || abort_build
+packrom Test-BeatEditor.xml -o "bin/Test - Beat editor.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

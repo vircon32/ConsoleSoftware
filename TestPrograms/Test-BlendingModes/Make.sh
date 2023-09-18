@@ -36,7 +36,7 @@ wav2vircon Sound-LampMoving.wav -o obj/Sound-LampMoving.vsnd || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-BlendingModes.xml -o bin/Test-BlendingModes.v32 || abort_build
+packrom Test-BlendingModes.xml -o "bin/Test - Blending modes.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

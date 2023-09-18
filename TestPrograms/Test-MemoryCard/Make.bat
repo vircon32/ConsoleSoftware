@@ -22,7 +22,7 @@ png2vircon Texture-GameScreen.png -o obj\Texture-GameScreen.vtex || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-MemoryCard.xml -o bin\Test-MemoryCard.v32 || goto :failed
+packrom Test-MemoryCard.xml -o "bin\Test - Memory card.v32" || goto :failed
 goto :succeeded
 
 :failed

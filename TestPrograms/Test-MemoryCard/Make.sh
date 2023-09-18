@@ -31,7 +31,7 @@ png2vircon Texture-GameScreen.png -o obj/Texture-GameScreen.vtex || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-MemoryCard.xml -o bin/Test-MemoryCard.v32 || abort_build
+packrom Test-MemoryCard.xml -o "bin/Test - Memory card.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

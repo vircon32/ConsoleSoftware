@@ -27,7 +27,7 @@ wav2vircon Sound-TicTac.wav -o obj\Sound-TicTac.vsnd || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-DateAndTime.xml -o bin\Test-DateAndTime.v32 || goto :failed
+packrom Test-DateAndTime.xml -o "bin\Test - Date and time.v32" || goto :failed
 goto :succeeded
 
 :failed

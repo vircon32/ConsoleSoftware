@@ -39,7 +39,7 @@ wav2vircon Sound-NonBreakableBlock.wav -o obj\Sound-NonBreakableBlock.vsnd || go
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Demo-Bricks.xml -o bin\Demo-Bricks.v32 || goto :failed
+packrom Demo-Bricks.xml -o "bin\Bricks (Demo).v32" || goto :failed
 goto :succeeded
 
 :failed

@@ -32,7 +32,7 @@ png2vircon Texture-Wheel.png      -o obj/Texture-Wheel.vtex      || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-Rotozoom.xml -o bin/Test-Rotozoom.v32 || abort_build
+packrom Test-Rotozoom.xml -o "bin/Test - Rotozoom.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

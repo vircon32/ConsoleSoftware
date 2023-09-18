@@ -67,7 +67,7 @@ wav2vircon sounds/SoundMissile.wav        -o obj/SoundMissile.vsnd        || abo
 echo
 echo Pack the ROM
 echo --------------------------
-packrom FierceSoldier.xml -o bin/FierceSoldier.v32 || abort_build
+packrom FierceSoldier.xml -o "bin/Fierce Soldier.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

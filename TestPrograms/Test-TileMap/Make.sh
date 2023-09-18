@@ -36,7 +36,7 @@ png2vircon Texture-TileSet.png -o obj/Texture-TileSet.vtex || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-TileMap.xml -o bin/Test-TileMap.v32 || abort_build
+packrom Test-TileMap.xml -o "bin/Test - Tile map.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

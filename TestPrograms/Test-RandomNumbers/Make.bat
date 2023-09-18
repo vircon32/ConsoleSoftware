@@ -28,7 +28,7 @@ wav2vircon Sound-PageComplete.wav -o obj\Sound-PageComplete.vsnd || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-RandomNumbers.xml -o bin\Test-RandomNumbers.v32 || goto :failed
+packrom Test-RandomNumbers.xml -o "bin\Test - Random numbers.v32" || goto :failed
 goto :succeeded
 
 :failed

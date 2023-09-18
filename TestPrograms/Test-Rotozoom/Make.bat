@@ -23,7 +23,7 @@ png2vircon Texture-Wheel.png -o obj\Texture-Wheel.vtex || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-Rotozoom.xml -o bin\Test-Rotozoom.v32 || goto :failed
+packrom Test-Rotozoom.xml -o "bin\Test - Rotozoom.v32" || goto :failed
 goto :succeeded
 
 :failed

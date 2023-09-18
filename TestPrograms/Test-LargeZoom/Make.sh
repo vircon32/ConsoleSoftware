@@ -31,7 +31,7 @@ png2vircon TextureCheckers.png -o obj/TextureCheckers.vtex || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-LargeZoom.xml -o bin/Test-LargeZoom.v32 || abort_build
+packrom Test-LargeZoom.xml -o "bin/Test - Large zoom.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

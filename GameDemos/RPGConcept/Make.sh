@@ -37,7 +37,7 @@ png2vircon TextureDialogFont.png -o obj/TextureDialogFont.vtex || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom RPGConcept.xml -o bin/RPGConcept.v32 || abort_build
+packrom RPGConcept.xml -o "bin/RPG Concept (Demo).v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

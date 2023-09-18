@@ -22,7 +22,7 @@ png2vircon TextureCheckers.png -o obj\TextureCheckers.vtex || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-LargeZoom.xml -o bin\Test-LargeZoom.v32 || goto :failed
+packrom Test-LargeZoom.xml -o "bin\Test - Large zoom.v32" || goto :failed
 goto :succeeded
 
 :failed

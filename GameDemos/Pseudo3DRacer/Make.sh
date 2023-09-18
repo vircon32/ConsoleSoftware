@@ -37,7 +37,7 @@ wav2vircon SoundEngine.wav -o obj/SoundEngine.vsnd || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Pseudo3DRacer.xml -o bin/Pseudo3DRacer.v32 || abort_build
+packrom Pseudo3DRacer.xml -o "bin/Pseudo-3D Racer (Demo).v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

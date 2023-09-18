@@ -28,7 +28,7 @@ assemble obj/Main.asm -o obj/Main.vbin || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom BasicPlatformer.xml -o bin/BasicPlatformer.v32 || abort_build
+packrom BasicPlatformer.xml -o "bin/Basic Platformer.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

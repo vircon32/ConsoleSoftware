@@ -31,7 +31,7 @@ png2vircon Texture-MathFunctions.png -o obj/Texture-MathFunctions.vtex || abort_
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-MathFunctions.xml -o bin/Test-MathFunctions.v32 || abort_build
+packrom Test-MathFunctions.xml -o "bin/Test - Math functions.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

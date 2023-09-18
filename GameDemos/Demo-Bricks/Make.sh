@@ -47,7 +47,7 @@ wav2vircon Sound-NonBreakableBlock.wav -o obj/Sound-NonBreakableBlock.vsnd || ab
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Demo-Bricks.xml -o bin/Demo-Bricks.v32 || abort_build
+packrom Demo-Bricks.xml -o "bin/Bricks (Demo).v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

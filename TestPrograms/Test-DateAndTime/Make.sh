@@ -36,7 +36,7 @@ wav2vircon Sound-TicTac.wav -o obj/Sound-TicTac.vsnd || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom Test-DateAndTime.xml -o bin/Test-DateAndTime.v32 || abort_build
+packrom Test-DateAndTime.xml -o "bin/Test - Date and time.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL

@@ -27,7 +27,7 @@ png2vircon Texture-TileSet.png -o obj\Texture-TileSet.vtex || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom Test-TileMap.xml -o bin\Test-TileMap.v32 || goto :failed
+packrom Test-TileMap.xml -o "bin\Test - Tile map.v32" || goto :failed
 goto :succeeded
 
 :failed
