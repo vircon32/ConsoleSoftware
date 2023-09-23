@@ -1,6 +1,6 @@
 // *****************************************************************************
     // include standard Vircon headers
-    #include "time.h"
+    // (none needed here)
     
     // include additional headers; print_numbers must
     // be included before, so that vector2d can detect
