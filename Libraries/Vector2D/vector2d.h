@@ -1,5 +1,5 @@
 /* *****************************************************************************
-*  Vircon32 library: "vector2d.h"                 File version: 2022/09/19     *
+*  Vircon32 library: "vector2d.h"                 File version: 2023/09/22     *
 *  --------------------------------------------------------------------------- *
 *  This header defines 2D vectors and allows general operation with them.      *
 ***************************************************************************** */
@@ -123,8 +123,8 @@ void v2_add( vector2d* v1, vector2d* v2, vector2d* result )
 
 void v2_subtract( vector2d* v1, vector2d* v2, vector2d* result )
 {
-    result->x = v1->x + v2->x;
-    result->y = v1->y + v2->y;
+    result->x = v1->x - v2->x;
+    result->y = v1->y - v2->y;
 }
 
 // ---------------------------------------------------------
