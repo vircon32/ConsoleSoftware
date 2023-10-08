@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="One Skill" version="1.0" />
+    <binary path="obj/OneSkill.vbin" />
+    <textures>
+        <texture path="obj/TextureTitle.vtex" />
+        <texture path="obj/TextureGameplay.vtex" />
+        <texture path="obj/TextureCutscenes.vtex" />
+        <texture path="obj/TextureFont11x16.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/MusicTitle.vsnd" />
+        <sound path="obj/MusicGameplay.vsnd" />
+        <sound path="obj/MusicCutscenes.vsnd" />
+        <sound path="obj/MusicTutorial.vsnd" />
+        
+        <sound path="obj/SoundTitleSlide.vsnd" />
+        <sound path="obj/SoundTitleLogo.vsnd" />
+        <sound path="obj/SoundPressStart.vsnd" />
+        <sound path="obj/SoundMenuMove.vsnd" />
+        <sound path="obj/SoundMenuAccept.vsnd" />
+        <sound path="obj/SoundMenuCancel.vsnd" />
+        <sound path="obj/SoundStoryLetter.vsnd" />
+        <sound path="obj/SoundPause.vsnd" />
+        <sound path="obj/SoundDeath.vsnd" />
+        <sound path="obj/SoundEnterDoor.vsnd" />
+        <sound path="obj/SoundLevelClear.vsnd" />
+        <sound path="obj/SoundJump.vsnd" />
+        <sound path="obj/SoundLand.vsnd" />
+        <sound path="obj/SoundGolemWalk.vsnd" />
+        <sound path="obj/SoundGolemDeath.vsnd" />
+        <sound path="obj/SoundBirdFlap.vsnd" />
+        <sound path="obj/SoundBirdDeath.vsnd" />
+        <sound path="obj/SoundEnemyHit.vsnd" />
+        <sound path="obj/SoundShoot.vsnd" />
+        <sound path="obj/SoundShotDestroyed.vsnd" />
+        <sound path="obj/SoundBoxDestroyed.vsnd" />
+        <sound path="obj/SoundSpikesSwitch.vsnd" />
+        <sound path="obj/SoundWandMagic.vsnd" />
+        <sound path="obj/SoundDoubleJump.vsnd" />
+        <sound path="obj/SoundBootsLand.vsnd" />
+    </sounds>
+</rom-definition>

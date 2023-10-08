@@ -1,0 +1,5 @@
+<texture-regions>
+    <texture name="TextureCutscenes" path="TextureCutscenes.png"/>
+    <region name="IntroSlide" left="0" top="0" right="411" bottom="191" hotspot-x="0" hotspot-y="0"/>
+    <region name="EndingSlide" left="0" top="193" right="411" bottom="384" hotspot-x="0" hotspot-y="193"/>
+</texture-regions>

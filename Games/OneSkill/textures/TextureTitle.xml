@@ -1,0 +1,12 @@
+<texture-regions>
+    <texture name="TextureTitle" path="TextureTitle.png"/>
+    <region name="BackgroundStrip" left="1" top="1" right="1" bottom="361" hotspot-x="1" hotspot-y="1"/>
+    <region name="BlueBand" left="5" top="1" right="408" bottom="360" hotspot-x="5" hotspot-y="1"/>
+    <region name="Logo" left="412" top="1" right="662" bottom="206" hotspot-x="412" hotspot-y="1"/>
+    <region name="PressStart" left="412" top="210" right="635" bottom="241" hotspot-x="412" hotspot-y="210"/>
+    <region name="SkillFrame" left="412" top="245" right="501" bottom="334" hotspot-x="412" hotspot-y="245"/>
+    <region name="SwitchArrows" left="505" top="245" right="567" bottom="296" hotspot-x="536" hotspot-y="270"/>
+    <region name="2023" left="505" top="300" right="565" bottom="315" hotspot-x="505" hotspot-y="300"/>
+    <region name="Carra" left="505" top="319" right="563" bottom="334" hotspot-x="505" hotspot-y="319"/>
+    <region name="DiagonalLine" left="666" top="1" right="788" bottom="360" hotspot-x="666" hotspot-y="360"/>
+</texture-regions>
