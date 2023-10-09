@@ -67,47 +67,65 @@ enum Sounds
 
 
 // game scenes
-#define Scene_Title        1
-#define Scene_Intro        2
-#define Scene_Tutorial     3
-#define Scene_Gameplay     4
-#define Scene_Ending       5
+enum GameScenes
+{
+    Scene_Title = 1,
+    Scene_Tutorial,
+    Scene_Intro,
+    Scene_Gameplay,
+    Scene_ChangeSkill,
+    Scene_Ending
+};
 
 // scene states: title
-#define Title_Initialize    11
-#define Title_FadeIn        12
-#define Title_TitleSlide    13
-#define Title_Waiting       14
-#define Title_StartPressed  15
-
-// scene states: intro
-//
+enum StatesTitle
+{
+    Title_Initialize = 11,
+    Title_FadeIn,
+    Title_SlideDown,
+    Title_Waiting,
+    Title_StartPressed
+};
 
 // scene states: tutorial
-#define Tutorial_Initialize  31
-#define Tutorial_FadeIn      32
-#define Tutorial_Intro       33
-#define Tutorial_SkillPost   34
-#define Tutorial_Gun         35
-#define Tutorial_Cape        36
-#define Tutorial_Boots       37
-#define Tutorial_Wand        38
-#define Tutorial_FadeOut     39
+enum StatesTutorial
+{
+    Tutorial_Initialize = 21,
+    Tutorial_SkillSystem,
+    Tutorial_Skills,
+    Tutorial_FadeOut
+};
+
+// scene states: story (intro & ending)
+enum StatesStory
+{
+    Story_Initialize = 31,
+    Story_WriteText,
+    Story_Waiting,
+    Story_FadeOut
+};
 
 // scene states: gameplay
-#define Gameplay_Initialize  41
-#define Gameplay_LevelIntro  42
-#define Gameplay_Level       43
-#define Gameplay_Pause       44
-#define Gameplay_Death       45
-#define Gameplay_Goal        46
-#define Gameplay_FadeOut     47
+enum StatesGameplay
+{
+    Gameplay_Initialize = 41,
+    Gameplay_LevelIntro,
+    Gameplay_Level,
+    Gameplay_Pause,
+    Gameplay_Death,
+    Gameplay_RoomClear,
+    Gameplay_LevelClear,
+    Gameplay_FadeOut
+};
 
-// scene states: ending
-#define Ending_Initialize   51
-#define Ending_FadeIn       52
-#define Ending_TextAppears  53
-#define Ending_FadeOut      54
+// scene states: change skill
+enum StatesChangeSkill
+{
+    ChangeSkill_Initialize = 51,
+    ChangeSkill_IconsAppear,
+    ChangeSkill_Rotate,
+    ChangeSkill_FadeOut
+};
 
 
 // ---------------------------------------------------------
@@ -138,3 +156,6 @@ void ResetGameSession()
     LevelNumber = 1;
     RoomNumber = 1;
 }
+
+// global objects
+textfont Font11x16;

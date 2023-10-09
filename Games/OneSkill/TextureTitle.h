@@ -36,7 +36,7 @@ void DefineRegions_TextureTitle()
     select_region( RegionCarra );
     define_region( 505,319,  563,334,  505,319 );
     select_region( RegionDiagonalLine );
-    define_region( 666,1,  788,360,  666,360 );
+    define_region( 666,1,  787,360,  666,360 );
 }
 
 // end include guard

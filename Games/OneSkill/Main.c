@@ -20,13 +20,11 @@
 #include "Levels.h"
 
 // include all game scenes
-/*
-#include "SceneGameplay.h"
 #include "SceneTitle.h"
-#include "SceneTutorial.h"
 #include "SceneIntro.h"
-#include "SceneEnding.h"
-*/
+//#include "SceneGameplay.h"
+//#include "SceneTutorial.h"
+//#include "SceneEnding.h"
 
 
 // ---------------------------------------------------------
@@ -73,6 +71,19 @@ void main( void )
     // PART 3: CREATE TEXT FONT
     // ------------------------------------
     
+    // define texture and regions for our characters
+    Font11x16.texture_id = TextureFont11x16;
+    Font11x16.character_zero_region_id = FirstRegionFont11x16;
+    
+    // define dimensions for our characters
+    Font11x16.character_height = 16;
+    Font11x16.use_variable_width = true;
+    textfont_read_region_widths( &Font11x16 );
+    
+    // no separation between characters, 10 pixels between lines
+    Font11x16.character_separation = 0;
+    Font11x16.line_separation = 10;
+    
     // ------------------------------------
     // PART 4: CREATE TILE MAPS
     // ------------------------------------
@@ -100,7 +111,6 @@ void main( void )
     {
         switch( GameScene )
         {
-            /*
             case Scene_Title:
               Title_RunStateMachine();
               break;
@@ -109,6 +119,7 @@ void main( void )
               Intro_RunStateMachine();
               break;
             
+            /*
             case Scene_Tutorial:
               Tutorial_RunStateMachine();
               break;
