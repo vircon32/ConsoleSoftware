@@ -1,6 +1,6 @@
 <texture-regions>
     <texture name="TextureGameplay" path="TextureGameplay.png"/>
-    <region name="TextChangeSkill" left="168" top="689" right="422" bottom="720" hotspot-x="295" hotspot-y="689"/>
+    <region name="TextChangeSkill" left="168" top="689" right="422" bottom="720" hotspot-x="168" hotspot-y="689"/>
     <region name="TextLevel" left="168" top="724" right="279" bottom="755" hotspot-x="168" hotspot-y="724"/>
     <region name="TextClear" left="283" top="724" right="411" bottom="755" hotspot-x="283" hotspot-y="724"/>
     <region name="TextHowToPlay" left="168" top="759" right="397" bottom="790" hotspot-x="282" hotspot-y="759"/>

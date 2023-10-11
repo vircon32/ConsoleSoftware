@@ -70,8 +70,8 @@ enum Sounds
 enum GameScenes
 {
     Scene_Title = 1,
-    Scene_Tutorial,
     Scene_Intro,
+    Scene_Tutorial,
     Scene_Gameplay,
     Scene_ChangeSkill,
     Scene_Ending
@@ -123,7 +123,8 @@ enum StatesChangeSkill
 {
     ChangeSkill_Initialize = 51,
     ChangeSkill_IconsAppear,
-    ChangeSkill_Rotate,
+    ChangeSkill_Rotating,
+    ChangeSkill_Waiting,
     ChangeSkill_FadeOut
 };
 
@@ -159,3 +160,8 @@ void ResetGameSession()
 
 // global objects
 textfont Font11x16;
+tileset TilesLevel, TilesMountains, TilesClouds;
+tilemap MapLevel, MapMountains, MapClouds;
+
+// artificial "map" for cloud and mountain backgrounds
+int[ 1 ][ 16 ] MapBackgrounds = {{ 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }};

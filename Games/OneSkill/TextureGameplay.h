@@ -66,7 +66,7 @@ void DefineRegions_TextureGameplay()
 
     // define single regions
     select_region( RegionTextChangeSkill );
-    define_region( 168,689,  422,720,  295,689 );
+    define_region( 168,689,  422,720,  168,689 );
     select_region( RegionTextLevel );
     define_region( 168,724,  279,755,  168,724 );
     select_region( RegionTextClear );

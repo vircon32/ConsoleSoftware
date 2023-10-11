@@ -22,9 +22,10 @@
 // include all game scenes
 #include "SceneTitle.h"
 #include "SceneIntro.h"
-//#include "SceneGameplay.h"
-//#include "SceneTutorial.h"
-//#include "SceneEnding.h"
+#include "SceneGameplay.h"
+#include "SceneChangeSkill.h"
+#include "SceneTutorial.h"
+#include "SceneEnding.h"
 
 
 // ---------------------------------------------------------
@@ -85,11 +86,60 @@ void main( void )
     Font11x16.line_separation = 10;
     
     // ------------------------------------
-    // PART 4: CREATE TILE MAPS
+    // PART 4: CREATE TILE SETS
     // ------------------------------------
     
+    // tileset for levels
+    TilesLevel.width  = 40;
+    TilesLevel.height = 40;
+    TilesLevel.gap_x = 0;
+    TilesLevel.gap_y = 0;
+    TilesLevel.texture_id = TextureGameplay;
+    TilesLevel.tile_zero_region_id = FirstRegionTileset;
+    TilesLevel.draw_tile_zero = false;
+    
+    // tileset for mountains background
+    TilesMountains.width = 160;
+    TilesMountains.height = 720;   // not true, but will be useful
+    TilesMountains.gap_x = 0;
+    TilesMountains.gap_y = 0;
+    TilesMountains.texture_id = TextureGameplay;
+    TilesMountains.tile_zero_region_id = FirstRegionMountains;
+    TilesMountains.draw_tile_zero = true;
+    
+    // tileset for mountains background
+    TilesClouds.width = 160;
+    TilesClouds.height = 720;   // not true, but will be useful
+    TilesClouds.gap_x = 0;
+    TilesClouds.gap_y = 0;
+    TilesClouds.texture_id = TextureGameplay;
+    TilesClouds.tile_zero_region_id = FirstRegionClouds;
+    TilesClouds.draw_tile_zero = true;
+    
     // ------------------------------------
-    // PART 5: GAME INITIALIZATIONS
+    // PART 5: CREATE TILE MAPS
+    // ------------------------------------
+    /*
+    // map for levels
+    MapLevel.tiles = &TilesLevel;
+    MapLevel.map = &SomeMap[ 0 ][ 0 ]; ??????
+    MapLevel.map_width = ???;
+    MapLevel.map_height = ???;
+    */
+    // map for mountains
+    MapMountains.tiles = &TilesMountains;
+    MapMountains.map = &MapBackgrounds[ 0 ][ 0 ];
+    MapMountains.map_width = 16;
+    MapMountains.map_height = 1;
+    
+    // map for clouds
+    MapClouds.tiles = &TilesClouds;
+    MapClouds.map = &MapBackgrounds[ 0 ][ 0 ];
+    MapClouds.map_width = 16;
+    MapClouds.map_height = 1;
+    
+    // ------------------------------------
+    // PART 6: GAME INITIALIZATIONS
     // ------------------------------------
     
     // configure the console
@@ -103,7 +153,7 @@ void main( void )
     GameState = Title_Initialize;
     
     // ------------------------------------
-    // PART 4: MAIN LOOP
+    // PART 7: MAIN LOOP
     // ------------------------------------
     
     // the game is structured in a series of scenes;
@@ -119,7 +169,6 @@ void main( void )
               Intro_RunStateMachine();
               break;
             
-            /*
             case Scene_Tutorial:
               Tutorial_RunStateMachine();
               break;
@@ -128,10 +177,13 @@ void main( void )
               Gameplay_RunStateMachine();
               break;
             
+            case Scene_ChangeSkill:
+              ChangeSkill_RunStateMachine();
+              break;
+            
             case Scene_Ending:
               Ending_RunStateMachine();
               break;
-            */
         }
         
         // wait until next frame

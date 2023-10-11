@@ -165,17 +165,24 @@ void Intro_RunState_FadeOut()
 
 void Intro_RunStateMachine()
 {
-    if( GameState == Story_Initialize )
-      Intro_RunState_Initialize();
-    
-    else if( GameState == Story_WriteText )
-      Intro_RunState_WriteText();
-    
-    else if( GameState == Story_Waiting )
-      Intro_RunState_Waiting();
-    
-    else if( GameState == Story_FadeOut )
-      Intro_RunState_FadeOut();
+    switch( GameState )
+    {
+        case Story_Initialize:
+           Intro_RunState_Initialize();
+           break;
+        
+        case Story_WriteText:
+            Intro_RunState_WriteText();
+            break;
+        
+        case Story_Waiting:
+            Intro_RunState_Waiting();
+            break;
+        
+        case Story_FadeOut:
+            Intro_RunState_FadeOut();
+            break;
+    }
     
     // count the frames in current state
     Intro_ElapsedFrames++;
