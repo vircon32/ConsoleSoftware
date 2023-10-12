@@ -110,29 +110,29 @@ void DefineRegions_TextureGameplay()
     select_region( RegionSkillsIconChange );
     define_region( 484,705,  523,744,  484,705 );
     select_region( RegionNeutralJumpUp );
-    define_region( 613,464,  645,508,  634,505 );
+    define_region( 613,464,  645,508,  630,505 );
     select_region( RegionPistolJumpUp );
-    define_region( 689,336,  738,380,  710,377 );
+    define_region( 689,336,  738,380,  706,377 );
     select_region( RegionCapeJumpUp );
-    define_region( 441,656,  484,700,  473,697 );
+    define_region( 441,656,  484,700,  469,697 );
     select_region( RegionWandJumpUp );
-    define_region( 705,602,  745,656,  726,653 );
+    define_region( 705,602,  745,656,  722,653 );
     select_region( RegionBootsJumpUp );
-    define_region( 749,653,  781,699,  770,696 );
+    define_region( 749,653,  781,699,  766,696 );
     select_region( RegionNeutralJumpDown );
-    define_region( 649,464,  683,501,  670,505 );
+    define_region( 649,464,  683,501,  666,505 );
     select_region( RegionPistolJumpDown );
-    define_region( 742,336,  791,373,  763,377 );
+    define_region( 742,336,  791,373,  759,377 );
     select_region( RegionCapeJumpDown );
-    define_region( 488,656,  533,693,  520,697 );
+    define_region( 488,656,  533,693,  516,697 );
     select_region( RegionWandJumpDown );
-    define_region( 749,602,  789,649,  770,653 );
+    define_region( 749,602,  789,649,  766,653 );
     select_region( RegionBootsJumpDown );
-    define_region( 708,660,  745,699,  729,703 );
+    define_region( 708,660,  745,699,  725,703 );
 
     // define region matrices
-    define_region_matrix( FirstRegionMountains, 1,0,  160,192,  1,192,  4,1,  0 );
-    define_region_matrix( FirstRegionClouds, 1,194,  160,372,  1,372,  4,1,  0 );
+    define_region_matrix( FirstRegionMountains, 1,1,  160,192,  1,1,  4,1,  0 );
+    define_region_matrix( FirstRegionClouds, 1,194,  160,372,  1,194,  4,1,  0 );
     define_region_matrix( FirstRegionTileset, 1,376,  40,415,  1,376,  11,5,  0 );
     define_region_matrix( FirstRegionCircleHighlight, 1,579,  72,650,  36,614,  6,1,  1 );
     define_region_matrix( FirstRegionDigits, 191,654,  212,685,  191,654,  10,1,  1 );
@@ -142,16 +142,16 @@ void DefineRegions_TextureGameplay()
     define_region_matrix( FirstRegionBirdFlap, 444,376,  528,443,  487,425,  1,2,  1 );
     define_region_matrix( FirstRegionSkillSelection, 441,748,  480,787,  441,748,  2,1,  1 );
     define_region_matrix( FirstRegionBullet, 766,167,  775,176,  770,171,  2,1,  1 );
-    define_region_matrix( FirstRegionNeutralIdle, 613,420,  645,460,  634,460,  2,1,  1 );
-    define_region_matrix( FirstRegionPistolIdle, 689,292,  738,332,  710,332,  2,1,  1 );
-    define_region_matrix( FirstRegionCapeIdle, 595,514,  639,554,  628,554,  2,1,  1 );
-    define_region_matrix( FirstRegionWandIdle, 441,602,  481,652,  462,652,  2,1,  1 );
-    define_region_matrix( FirstRegionBootsIdle, 613,376,  648,416,  634,416,  2,1,  1 );
-    define_region_matrix( FirstRegionNeutralWalk, 689,470,  723,510,  710,510,  2,2,  1 );
-    define_region_matrix( FirstRegionPistolWalk, 689,384,  738,424,  711,424,  2,2,  1 );
-    define_region_matrix( FirstRegionCapeWalk, 595,558,  640,598,  628,598,  4,1,  1 );
-    define_region_matrix( FirstRegionWandWalk, 527,602,  569,652,  549,652,  4,1,  1 );
-    define_region_matrix( FirstRegionBootsWalk, 537,656,  573,696,  559,695,  4,1,  1 );
+    define_region_matrix( FirstRegionNeutralIdle, 613,420,  645,460,  630,460,  2,1,  1 );
+    define_region_matrix( FirstRegionPistolIdle, 689,292,  738,332,  706,332,  2,1,  1 );
+    define_region_matrix( FirstRegionCapeIdle, 595,514,  639,554,  624,554,  2,1,  1 );
+    define_region_matrix( FirstRegionWandIdle, 441,602,  481,652,  458,652,  2,1,  1 );
+    define_region_matrix( FirstRegionBootsIdle, 613,376,  648,416,  630,416,  2,1,  1 );
+    define_region_matrix( FirstRegionNeutralWalk, 689,470,  723,510,  706,510,  2,2,  1 );
+    define_region_matrix( FirstRegionPistolWalk, 689,384,  738,424,  707,424,  2,2,  1 );
+    define_region_matrix( FirstRegionCapeWalk, 595,558,  640,598,  624,598,  4,1,  1 );
+    define_region_matrix( FirstRegionWandWalk, 527,602,  569,652,  545,652,  4,1,  1 );
+    define_region_matrix( FirstRegionBootsWalk, 537,656,  573,696,  554,695,  4,1,  1 );
 }
 
 // end include guard

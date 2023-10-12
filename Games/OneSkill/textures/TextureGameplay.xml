@@ -22,21 +22,21 @@
     <region name="PlayerDeath" left="532" top="536" right="564" bottom="579" hotspot-x="553" hotspot-y="579"/>
     <region name="SkillsIconGUI" left="441" top="705" right="480" bottom="744" hotspot-x="441" hotspot-y="705"/>
     <region name="SkillsIconChange" left="484" top="705" right="523" bottom="744" hotspot-x="484" hotspot-y="705"/>
-    <region name="NeutralJumpUp" left="613" top="464" right="645" bottom="508" hotspot-x="634" hotspot-y="505"/>
-    <region name="PistolJumpUp" left="689" top="336" right="738" bottom="380" hotspot-x="710" hotspot-y="377"/>
-    <region name="CapeJumpUp" left="441" top="656" right="484" bottom="700" hotspot-x="473" hotspot-y="697"/>
-    <region name="WandJumpUp" left="705" top="602" right="745" bottom="656" hotspot-x="726" hotspot-y="653"/>
-    <region name="BootsJumpUp" left="749" top="653" right="781" bottom="699" hotspot-x="770" hotspot-y="696"/>
-    <region name="NeutralJumpDown" left="649" top="464" right="683" bottom="501" hotspot-x="670" hotspot-y="505"/>
-    <region name="PistolJumpDown" left="742" top="336" right="791" bottom="373" hotspot-x="763" hotspot-y="377"/>
-    <region name="CapeJumpDown" left="488" top="656" right="533" bottom="693" hotspot-x="520" hotspot-y="697"/>
-    <region name="WandJumpDown" left="749" top="602" right="789" bottom="649" hotspot-x="770" hotspot-y="653"/>
-    <region name="BootsJumpDown" left="708" top="660" right="745" bottom="699" hotspot-x="729" hotspot-y="703"/>
+    <region name="NeutralJumpUp" left="613" top="464" right="645" bottom="508" hotspot-x="630" hotspot-y="505"/>
+    <region name="PistolJumpUp" left="689" top="336" right="738" bottom="380" hotspot-x="706" hotspot-y="377"/>
+    <region name="CapeJumpUp" left="441" top="656" right="484" bottom="700" hotspot-x="469" hotspot-y="697"/>
+    <region name="WandJumpUp" left="705" top="602" right="745" bottom="656" hotspot-x="722" hotspot-y="653"/>
+    <region name="BootsJumpUp" left="749" top="653" right="781" bottom="699" hotspot-x="766" hotspot-y="696"/>
+    <region name="NeutralJumpDown" left="649" top="464" right="683" bottom="501" hotspot-x="666" hotspot-y="505"/>
+    <region name="PistolJumpDown" left="742" top="336" right="791" bottom="373" hotspot-x="759" hotspot-y="377"/>
+    <region name="CapeJumpDown" left="488" top="656" right="533" bottom="693" hotspot-x="516" hotspot-y="697"/>
+    <region name="WandJumpDown" left="749" top="602" right="789" bottom="649" hotspot-x="766" hotspot-y="653"/>
+    <region name="BootsJumpDown" left="708" top="660" right="745" bottom="699" hotspot-x="725" hotspot-y="703"/>
     <matrix columns = "4" rows="1" separation="0">
-        <region name="Mountains" left="1" top="0" right="160" bottom="192" hotspot-x="1" hotspot-y="192"/>
+        <region name="Mountains" left="1" top="1" right="160" bottom="192" hotspot-x="1" hotspot-y="1"/>
     </matrix>
     <matrix columns = "4" rows="1" separation="0">
-        <region name="Clouds" left="1" top="194" right="160" bottom="372" hotspot-x="1" hotspot-y="372"/>
+        <region name="Clouds" left="1" top="194" right="160" bottom="372" hotspot-x="1" hotspot-y="194"/>
     </matrix>
     <matrix columns = "11" rows="5" separation="0">
         <region name="Tileset" left="1" top="376" right="40" bottom="415" hotspot-x="1" hotspot-y="376"/>
@@ -66,33 +66,33 @@
         <region name="Bullet" left="766" top="167" right="775" bottom="176" hotspot-x="770" hotspot-y="171"/>
     </matrix>
     <matrix columns = "2" rows="1" separation="1">
-        <region name="NeutralIdle" left="613" top="420" right="645" bottom="460" hotspot-x="634" hotspot-y="460"/>
+        <region name="NeutralIdle" left="613" top="420" right="645" bottom="460" hotspot-x="630" hotspot-y="460"/>
     </matrix>
     <matrix columns = "2" rows="1" separation="1">
-        <region name="PistolIdle" left="689" top="292" right="738" bottom="332" hotspot-x="710" hotspot-y="332"/>
+        <region name="PistolIdle" left="689" top="292" right="738" bottom="332" hotspot-x="706" hotspot-y="332"/>
     </matrix>
     <matrix columns = "2" rows="1" separation="1">
-        <region name="CapeIdle" left="595" top="514" right="639" bottom="554" hotspot-x="628" hotspot-y="554"/>
+        <region name="CapeIdle" left="595" top="514" right="639" bottom="554" hotspot-x="624" hotspot-y="554"/>
     </matrix>
     <matrix columns = "2" rows="1" separation="1">
-        <region name="WandIdle" left="441" top="602" right="481" bottom="652" hotspot-x="462" hotspot-y="652"/>
+        <region name="WandIdle" left="441" top="602" right="481" bottom="652" hotspot-x="458" hotspot-y="652"/>
     </matrix>
     <matrix columns = "2" rows="1" separation="1">
-        <region name="BootsIdle" left="613" top="376" right="648" bottom="416" hotspot-x="634" hotspot-y="416"/>
+        <region name="BootsIdle" left="613" top="376" right="648" bottom="416" hotspot-x="630" hotspot-y="416"/>
     </matrix>
     <matrix columns = "2" rows="2" separation="1">
-        <region name="NeutralWalk" left="689" top="470" right="723" bottom="510" hotspot-x="710" hotspot-y="510"/>
+        <region name="NeutralWalk" left="689" top="470" right="723" bottom="510" hotspot-x="706" hotspot-y="510"/>
     </matrix>
     <matrix columns = "2" rows="2" separation="1">
-        <region name="PistolWalk" left="689" top="384" right="738" bottom="424" hotspot-x="711" hotspot-y="424"/>
+        <region name="PistolWalk" left="689" top="384" right="738" bottom="424" hotspot-x="707" hotspot-y="424"/>
     </matrix>
     <matrix columns = "4" rows="1" separation="1">
-        <region name="CapeWalk" left="595" top="558" right="640" bottom="598" hotspot-x="628" hotspot-y="598"/>
+        <region name="CapeWalk" left="595" top="558" right="640" bottom="598" hotspot-x="624" hotspot-y="598"/>
     </matrix>
     <matrix columns = "4" rows="1" separation="1">
-        <region name="WandWalk" left="527" top="602" right="569" bottom="652" hotspot-x="549" hotspot-y="652"/>
+        <region name="WandWalk" left="527" top="602" right="569" bottom="652" hotspot-x="545" hotspot-y="652"/>
     </matrix>
     <matrix columns = "4" rows="1" separation="1">
-        <region name="BootsWalk" left="537" top="656" right="573" bottom="696" hotspot-x="559" hotspot-y="695"/>
+        <region name="BootsWalk" left="537" top="656" right="573" bottom="696" hotspot-x="554" hotspot-y="695"/>
     </matrix>
 </texture-regions>

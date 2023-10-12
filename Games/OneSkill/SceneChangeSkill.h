@@ -1,8 +1,18 @@
+// *****************************************************************************
+    // start include guard
+    #ifndef SCENE_CHANGE_SKILL_H
+    #define SCENE_CHANGE_SKILL_H
+    
+    // include project headers
+    #include "Globals.h"
+// *****************************************************************************
+
+
 // auxiliary function to handle skills cyclically
 int NormalizeSkillNumber( int SkillNumber )
 {
-    if( SkillNumber < 0  ) return SkillNumber + 4;
-    if( SkillNumber >= 4 ) return SkillNumber - 4;
+    if( SkillNumber < 1  ) return SkillNumber + 4;
+    if( SkillNumber > 4 ) return SkillNumber - 4;
     return SkillNumber;
 }
 
@@ -48,8 +58,7 @@ void ChangeSkill_ChangeState( int NewState )
 void ChangeSkill_DrawScene( int AlphaLevel )
 {
     // first draw the gameplay scene underneath
-    // (how???)
-    clear_screen( color_cyan );
+    DrawCurrentRoom();
     
     // darken the background
     clear_screen( make_color_rgba( 0,0,0, AlphaLevel / 2 ) );
@@ -80,7 +89,7 @@ void ChangeSkill_DrawScene( int AlphaLevel )
         float IconY = ChangeSkill_CenterY + IconsRadius * sin( Angle ) - 20;
         
         int SkillNumber = NormalizeSkillNumber( ChangeSkill_SelectedSkill + i );
-        select_region( FirstRegionSkillIcons + SkillNumber );
+        select_region( FirstRegionSkillIcons + (SkillNumber-1) );
         draw_region_at( IconX, IconY );
     }
     
@@ -99,7 +108,13 @@ void ChangeSkill_DrawScene( int AlphaLevel )
 
 void ChangeSkill_RunState_Initialize()
 {
-    ChangeSkill_SelectedSkill = 0; // use current skill!!
+    // use current skill, but start at
+    // pistol if player has no skill yet
+    ChangeSkill_SelectedSkill = Player1.Skill;
+    
+    if( ChangeSkill_SelectedSkill <= 0 )
+      ChangeSkill_SelectedSkill = 1;
+    
     ChangeSkill_NextSkillSign = 0;
     ChangeSkill_CurrentAngle = 0; // use current skill??
     
@@ -152,7 +167,7 @@ void ChangeSkill_RunState_Waiting()
     draw_region_at( ChangeSkill_CenterX - 20, ChangeSkill_CenterY - (WheelRadius + 20) );
     
     // draw skill name
-    select_region( FirstRegionSkillNamesChange + ChangeSkill_SelectedSkill );
+    select_region( FirstRegionSkillNamesChange + (ChangeSkill_SelectedSkill-1) );
     draw_region_at( ChangeSkill_CenterX, ChangeSkill_CenterY - (WheelRadius + 30) );
     
     // select previous skill
@@ -231,3 +246,9 @@ void ChangeSkill_RunStateMachine()
     // count the frames in current state
     ChangeSkill_ElapsedFrames++;
 }
+
+
+// *****************************************************************************
+    // end include guard
+    #endif
+// *****************************************************************************

@@ -1,3 +1,10 @@
+// *****************************************************************************
+    // start include guard
+    #ifndef TILEPROPERTIES_H
+    #define TILEPROPERTIES_H
+// *****************************************************************************
+
+
 // ---------------------------------------------------------
 //   PROPERTIES OF THE LEVEL TILESET
 // ---------------------------------------------------------
@@ -27,42 +34,20 @@ enum TileTypes
     Tile_Bird
 };
 
-// ---------------------------------------------------------
-
-bool TileHasNoBoundaries( int Tile )
-{
-    return (Tile == Tile_Empty || Tile >= Tile_OffBlock );
-}
 
 // ---------------------------------------------------------
-
-bool TileHasLeftBoundary( int Tile )
-{
-    return (Tile > Tile_Empty && Tile <= Tile_TimedSpikes);
-}
-
+//   PROPERTIES FOR EACH TILE TYPE
 // ---------------------------------------------------------
 
-bool TileHasRightBoundary( int Tile )
-{
-    return (Tile > Tile_Empty && Tile <= Tile_TimedSpikes);
-}
 
-// ---------------------------------------------------------
+bool TileHasNoBoundaries( int Tile );
+bool TileHasLeftBoundary( int Tile );
+bool TileHasRightBoundary( int Tile );
+bool TileHasTopBoundary( int Tile );
+bool TileHasBottomBoundary( int Tile );
 
-bool TileHasTopBoundary( int Tile )
-{
-    // all spikes will let the player sink in and get
-    // damaged unless they are currently wearing the boots
-    if( Tile == Tile_Spikes || Tile == Tile_TimedSpikes )
-      return (PlayerSkill == Skills_Boots);
-    
-    return (Tile > Tile_Empty && Tile <= Tile_TimedSpikes);
-}
 
-// ---------------------------------------------------------
-
-bool TileHasBottomBoundary( int Tile )
-{
-    return (Tile > Tile_Empty && Tile <= Tile_TimedSpikes);
-}
+// *****************************************************************************
+    // end include guard
+    #endif
+// *****************************************************************************

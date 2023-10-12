@@ -1,31 +1,40 @@
-// include Vircon libraries
-#include "time.h"
-#include "video.h"
-#include "audio.h"
-#include "math.h"
-#include "input.h"
-#include "misc.h"
-#include "string.h"
-
-// include additional libraries
-#include "textfont.h"
-#include "tilemap.h"
-
-// include this project files
-#include "Definitions.h"
-#include "TextureGameplay.h"
-#include "TextureTitle.h"
-#include "TextureCutscenes.h"
-#include "TextureFont11x16.h"
-#include "Levels.h"
-
-// include all game scenes
-#include "SceneTitle.h"
-#include "SceneIntro.h"
-#include "SceneGameplay.h"
-#include "SceneChangeSkill.h"
-#include "SceneTutorial.h"
-#include "SceneEnding.h"
+// *****************************************************************************
+    // include Vircon libraries
+    #include "time.h"
+    #include "video.h"
+    #include "audio.h"
+    #include "math.h"
+    #include "input.h"
+    #include "misc.h"
+    #include "string.h"
+    
+    // include this project files
+    #include "Definitions.h"
+    #include "TextureGameplay.h"
+    #include "TextureTitle.h"
+    #include "TextureCutscenes.h"
+    #include "TextureFont11x16.h"
+    #include "Levels.h"
+    
+    // include all game scenes
+    #include "SceneTitle.h"
+    #include "SceneIntro.h"
+    #include "SceneGameplay.h"
+    #include "SceneChangeSkill.h"
+    #include "SceneTutorial.h"
+    #include "SceneEnding.h"
+    
+    // include all C files
+    // (this compiler has no linker)
+    #include "Box.c"
+    #include "DrawFunctions.c"
+    #include "GameLogic.c"
+    #include "Levels.c"
+    #include "Physics.c"
+    #include "Player.c"
+    #include "RoomMap.c"
+    #include "TileProperties.c"
+// *****************************************************************************
 
 
 // ---------------------------------------------------------
@@ -100,16 +109,16 @@ void main( void )
     
     // tileset for mountains background
     TilesMountains.width = 160;
-    TilesMountains.height = 720;   // not true, but will be useful
+    TilesMountains.height = 192;
     TilesMountains.gap_x = 0;
     TilesMountains.gap_y = 0;
     TilesMountains.texture_id = TextureGameplay;
     TilesMountains.tile_zero_region_id = FirstRegionMountains;
     TilesMountains.draw_tile_zero = true;
     
-    // tileset for mountains background
+    // tileset for clouds background
     TilesClouds.width = 160;
-    TilesClouds.height = 720;   // not true, but will be useful
+    TilesClouds.height = 179;
     TilesClouds.gap_x = 0;
     TilesClouds.gap_y = 0;
     TilesClouds.texture_id = TextureGameplay;
@@ -119,22 +128,23 @@ void main( void )
     // ------------------------------------
     // PART 5: CREATE TILE MAPS
     // ------------------------------------
-    /*
+    
     // map for levels
     MapLevel.tiles = &TilesLevel;
-    MapLevel.map = &SomeMap[ 0 ][ 0 ]; ??????
-    MapLevel.map_width = ???;
-    MapLevel.map_height = ???;
-    */
+    MapLevel.map = &CurrentRoomMap.Tiles[ 0 ][ 0 ];
+    MapLevel.array_width = MaxTilesInX;
+    
     // map for mountains
     MapMountains.tiles = &TilesMountains;
     MapMountains.map = &MapBackgrounds[ 0 ][ 0 ];
+    MapMountains.array_width = 16;
     MapMountains.map_width = 16;
     MapMountains.map_height = 1;
     
     // map for clouds
     MapClouds.tiles = &TilesClouds;
     MapClouds.map = &MapBackgrounds[ 0 ][ 0 ];
+    MapClouds.array_width = 16;
     MapClouds.map_width = 16;
     MapClouds.map_height = 1;
     
@@ -149,8 +159,8 @@ void main( void )
     // set initial game state
     CreateGameLevels();
     ResetGameSession();
-    GameScene = Scene_Title;
-    GameState = Title_Initialize;
+    GameScene = Scene_Gameplay;
+    GameState = Gameplay_Initialize;
     
     // ------------------------------------
     // PART 7: MAIN LOOP

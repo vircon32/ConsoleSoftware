@@ -1,3 +1,10 @@
+// *****************************************************************************
+    // start include guard
+    #ifndef DEFINITIONS_H
+    #define DEFINITIONS_H
+// *****************************************************************************
+
+
 // ---------------------------------------------------------
 //   TEXTURES
 // ---------------------------------------------------------
@@ -134,34 +141,22 @@ enum StatesChangeSkill
 // ---------------------------------------------------------
 
 
+// game-wide level structure
 #define NumberOfLevels  2
 #define RoomsPerLevel   2
 
-
-// ---------------------------------------------------------
-//   GLOBAL VARIABLES
-// ---------------------------------------------------------
-
-
-// globals for game state
-int GameScene;      // scene currently running
-int GameState;      // state within that scene
-
-// globals for game session
-int LevelNumber;    // starts from 1, not 0
-int RoomNumber;     // starts from 1, not 0
-
-// set initial state for the whole game
-void ResetGameSession()
+// all available skills
+enum PlayerSkills
 {
-    LevelNumber = 1;
-    RoomNumber = 1;
-}
+    Skill_None = 0,     // only usable at level start
+    Skill_Pistol,
+    Skill_Cape,
+    Skill_Wand,
+    Skill_Boots
+};
 
-// global objects
-textfont Font11x16;
-tileset TilesLevel, TilesMountains, TilesClouds;
-tilemap MapLevel, MapMountains, MapClouds;
 
-// artificial "map" for cloud and mountain backgrounds
-int[ 1 ][ 16 ] MapBackgrounds = {{ 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }};
+// *****************************************************************************
+    // end include guard
+    #endif
+// *****************************************************************************

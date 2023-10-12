@@ -62,9 +62,12 @@ struct tilemap
     // its first element
     int* map;
     
-    // these are the map dimensions in tiles; they will be the
-    // same as the dimensions of the 2D array
+    // these are the map dimensions in tiles; these may be
+    // different from the dimensions of the 2D array
     int map_width, map_height;
+    
+    // the width of the 2D array
+    int array_width;
     
     // current camera position, relative to the map's top-left
     // corner (coordinates are in pixels); this will determine
@@ -146,7 +149,7 @@ void tilemap_draw( tilemap* tm )
     for( int tile_y = min_tile_y; tile_y <= max_tile_y; ++tile_y )
     {
         int draw_x = map_topleft_x + min_tile_x * tile_step_x;
-        int* current_tile = tm->map + tm->map_width * tile_y + min_tile_x;
+        int* current_tile = tm->map + tm->array_width * tile_y + min_tile_x;
         
         for( int tile_x = min_tile_x; tile_x <= max_tile_x; ++tile_x )
         {
