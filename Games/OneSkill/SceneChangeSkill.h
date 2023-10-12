@@ -27,10 +27,6 @@ int ChangeSkill_SelectedSkill;
 int ChangeSkill_NextSkillSign;
 float ChangeSkill_CurrentAngle;
 
-// current wheel center
-int ChangeSkill_CenterX;
-int ChangeSkill_CenterY;
-
 // wheel properties
 #define WheelRadius 78
 
@@ -74,7 +70,7 @@ void ChangeSkill_DrawScene( int AlphaLevel )
     // draw the wheel
     set_drawing_angle( ChangeSkill_CurrentAngle );
     select_region( RegionSkillCircle );
-    draw_region_rotated_at( ChangeSkill_CenterX, ChangeSkill_CenterY );
+    draw_region_rotated_at( SkillWheelCenterX, SkillWheelCenterY );
     
     // draw skill icons
     float IconsRadius = WheelRadius;
@@ -85,8 +81,8 @@ void ChangeSkill_DrawScene( int AlphaLevel )
     for( int i = 0; i < 4; ++i )
     {
         float Angle = ChangeSkill_CurrentAngle + (pi/2.0) * (i - 1);
-        float IconX = ChangeSkill_CenterX + IconsRadius * cos( Angle ) - 20;
-        float IconY = ChangeSkill_CenterY + IconsRadius * sin( Angle ) - 20;
+        float IconX = SkillWheelCenterX + IconsRadius * cos( Angle ) - 20;
+        float IconY = SkillWheelCenterY + IconsRadius * sin( Angle ) - 20;
         
         int SkillNumber = NormalizeSkillNumber( ChangeSkill_SelectedSkill + i );
         select_region( FirstRegionSkillIcons + (SkillNumber-1) );
@@ -95,7 +91,7 @@ void ChangeSkill_DrawScene( int AlphaLevel )
     
     // draw center icon
     select_region( RegionSkillsIconChange );
-    draw_region_at( ChangeSkill_CenterX - 20, ChangeSkill_CenterY - 20 );
+    draw_region_at( SkillWheelCenterX - 20, SkillWheelCenterY - 20 );
     
     set_multiply_color( color_white );
 }
@@ -116,10 +112,12 @@ void ChangeSkill_RunState_Initialize()
       ChangeSkill_SelectedSkill = 1;
     
     ChangeSkill_NextSkillSign = 0;
-    ChangeSkill_CurrentAngle = 0; // use current skill??
+    ChangeSkill_CurrentAngle = 0;
     
-    ChangeSkill_CenterX = 320;
-    ChangeSkill_CenterY = 180;
+    // adapt wheel center from room coordinates
+    // to screen coordinates
+    SkillWheelCenterX += CurrentRoomMap.TopLeftOnScreen.x;
+    SkillWheelCenterY += CurrentRoomMap.TopLeftOnScreen.y;
     
     // transition immediately
     ChangeSkill_ChangeState( ChangeSkill_IconsAppear );
@@ -164,11 +162,11 @@ void ChangeSkill_RunState_Waiting()
     // draw icon highlight
     int CurrentFrame = (ChangeSkill_ElapsedFrames / 8) % 2;
     select_region( FirstRegionSkillSelection + CurrentFrame );
-    draw_region_at( ChangeSkill_CenterX - 20, ChangeSkill_CenterY - (WheelRadius + 20) );
+    draw_region_at( SkillWheelCenterX - 20, SkillWheelCenterY - (WheelRadius + 20) );
     
     // draw skill name
     select_region( FirstRegionSkillNamesChange + (ChangeSkill_SelectedSkill-1) );
-    draw_region_at( ChangeSkill_CenterX, ChangeSkill_CenterY - (WheelRadius + 30) );
+    draw_region_at( SkillWheelCenterX, SkillWheelCenterY - (WheelRadius + 30) );
     
     // select previous skill
     if( gamepad_left() == 1 )
@@ -190,7 +188,7 @@ void ChangeSkill_RunState_Waiting()
     if( gamepad_button_a() == 1 || gamepad_button_b() == 1 )
     {
         // apply skill change
-        // ??
+        Player1.Skill = (PlayerSkills)ChangeSkill_SelectedSkill;
         
         ChangeSkill_ChangeState( ChangeSkill_FadeOut );
     }

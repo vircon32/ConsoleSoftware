@@ -6,6 +6,24 @@
     // include project headers
     #include "Player.h"
     #include "RoomMap.h"
+    
+    // now include all objects used in levels
+    // (all these use the base headers and the player)
+    // order has to be based on their interdependencies
+    #include "levelobjects/SkillPost.h"
+    /*
+    #include "levelobjects/Highlight.h"
+    #include "levelobjects/ClosedDoor.h"
+    #include "levelobjects/RoomDoor.h"
+    #include "levelobjects/RoomDoor.h"
+    #include "levelobjects/Spike.h"
+    #include "levelobjects/TimedSpike.h"
+    #include "levelobjects/Golem.h"
+    #include "levelobjects/Bird.h"
+    #include "levelobjects/Crate.h"
+    #include "levelobjects/OnOffBlock.h"
+    #include "levelobjects/PistolShot.h"
+    */
 // *****************************************************************************
 
 
@@ -18,8 +36,12 @@
 RoomMap CurrentRoomMap;
 Player Player1;
 //Goal RoomGoal;
-/*
+
 // arrays of level objects
+SkillPost[ 10 ] SkillPosts;
+int ExistingSkillPosts;
+
+/*
 Coin[ 9 ] Coins;
 int ExistingCoins;
 

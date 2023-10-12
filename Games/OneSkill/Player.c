@@ -17,7 +17,7 @@ void Player_Create( Player* P, int TileX, int TileY )
     P->ShapeBox.Hotspot.x = 11;
     P->ShapeBox.Hotspot.y = 37;
     P->StartPosition.x = TileWidth * (TileX + 0.5);
-    P->StartPosition.y = TileHeight * (TileY + 1) - 1;
+    P->StartPosition.y = TileHeight * (TileY + 1);
 }
 
 // ---------------------------------------------------------

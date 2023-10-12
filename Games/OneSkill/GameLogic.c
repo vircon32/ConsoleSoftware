@@ -5,23 +5,6 @@
     #include "Box.h"
     #include "Physics.h"
     #include "Globals.h"
-    
-    // now include all objects used in levels
-    // (all these use the base headers and the player)
-    // order has to be based on their interdependencies
-    /*
-    #include "levelobjects/Highlight.h"
-    #include "levelobjects/ClosedDoor.h"
-    #include "levelobjects/RoomDoor.h"
-    #include "levelobjects/RoomDoor.h"
-    #include "levelobjects/Spike.h"
-    #include "levelobjects/TimedSpike.h"
-    #include "levelobjects/Golem.h"
-    #include "levelobjects/Bird.h"
-    #include "levelobjects/Crate.h"
-    #include "levelobjects/OnOffBlock.h"
-    #include "levelobjects/PistolShot.h"
-    */
 // *****************************************************************************
 
 
@@ -39,6 +22,8 @@ void LoadRoom( Room* R )
     MapLevel.map_height = R->TilesInY;
     
     // initialize all object counts to zero
+    ExistingSkillPosts = 0;
+    
     /*
     ExistingCoins = 0;
     ExistingSpikes = 0;
@@ -66,6 +51,15 @@ void LoadRoom( Room* R )
             *TilePointer = Tile_Empty;
             Player_Create( &Player1, TileX, TileY );
         }
+        
+        // create a skill post
+        else if( TileValue == Tile_SkillPost )
+        {
+            *TilePointer = Tile_Empty;
+            SkillPost_Create( &SkillPosts[ ExistingSkillPosts ], TileX, TileY );
+            ExistingSkillPosts++;
+        }
+        
         /*
         // create a coin
         else if( TileValue == Tile_Coin )
@@ -140,6 +134,9 @@ void ResetRoom()
     //Goal_Reset( &RoomGoal );
     
     // reset object lists
+    for( int i = 0; i < ExistingSkillPosts; i++ )
+      SkillPost_Reset( &SkillPosts[ i ] );
+  
     /*
     for( int i = 0; i < ExistingCoins; i++ )
       Coin_Reset( &Coins[ i ] );
@@ -176,6 +173,9 @@ void ResetRoom()
 
 void UpdateRoom()
 {
+    for( int i = 0; i < ExistingSkillPosts; i++ )
+      SkillPost_Update( &SkillPosts[ i ], &Player1 );
+    
     /*
     Goal_Update( &RoomGoal, &Player1 );
     

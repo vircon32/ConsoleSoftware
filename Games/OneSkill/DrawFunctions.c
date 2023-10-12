@@ -15,6 +15,10 @@
 void DrawCurrentRoom()
 {
     RoomMap_Draw( &CurrentRoomMap );
+    
+    for( int i = 0; i < ExistingSkillPosts; i++ )
+      SkillPost_Draw( &SkillPosts[ i ], &CurrentRoomMap.TopLeftOnScreen );
+    
     /*
     for( int i = 0; i < ExistingCoins; i++ )
       Coin_Draw( &Coins[ i ], &CurrentRoomMap.TopLeftOnScreen );

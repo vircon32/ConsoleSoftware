@@ -37,6 +37,10 @@ tilemap MapLevel, MapMountains, MapClouds;
 // artificial "map" for cloud and mountain backgrounds
 int[ 1 ][ 16 ] MapBackgrounds = {{ 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3, 0, 1, 2, 3 }};
 
+// current wheel center
+int SkillWheelCenterX;
+int SkillWheelCenterY;
+
 
 // *****************************************************************************
     // end include guard
