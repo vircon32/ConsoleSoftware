@@ -117,6 +117,7 @@ enum StatesGameplay
 {
     Gameplay_Initialize = 41,
     Gameplay_LevelIntro,
+    Gameplay_RoomIntro,
     Gameplay_Level,
     Gameplay_Pause,
     Gameplay_Death,

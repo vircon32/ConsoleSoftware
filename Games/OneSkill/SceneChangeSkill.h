@@ -186,12 +186,7 @@ void ChangeSkill_RunState_Waiting()
     
     // apply current skill
     if( gamepad_button_a() == 1 || gamepad_button_b() == 1 )
-    {
-        // apply skill change
-        Player1.Skill = (PlayerSkills)ChangeSkill_SelectedSkill;
-        
-        ChangeSkill_ChangeState( ChangeSkill_FadeOut );
-    }
+      ChangeSkill_ChangeState( ChangeSkill_FadeOut );
 }
 
 // ---------------------------------------------------------
@@ -205,6 +200,15 @@ void ChangeSkill_RunState_FadeOut()
     // when finished change back to gameplay scene
     if( ChangeSkill_ElapsedFrames >= 15 )
     {
+        // apply skill change
+        if( Player1.Skill != ChangeSkill_SelectedSkill )
+        {
+            Player1.Skill = (PlayerSkills)ChangeSkill_SelectedSkill;
+            Vector2D HighlightPosition = Player1.ShapeBox.Position;
+            HighlightPosition.y -= 18;
+            CreateHighlight( &HighlightPosition );
+        }
+        
         GameScene = Scene_Gameplay;
         GameState = Gameplay_Level;
     }

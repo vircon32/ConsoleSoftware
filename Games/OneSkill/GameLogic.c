@@ -48,8 +48,9 @@ void LoadRoom( Room* R )
         // set the player start position
         if( TileValue == Tile_PlayerStart )
         {
-            *TilePointer = Tile_Empty;
             Player_Create( &Player1, TileX, TileY );
+            EntryDoor_Create( &RoomEntry, TileX, TileY );
+            *TilePointer = Tile_Empty;
         }
         
         // create a skill post
@@ -58,6 +59,13 @@ void LoadRoom( Room* R )
             *TilePointer = Tile_Empty;
             SkillPost_Create( &SkillPosts[ ExistingSkillPosts ], TileX, TileY );
             ExistingSkillPosts++;
+        }
+        
+        // position the goal
+        else if( TileValue == Tile_Door )
+        {
+            *TilePointer = Tile_Empty;
+            ExitDoor_Create( &RoomExit, TileX, TileY );
         }
         
         /*
@@ -131,7 +139,7 @@ void ResetRoom()
 {
     // reset single objects
     Player_Reset( &Player1 );
-    //Goal_Reset( &RoomGoal );
+    ExitDoor_Reset( &RoomExit );
     
     // reset object lists
     for( int i = 0; i < ExistingSkillPosts; i++ )
@@ -158,11 +166,11 @@ void ResetRoom()
     
     for( int i = 0; i < ExistingSprings; i++ )
       Spring_Reset( &Springs[ i ] );
+    */
     
     // disable all highlights
     for( int i = 0; i < 5; i++ )
       Highlight_Reset( &Highlights[ i ] );
-    */
 }
 
 
@@ -176,8 +184,9 @@ void UpdateRoom()
     for( int i = 0; i < ExistingSkillPosts; i++ )
       SkillPost_Update( &SkillPosts[ i ], &Player1 );
     
+    ExitDoor_Update( &RoomExit, &Player1 );
+    
     /*
-    Goal_Update( &RoomGoal, &Player1 );
     
     for( int i = 0; i < ExistingCoins; i++ )
       Coin_Update( &Coins[ i ], &Player1 );
@@ -202,8 +211,8 @@ void UpdateRoom()
       
     for( int i = 0; i < ExistingConveyors; i++ )
       Conveyor_Update( &Conveyors[ i ], &Player1 );
+    */
       
     for( int i = 0; i < 5; i++ )
       Highlight_Update( &Highlights[ i ] );
-    */
 }

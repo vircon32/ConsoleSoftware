@@ -4,7 +4,7 @@
     <region name="TextLevel" left="168" top="724" right="279" bottom="755" hotspot-x="168" hotspot-y="724"/>
     <region name="TextClear" left="283" top="724" right="411" bottom="755" hotspot-x="283" hotspot-y="724"/>
     <region name="TextHowToPlay" left="168" top="759" right="397" bottom="790" hotspot-x="282" hotspot-y="759"/>
-    <region name="TextPause" left="592" top="705" right="705" bottom="736" hotspot-x="592" hotspot-y="705"/>
+    <region name="TextPause" left="592" top="705" right="705" bottom="736" hotspot-x="648" hotspot-y="719"/>
     <region name="DashCharacter" left="168" top="654" right="189" bottom="685" hotspot-x="168" hotspot-y="654"/>
     <region name="SkillCircle" left="1" top="654" right="164" bottom="817" hotspot-x="82" hotspot-y="735"/>
     <region name="EndLevelDoor" left="644" top="1" right="738" bottom="83" hotspot-x="672" hotspot-y="83"/>
@@ -94,5 +94,8 @@
     </matrix>
     <matrix columns = "4" rows="1" separation="1">
         <region name="BootsWalk" left="537" top="656" right="573" bottom="696" hotspot-x="554" hotspot-y="695"/>
+    </matrix>
+    <matrix columns = "7" rows="1" separation="1">
+        <region name="EnterDoor" left="525" top="777" right="558" bottom="817" hotspot-x="541" hotspot-y="817"/>
     </matrix>
 </texture-regions>

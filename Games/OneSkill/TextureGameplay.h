@@ -58,6 +58,7 @@
 #define FirstRegionCapeWalk  147
 #define FirstRegionWandWalk  151
 #define FirstRegionBootsWalk  155
+#define FirstRegionEnterDoor  159
 
 // your initialization code must call this function
 void DefineRegions_TextureGameplay() 
@@ -74,7 +75,7 @@ void DefineRegions_TextureGameplay()
     select_region( RegionTextHowToPlay );
     define_region( 168,759,  397,790,  282,759 );
     select_region( RegionTextPause );
-    define_region( 592,705,  705,736,  592,705 );
+    define_region( 592,705,  705,736,  648,719 );
     select_region( RegionDashCharacter );
     define_region( 168,654,  189,685,  168,654 );
     select_region( RegionSkillCircle );
@@ -152,6 +153,7 @@ void DefineRegions_TextureGameplay()
     define_region_matrix( FirstRegionCapeWalk, 595,558,  640,598,  624,598,  4,1,  1 );
     define_region_matrix( FirstRegionWandWalk, 527,602,  569,652,  545,652,  4,1,  1 );
     define_region_matrix( FirstRegionBootsWalk, 537,656,  573,696,  554,695,  4,1,  1 );
+    define_region_matrix( FirstRegionEnterDoor, 525,777,  558,817,  541,817,  7,1,  1 );
 }
 
 // end include guard

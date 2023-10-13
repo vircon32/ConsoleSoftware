@@ -191,6 +191,7 @@ void Tutorial_RunState_FadeOut()
     // change scene when finished
     if( Tutorial_ElapsedFrames >= 60 )
     {
+        ResetGameSession();
         GameScene = Scene_Gameplay;
         GameState = Gameplay_Initialize;
     }

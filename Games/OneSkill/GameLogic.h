@@ -10,12 +10,11 @@
     // now include all objects used in levels
     // (all these use the base headers and the player)
     // order has to be based on their interdependencies
-    #include "levelobjects/SkillPost.h"
-    /*
     #include "levelobjects/Highlight.h"
-    #include "levelobjects/ClosedDoor.h"
-    #include "levelobjects/RoomDoor.h"
-    #include "levelobjects/RoomDoor.h"
+    #include "levelobjects/SkillPost.h"
+    #include "levelobjects/ExitDoor.h"
+    #include "levelobjects/EntryDoor.h"
+    /*
     #include "levelobjects/Spike.h"
     #include "levelobjects/TimedSpike.h"
     #include "levelobjects/Golem.h"
@@ -35,7 +34,8 @@
 // unique level objects
 RoomMap CurrentRoomMap;
 Player Player1;
-//Goal RoomGoal;
+EntryDoor RoomEntry;
+ExitDoor RoomExit;
 
 // arrays of level objects
 SkillPost[ 10 ] SkillPosts;

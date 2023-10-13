@@ -178,13 +178,11 @@ void Player_UpdateAnimation( Player* P )
         return;
     }
     
-    // case 2: level clear
-    if( GameState == Gameplay_LevelClear )
+    // case 2: level or room clear
+    if( GameState == Gameplay_LevelClear || GameState == Gameplay_RoomClear )
     {
-        /*
-        if( (Gameplay_ElapsedFrames & 16) == 0 )
-          P->DrawnRegion = 0; //RegionPlayerVictory;   MIRAR!!
-        */
+        int AnimationFrame = min( Gameplay_ElapsedFrames / 5, 6 );
+        P->DrawnRegion = FirstRegionEnterDoor + AnimationFrame;
         return;
     }
     

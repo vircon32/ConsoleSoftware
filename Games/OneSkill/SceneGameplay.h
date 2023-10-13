@@ -31,14 +31,42 @@ void Gameplay_ChangeState( int NewState )
     &&  NewState == Gameplay_Level )
       play_sound_in_channel( MusicGameplay, ChannelMusic );
     
+    if( OldState == Gameplay_RoomIntro
+    &&  NewState == Gameplay_Level )
+      play_sound_in_channel( MusicGameplay, ChannelMusic );
+    
     if( OldState == Gameplay_Pause
     &&  NewState == Gameplay_Level )
       play_channel( ChannelMusic );
+    
+    if( NewState == Gameplay_RoomClear )
+    {
+        stop_channel( ChannelMusic );
+        play_sound( SoundMenuAccept );
+        
+        Player1.ShapeBox.Position.x = RoomExit.EventBox.Position.x + 20;
+        Player1.ShapeBox.Position.y = RoomExit.EventBox.Position.y + 40;
+        Player1.Skill = Skill_None;
+    }
     
     else if( NewState == Gameplay_LevelClear )
     {
         stop_channel( ChannelMusic );
         play_sound( SoundLevelClear );
+        
+        Player1.ShapeBox.Position.x = RoomExit.EventBox.Position.x + 20;
+        Player1.ShapeBox.Position.y = RoomExit.EventBox.Position.y + 40;
+        Player1.Skill = Skill_None;
+    }
+    
+    else if( NewState == Gameplay_LevelIntro || NewState == Gameplay_RoomIntro )
+    {
+        // load the room (careful: numbering starts at 1)
+        LoadRoom( &GameLevels[ LevelNumber - 1 ].Rooms[ RoomNumber - 1 ] );
+        ResetRoom();
+        
+        // position camera over the player
+        RoomMap_PositionCamera( &CurrentRoomMap );
     }
     
     else if( NewState == Gameplay_Death )
@@ -67,10 +95,6 @@ void Gameplay_ChangeState( int NewState )
 
 void Gameplay_RunState_Initialize()
 {
-    // load the room (careful: numbering starts at 1)
-    LoadRoom( &GameLevels[ LevelNumber - 1 ].Rooms[ RoomNumber - 1 ] );
-    ResetRoom();
-    
     // transition immediately
     Gameplay_ChangeState( Gameplay_LevelIntro );
 }
@@ -79,25 +103,47 @@ void Gameplay_RunState_Initialize()
 
 void Gameplay_RunState_LevelIntro()
 {
-    clear_screen( color_black );
+    if( Gameplay_ElapsedFrames < 60 )
+      clear_screen( color_black );
+  
+    // fade-in effect after a while
+    else
+    {
+        DrawCurrentRoom();
+        DrawGUI();
+        
+        int BlackLevel = max( 0, 255 - 255 * (Gameplay_ElapsedFrames-60) / 60 );
+        clear_screen( make_color_rgba( 0,0,0,BlackLevel ) );
+    }
     
     // write current level and room
     select_texture( TextureGameplay );
     int TextY = screen_height/2-15;
     
     select_region( RegionTextLevel );
-    draw_region_at( 220, TextY );
+    draw_region_at( 240, TextY );
     
     select_region( FirstRegionDigits + LevelNumber );
-    draw_region_at( 350, TextY );
-    
-    select_region( RegionDashCharacter );
-    draw_region_at( 374, TextY );
-    
-    select_region( FirstRegionDigits + RoomNumber );
-    draw_region_at( 398, TextY );
+    draw_region_at( 370, TextY );
     
     if( Gameplay_ElapsedFrames >= 120 )
+      Gameplay_ChangeState( Gameplay_Level );
+}
+
+// ---------------------------------------------------------
+
+void Gameplay_RunState_RoomIntro()
+{
+    // draw the scene
+    DrawCurrentRoom();
+    DrawGUI();
+    
+    // fade-in effect
+    int BlackLevel = max( 0, 255 - 255 * Gameplay_ElapsedFrames / 60 );
+    clear_screen( make_color_rgba( 0,0,0,BlackLevel ) );
+    
+    // when finished go back to level
+    if( Gameplay_ElapsedFrames >= 60 )
       Gameplay_ChangeState( Gameplay_Level );
 }
 
@@ -115,10 +161,6 @@ void Gameplay_RunState_Level()
     // (3) apply the restricted movements, that ensure no penetration
     Player_ApplyMovement( &Player1 );
     
-    // FOR DEBUG ONLY: INSTANT WIN BUTTON
-    // if( gamepad_button_b() == 1 )
-    //   Gameplay_ChangeState( Gameplay_Goal );
-    
     // ------------------------
     
     // apply gameplay logic
@@ -127,8 +169,17 @@ void Gameplay_RunState_Level()
     // move camera to focus on the player
     RoomMap_PositionCamera( &CurrentRoomMap );
     
+    // detect level and room clear
+    if( RoomExit.WasEntered )
+    {
+        if( RoomExit.IsLevelDoor )
+          Gameplay_ChangeState( Gameplay_LevelClear );
+        else
+          Gameplay_ChangeState( Gameplay_RoomClear );
+    }
+    
     // detect player death by fall
-    if( Box_Top( &Player1.ShapeBox ) > CurrentRoomMap.TilesInY * TileHeight )
+    else if( Box_Top( &Player1.ShapeBox ) > CurrentRoomMap.TilesInY * TileHeight )
       Gameplay_ChangeState( Gameplay_Death );
     
     // now that all elements are updated, animate
@@ -137,7 +188,11 @@ void Gameplay_RunState_Level()
     
     // button start pauses the game
     if( gamepad_button_start() == 1 )
-      Gameplay_ChangeState( Gameplay_Pause );
+    {
+        // prevent pause if any other event happened
+        if( GameState == Gameplay_Level )
+          Gameplay_ChangeState( Gameplay_Pause );
+    }
     
     // ------------------------
     
@@ -150,6 +205,22 @@ void Gameplay_RunState_Level()
 
 void Gameplay_RunState_Pause()
 {
+    // draw the scene normally
+    DrawCurrentRoom();
+    DrawGUI();
+    
+    // darken the screen and draw the pause text
+    clear_screen( make_color_rgba(0,0,0,92) );
+    select_region( RegionTextPause );
+    draw_region_at( screen_width/2, screen_height/2 );
+    
+    // avoid pausing & resuming too quickly
+    // in order to prevent unforeseen bugs
+    if( Gameplay_ElapsedFrames < 5 )
+      return;
+    
+    if( gamepad_button_start() == 1 )
+      Gameplay_ChangeState( Gameplay_Level );
 }
 
 // ---------------------------------------------------------
@@ -162,12 +233,69 @@ void Gameplay_RunState_Death()
 
 void Gameplay_RunState_RoomClear()
 {
+    // update player animation
+    Player_UpdateAnimation( &Player1 );
+    
+    // draw the scene
+    DrawCurrentRoom();
+    DrawGUI();
+    
+    // fade out to black
+    int AlphaLevel = min( 255, 255 * Gameplay_ElapsedFrames / 60 );
+    clear_screen( make_color_rgba( 0,0,0,AlphaLevel ) );
+    
+    // when finished, go to next room
+    if( Gameplay_ElapsedFrames >= 60 )
+    {
+        RoomNumber++;
+        Gameplay_ChangeState( Gameplay_RoomIntro );
+    }
 }
 
 // ---------------------------------------------------------
 
 void Gameplay_RunState_LevelClear()
 {
+    // update player animation
+    Player_UpdateAnimation( &Player1 );
+    
+    // draw the scene
+    DrawCurrentRoom();
+    DrawGUI();
+    
+    // write level clear text
+    select_region( RegionTextLevel );
+    draw_region_at( 200, screen_height/2 );
+    
+    select_region( RegionTextClear );
+    draw_region_at( 320, screen_height/2 );
+    
+    // fade out after a while
+    if( Gameplay_ElapsedFrames >= 120 )
+    {
+        int AlphaLevel = min( 255, 255 * (Gameplay_ElapsedFrames-120) / 60 );
+        clear_screen( make_color_rgba( 0,0,0,AlphaLevel ) );
+    }
+    
+    // when finished, go to next level
+    if( Gameplay_ElapsedFrames >= 180 )
+    {
+        LevelNumber++;
+        
+        // continue the game
+        if( LevelNumber <= NumberOfLevels )
+        {
+            RoomNumber = 1;
+            Gameplay_ChangeState( Gameplay_Initialize );
+        }
+        
+        // the whole game was cleared
+        else
+        {
+            GameScene = Scene_Ending;
+            GameState = Story_Initialize;
+        }
+    }
 }
 
 // ---------------------------------------------------------
@@ -192,6 +320,10 @@ void Gameplay_RunStateMachine()
         
         case Gameplay_LevelIntro:
           Gameplay_RunState_LevelIntro();
+          break;
+        
+        case Gameplay_RoomIntro:
+          Gameplay_RunState_RoomIntro();
           break;
         
         case Gameplay_Level:
