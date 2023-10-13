@@ -10,7 +10,7 @@
 
 // player motion constants
 #define Gravity 1000
-#define JumpImpulse 480
+#define JumpImpulse 460
 #define JumpCancelFrames 30
 #define JumpCancelFactor 0.4
 #define MaxSpeedX 150
@@ -40,6 +40,8 @@ struct Player
     int DrawnRegion;          // the currently displayed texture region
     int FramesToCancelJump; 
     int FacingDirectionX;
+    bool IsDead;
+    bool DidDoubleJump;
 };
 
 // ---------------------------------------------------------

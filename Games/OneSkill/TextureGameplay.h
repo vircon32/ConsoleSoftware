@@ -14,7 +14,7 @@
 #define RegionEndRoomDoor  8
 #define RegionClosedDoor  9
 #define RegionSignIn  10
-#define RegionSignButtonX  11
+#define RegionSignUp  11
 #define RegionBlockOnOffSwitching  12
 #define RegionTimedSpikesSwitching  13
 #define RegionSkillPost  14
@@ -88,8 +88,8 @@ void DefineRegions_TextureGameplay()
     define_region( 695,87,  744,151,  700,151 );
     select_region( RegionSignIn );
     define_region( 725,167,  762,178,  744,178 );
-    select_region( RegionSignButtonX );
-    define_region( 725,182,  746,204,  736,204 );
+    select_region( RegionSignUp );
+    define_region( 750,182,  771,204,  761,204 );
     select_region( RegionBlockOnOffSwitching );
     define_region( 725,208,  764,247,  725,208 );
     select_region( RegionTimedSpikesSwitching );

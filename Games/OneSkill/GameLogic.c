@@ -23,10 +23,10 @@ void LoadRoom( Room* R )
     
     // initialize all object counts to zero
     ExistingSkillPosts = 0;
+    ExistingSpikes = 0;
     
     /*
     ExistingCoins = 0;
-    ExistingSpikes = 0;
     ExistingKeys = 0;
     ExistingDoors = 0;
     ExistingMorningStars = 0;
@@ -68,6 +68,12 @@ void LoadRoom( Room* R )
             ExitDoor_Create( &RoomExit, TileX, TileY );
         }
         
+        else if( TileValue == Tile_Spikes )
+        {
+            Spike_Create( &Spikes[ ExistingSpikes ], TileX, TileY );
+            ExistingSpikes++;
+        }
+        
         /*
         // create a coin
         else if( TileValue == Tile_Coin )
@@ -81,12 +87,6 @@ void LoadRoom( Room* R )
         else if( TileValue == Tile_Goal )
         {
             Goal_Create( &RoomGoal, TileX, TileY );
-        }
-        
-        else if( TileValue == Tile_Spike )
-        {
-            Spike_Create( &Spikes[ ExistingSpikes ], TileX, TileY );
-            ExistingSpikes++;
         }
         
         else if( TileValue == Tile_MorningStar )
@@ -128,9 +128,20 @@ void LoadRoom( Room* R )
     }
     
     // configure background rendering
-    CurrentRoomMap.BackgroundColor = make_color_rgb( 203, 219, 252 );
-    CurrentRoomMap.MountainsMultiplyColor = color_white;
-    CurrentRoomMap.CloudsMultiplyColor = color_white;
+    if( RoomNumber == 1 )
+    {
+        // day mode
+        CurrentRoomMap.BackgroundColor = make_color_rgb( 203, 219, 252 );
+        CurrentRoomMap.MountainsMultiplyColor = color_white;
+        CurrentRoomMap.CloudsMultiplyColor = color_white;
+    }
+    else
+    {
+        // night mode
+        CurrentRoomMap.BackgroundColor = make_color_rgb( 50, 60, 60 );
+        CurrentRoomMap.MountainsMultiplyColor = make_color_rgb( 128, 128, 160 );
+        CurrentRoomMap.CloudsMultiplyColor = make_color_rgb( 130, 160, 160 );
+    }
 }
 
 // ---------------------------------------------------------
@@ -168,6 +179,10 @@ void ResetRoom()
       Spring_Reset( &Springs[ i ] );
     */
     
+    // disable all pistol shots
+    for( int i = 0; i < 10; i++ )
+      PistolShot_Reset( &PistolShots[ i ] );
+    
     // disable all highlights
     for( int i = 0; i < 5; i++ )
       Highlight_Reset( &Highlights[ i ] );
@@ -181,18 +196,18 @@ void ResetRoom()
 
 void UpdateRoom()
 {
+    ExitDoor_Update( &RoomExit, &Player1 );
+    
     for( int i = 0; i < ExistingSkillPosts; i++ )
       SkillPost_Update( &SkillPosts[ i ], &Player1 );
     
-    ExitDoor_Update( &RoomExit, &Player1 );
+    for( int i = 0; i < ExistingSpikes; i++ )
+      Spike_Update( &Spikes[ i ], &Player1 );
     
     /*
     
     for( int i = 0; i < ExistingCoins; i++ )
       Coin_Update( &Coins[ i ], &Player1 );
-    
-    for( int i = 0; i < ExistingSpikes; i++ )
-      Spike_Update( &Spikes[ i ], &Player1 );
     
     for( int i = 0; i < ExistingMorningStars; i++ )
       MorningStar_Update( &MorningStars[ i ], &Player1 );
@@ -212,7 +227,10 @@ void UpdateRoom()
     for( int i = 0; i < ExistingConveyors; i++ )
       Conveyor_Update( &Conveyors[ i ], &Player1 );
     */
-      
+    
+    for( int i = 0; i < 10; i++ )
+      PistolShot_Update( &PistolShots[ i ] );
+    
     for( int i = 0; i < 5; i++ )
       Highlight_Update( &Highlights[ i ] );
 }

@@ -37,8 +37,8 @@ void Tutorial_ChangeState( int NewState )
 int[ 3 ][ 150 ] Tutorial_SkillPostText =
 {
     "NICO CAN ONLY USE ONE SKILL AT A TIME.",
-    "PRESSING BUTTON X ON A SKILL POST WILL",
-    "ALLOW YOU TO CHANGE YOUR CURRENT SKILL."
+    "PRESSING UP AT A SKILL POST WILL ALLOW",
+    "YOU TO CHANGE YOUR CURRENT SKILL."
 };
 
 int[ 4 ][ 60 ] Tutorial_SkillTexts =
@@ -104,13 +104,13 @@ void Tutorial_RunState_SkillSystem()
     
     // write skill text, line by line
     if( Tutorial_ElapsedFrames >= 40 )
-      textfont_print_from_left( &Font11x16, 120, 230, Tutorial_SkillPostText[ 0 ] );
+      textfont_print_centered( &Font11x16, screen_width/2, 230, Tutorial_SkillPostText[ 0 ] );
     
     if( Tutorial_ElapsedFrames >= 60 )
-      textfont_print_from_left( &Font11x16, 120, 250, Tutorial_SkillPostText[ 1 ] );
+      textfont_print_centered( &Font11x16, screen_width/2, 250, Tutorial_SkillPostText[ 1 ] );
 
     if( Tutorial_ElapsedFrames >= 80 )
-      textfont_print_from_left( &Font11x16, 120, 270, Tutorial_SkillPostText[ 2 ] );
+      textfont_print_centered( &Font11x16, screen_width/2, 270, Tutorial_SkillPostText[ 2 ] );
     
     // allow player to skip tutorial
     if( AnyButtonPressed() )

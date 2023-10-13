@@ -39,6 +39,9 @@ void Player_Reset( Player* P )
     P->ShapeBox.Contacts.Bottom = true;
     P->ShapeBox.PreviousContacts.Bottom = true;
     P->ShapeBox.Velocity.y = 5;
+    
+    P->IsDead = false;
+    P->DidDoubleJump = false;
 }
 
 // ---------------------------------------------------------
@@ -130,14 +133,36 @@ void Player_DetermineMovement( Player* P )
     // simulate tentative player motion for this frame
     Box_Simulate( &P->ShapeBox );
     
-    // jump is an upward impulse
+    // button A makes player jump
     if( gamepad_button_a() == 1 )
-      if( P->ShapeBox.PreviousContacts.Bottom )
+    {
+        bool CanJump = P->ShapeBox.PreviousContacts.Bottom;
+        
+        // with cape, allow a single double jump
+        if( !CanJump && P->Skill == Skill_Cape && !P->DidDoubleJump )
         {
-            P->ShapeBox.DeltaVelocity.y -= JumpImpulse;
-            P->FramesToCancelJump = JumpCancelFrames;
-            play_sound( SoundJump );
+            // don't allow both jumps to be too close
+            if( P->FramesToCancelJump == 0 )
+            {
+                CanJump = true;
+                P->DidDoubleJump = true;
+            }
         }
+        
+        // apply jump as an fixed upwards speed
+        if( CanJump )
+        {
+            P->ShapeBox.Velocity.y = 0;
+            P->ShapeBox.DeltaVelocity.y = -JumpImpulse;
+            P->FramesToCancelJump = JumpCancelFrames;
+            
+            if( P->DidDoubleJump )
+              play_sound( SoundDoubleJump );
+            else
+              play_sound( SoundJump );
+        }
+        
+    }
     
     if( P->FramesToCancelJump > 0 )
       P->FramesToCancelJump--;
@@ -149,6 +174,22 @@ void Player_DetermineMovement( Player* P )
           P->ShapeBox.DeltaVelocity.y -= P->ShapeBox.Velocity.y * JumpCancelFactor;
           P->FramesToCancelJump = 0;
       }
+    
+    // button B with the pistol shoots a bullet
+    if( gamepad_button_b() == 1 && P->Skill == Skill_Pistol )
+    {
+        Vector2D ShotPosition = P->ShapeBox.Position;
+        ShotPosition.x += 32 * P->FacingDirectionX;
+        ShotPosition.y -= 23;
+        CreatePistolShot( &ShotPosition, P->FacingDirectionX > 0 );
+        play_sound( SoundShoot );
+    }
+    
+    // button B with the wand uses magic
+    if( gamepad_button_b() == 1 && P->Skill == Skill_Wand )
+    {
+        // pending
+    }
 }
 
 // ---------------------------------------------------------
@@ -160,7 +201,16 @@ void Player_ApplyMovement( Player* P )
     
     // detect player landing
     if( !P->ShapeBox.PreviousContacts.Bottom && P->ShapeBox.Contacts.Bottom )
-      play_sound( SoundLand );
+    {
+        // renew double jump
+        P->DidDoubleJump = false;
+        
+        // use a different sound for boots
+        if( P->Skill == Skill_Boots )
+          play_sound( SoundBootsLand );
+        else
+          play_sound( SoundLand );
+    }
 }
 
 // ---------------------------------------------------------

@@ -47,6 +47,8 @@ void Gameplay_ChangeState( int NewState )
         Player1.ShapeBox.Position.x = RoomExit.EventBox.Position.x + 20;
         Player1.ShapeBox.Position.y = RoomExit.EventBox.Position.y + 40;
         Player1.Skill = Skill_None;
+        
+        RoomExit.ShowingSign = false;
     }
     
     else if( NewState == Gameplay_LevelClear )
@@ -57,6 +59,8 @@ void Gameplay_ChangeState( int NewState )
         Player1.ShapeBox.Position.x = RoomExit.EventBox.Position.x + 20;
         Player1.ShapeBox.Position.y = RoomExit.EventBox.Position.y + 40;
         Player1.Skill = Skill_None;
+        
+        RoomExit.ShowingSign = false;
     }
     
     else if( NewState == Gameplay_LevelIntro || NewState == Gameplay_RoomIntro )
@@ -182,6 +186,10 @@ void Gameplay_RunState_Level()
     else if( Box_Top( &Player1.ShapeBox ) > CurrentRoomMap.TilesInY * TileHeight )
       Gameplay_ChangeState( Gameplay_Death );
     
+    // detect player death caused by other objects
+    else if( Player1.IsDead )
+      Gameplay_ChangeState( Gameplay_Death );
+    
     // now that all elements are updated, animate
     // the player according to the situation
     Player_UpdateAnimation( &Player1 );
@@ -227,6 +235,43 @@ void Gameplay_RunState_Pause()
 
 void Gameplay_RunState_Death()
 {
+    // give player an initial impulse upwards
+    if( Gameplay_ElapsedFrames == 1 )
+    {
+        Player1.ShapeBox.Velocity.y = -JumpImpulse * 0.75;
+        Player1.ShapeBox.Velocity.x = 0;
+        
+        Vector2D HighlightPosition = Player1.ShapeBox.Position;
+        HighlightPosition.y -= 20;
+        CreateHighlight( &HighlightPosition );
+    }
+    
+    // apply gravity over player, with no collisions
+    Box_BeginNewFrame( &Player1.ShapeBox );
+    Player1.ShapeBox.Acceleration.y = Gravity;
+    Box_Simulate( &Player1.ShapeBox );
+    Box_Move( &Player1.ShapeBox );
+    
+    // update highlights
+    for( int i = 0; i < 5; i++ )
+      Highlight_Update( &Highlights[ i ] );
+    
+    // draw scene
+    DrawCurrentRoom();
+    DrawGUI();
+    
+    // clear screen with transparency for dark red effect
+    clear_screen( make_color_rgba(75,0,0,160) );
+    
+    // redraw player over the scene to highlight it
+    Player_Draw( &Player1, &CurrentRoomMap.TopLeftOnScreen );
+    
+    // restart the level from room 1
+    if( Gameplay_ElapsedFrames >= 120 )
+    {
+        RoomNumber = 1;
+        Gameplay_ChangeState( Gameplay_LevelIntro );
+    }
 }
 
 // ---------------------------------------------------------
@@ -271,14 +316,14 @@ void Gameplay_RunState_LevelClear()
     draw_region_at( 320, screen_height/2 );
     
     // fade out after a while
-    if( Gameplay_ElapsedFrames >= 120 )
+    if( Gameplay_ElapsedFrames >= 220 )
     {
-        int AlphaLevel = min( 255, 255 * (Gameplay_ElapsedFrames-120) / 60 );
+        int AlphaLevel = min( 255, 255 * (Gameplay_ElapsedFrames-220) / 60 );
         clear_screen( make_color_rgba( 0,0,0,AlphaLevel ) );
     }
     
     // when finished, go to next level
-    if( Gameplay_ElapsedFrames >= 180 )
+    if( Gameplay_ElapsedFrames >= 280 )
     {
         LevelNumber++;
         

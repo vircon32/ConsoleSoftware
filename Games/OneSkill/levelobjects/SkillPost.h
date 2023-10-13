@@ -41,8 +41,8 @@ void SkillPost_Update( SkillPost* SP, Player* P )
         if( !P->ShapeBox.Contacts.Bottom ) return;
         SP->ShowingSign = true;
         
-        // if player pressed X, go to skill change scene
-        if( gamepad_button_x() == 1 )
+        // if player pressed up, go to skill change scene
+        if( gamepad_up() == 1 )
         {
             SkillWheelCenterX = SP->EventBox.Position.x + 20;
             SkillWheelCenterY = SP->EventBox.Position.y - 20 + 1;
@@ -75,7 +75,7 @@ void SkillPost_Draw( SkillPost* SP, Vector2D* LevelTopLeftOnScreen )
         
         float SignX = PostX + 20;
         float SignY = PostY - 90;
-        select_region( RegionSignButtonX );
+        select_region( RegionSignUp );
         draw_region_at( round(SignX+0.4), round(SignY+0.4) );
     }
 }

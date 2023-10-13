@@ -169,7 +169,7 @@ void ChangeSkill_RunState_Waiting()
     draw_region_at( SkillWheelCenterX, SkillWheelCenterY - (WheelRadius + 30) );
     
     // select previous skill
-    if( gamepad_left() == 1 )
+    if( gamepad_right() == 1 )
     {
         ChangeSkill_NextSkillSign = 1;
         ChangeSkill_ChangeState( ChangeSkill_Rotating );
@@ -177,7 +177,7 @@ void ChangeSkill_RunState_Waiting()
     }
     
     // select next skill
-    if( gamepad_right() == 1 )
+    if( gamepad_left() == 1 )
     {
         ChangeSkill_NextSkillSign = -1;
         ChangeSkill_ChangeState( ChangeSkill_Rotating );

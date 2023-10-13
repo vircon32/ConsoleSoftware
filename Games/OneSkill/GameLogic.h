@@ -14,14 +14,14 @@
     #include "levelobjects/SkillPost.h"
     #include "levelobjects/ExitDoor.h"
     #include "levelobjects/EntryDoor.h"
-    /*
     #include "levelobjects/Spike.h"
+    #include "levelobjects/PistolShot.h"
+    /*
     #include "levelobjects/TimedSpike.h"
     #include "levelobjects/Golem.h"
     #include "levelobjects/Bird.h"
     #include "levelobjects/Crate.h"
     #include "levelobjects/OnOffBlock.h"
-    #include "levelobjects/PistolShot.h"
     */
 // *****************************************************************************
 
@@ -41,12 +41,12 @@ ExitDoor RoomExit;
 SkillPost[ 10 ] SkillPosts;
 int ExistingSkillPosts;
 
+Spike[ 30 ] Spikes;
+int ExistingSpikes;
+
 /*
 Coin[ 9 ] Coins;
 int ExistingCoins;
-
-Spike[ 30 ] Spikes;
-int ExistingSpikes;
 
 MorningStar[ 40 ] MorningStars;
 int ExistingMorningStars;

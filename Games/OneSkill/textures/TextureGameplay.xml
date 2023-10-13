@@ -11,7 +11,7 @@
     <region name="EndRoomDoor" left="644" top="87" right="693" bottom="151" hotspot-x="649" hotspot-y="151"/>
     <region name="ClosedDoor" left="695" top="87" right="744" bottom="151" hotspot-x="700" hotspot-y="151"/>
     <region name="SignIn" left="725" top="167" right="762" bottom="178" hotspot-x="744" hotspot-y="178"/>
-    <region name="SignButtonX" left="725" top="182" right="746" bottom="204" hotspot-x="736" hotspot-y="204"/>
+    <region name="SignUp" left="750" top="182" right="771" bottom="204" hotspot-x="761" hotspot-y="204"/>
     <region name="BlockOnOffSwitching" left="725" top="208" right="764" bottom="247" hotspot-x="725" hotspot-y="208"/>
     <region name="TimedSpikesSwitching" left="725" top="249" right="764" bottom="288" hotspot-x="725" hotspot-y="249"/>
     <region name="SkillPost" left="644" top="285" right="683" bottom="364" hotspot-x="644" hotspot-y="364"/>

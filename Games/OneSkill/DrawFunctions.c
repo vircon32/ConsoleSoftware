@@ -36,11 +36,13 @@ void DrawCurrentRoom()
       OnOffBlock_Draw( &OnOffBlocks[ i ], &CurrentRoomMap.TopLeftOnScreen );
     */
     
+    for( int i = 0; i < 10; i++ )
+      PistolShot_Draw( &PistolShots[ i ], &CurrentRoomMap.TopLeftOnScreen );
+    
     // the player is drawn over all other objects
     Player_Draw( &Player1, &CurrentRoomMap.TopLeftOnScreen );
     
-    // highlights should appear just below the player
-    // but over any background objects
+    // highlights should appear over the player
     for( int i = 0; i < 5; i++ )
       Highlight_Draw( &Highlights[ i ], &CurrentRoomMap.TopLeftOnScreen );
 }
