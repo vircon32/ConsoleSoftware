@@ -68,13 +68,13 @@ void Highlight_Draw( Highlight* H, Vector2D* LevelTopLeftOnScreen )
 // ---------------------------------------------------------
 
 
-Highlight[ 5 ] Highlights;
+Highlight[ 10 ] Highlights;
 
 // ---------------------------------------------------------
 
 void CreateHighlight( Vector2D* Position )
 {
-    for( int i = 0; i < 5; i++ )
+    for( int i = 0; i < 10; i++ )
       if( !Highlights[ i ].Active )
         {
             Highlight_Create( &Highlights[ i ], Position );

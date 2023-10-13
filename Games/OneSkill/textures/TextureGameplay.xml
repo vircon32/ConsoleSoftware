@@ -98,4 +98,7 @@
     <matrix columns = "7" rows="1" separation="1">
         <region name="EnterDoor" left="525" top="777" right="558" bottom="817" hotspot-x="541" hotspot-y="817"/>
     </matrix>
+    <matrix columns = "1" rows="4" separation="1">
+        <region name="ShotBreaking" left="763" top="470" right="782" bottom="489" hotspot-x="772" hotspot-y="479"/>
+    </matrix>
 </texture-regions>

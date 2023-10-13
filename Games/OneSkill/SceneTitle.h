@@ -96,11 +96,11 @@ void Title_DrawScene( bool DrawLogo )
     int AnimationFrame = ( CurrentFrames / 8 ) % 4;
     select_texture( TextureGameplay );
     select_region( FirstRegionBootsWalk + AnimationFrame );
-    draw_region_at( 68 + 49, 65 + 65 );
+    draw_region_at( 68 + 44, 65 + 65 );
     select_region( FirstRegionPistolWalk + AnimationFrame );
-    draw_region_at( 29 + 49, 181 + 65 );
+    draw_region_at( 29 + 44, 181 + 65 );
     select_region( FirstRegionWandWalk + AnimationFrame );
-    draw_region_at( 523 + 49, 65 + 65 );
+    draw_region_at( 523 + 44, 65 + 65 );
     select_region( FirstRegionCapeWalk + AnimationFrame );
     draw_region_at( 484 + 49, 181 + 65 );
 }

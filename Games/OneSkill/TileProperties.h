@@ -22,7 +22,7 @@
 enum TileTypes
 {
     Tile_Empty = 0,
-    Tile_Box = 22,
+    Tile_Crate = 22,
     Tile_OnBlock = 33,
     Tile_Spikes = 44,
     Tile_TimedSpikes,

@@ -59,6 +59,7 @@
 #define FirstRegionWandWalk  151
 #define FirstRegionBootsWalk  155
 #define FirstRegionEnterDoor  159
+#define FirstRegionShotBreaking  166
 
 // your initialization code must call this function
 void DefineRegions_TextureGameplay() 
@@ -154,6 +155,7 @@ void DefineRegions_TextureGameplay()
     define_region_matrix( FirstRegionWandWalk, 527,602,  569,652,  545,652,  4,1,  1 );
     define_region_matrix( FirstRegionBootsWalk, 537,656,  573,696,  554,695,  4,1,  1 );
     define_region_matrix( FirstRegionEnterDoor, 525,777,  558,817,  541,817,  7,1,  1 );
+    define_region_matrix( FirstRegionShotBreaking, 763,470,  782,489,  772,479,  1,4,  1 );
 }
 
 // end include guard

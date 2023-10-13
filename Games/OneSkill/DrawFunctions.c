@@ -43,7 +43,7 @@ void DrawCurrentRoom()
     Player_Draw( &Player1, &CurrentRoomMap.TopLeftOnScreen );
     
     // highlights should appear over the player
-    for( int i = 0; i < 5; i++ )
+    for( int i = 0; i < 10; i++ )
       Highlight_Draw( &Highlights[ i ], &CurrentRoomMap.TopLeftOnScreen );
 }
 

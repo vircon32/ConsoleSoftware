@@ -157,7 +157,14 @@ void Player_DetermineMovement( Player* P )
             P->FramesToCancelJump = JumpCancelFrames;
             
             if( P->DidDoubleJump )
-              play_sound( SoundDoubleJump );
+            {
+                play_sound( SoundDoubleJump );
+                
+                // create a highlight under player's feet
+                Vector2D HighlightPosition = P->ShapeBox.Position;
+                HighlightPosition.y -= 5;
+                CreateHighlight( &HighlightPosition );
+            }
             else
               play_sound( SoundJump );
         }
@@ -188,7 +195,26 @@ void Player_DetermineMovement( Player* P )
     // button B with the wand uses magic
     if( gamepad_button_b() == 1 && P->Skill == Skill_Wand )
     {
-        // pending
+        // create a highlight on the wand's tip
+        Vector2D HighlightPosition;
+        HighlightPosition.x = P->ShapeBox.Position.x + 23 * P->FacingDirectionX;
+        HighlightPosition.y = P->ShapeBox.Position.y - 33;
+        CreateHighlight( &HighlightPosition );
+        
+        // play sound for wand magic
+        play_sound( SoundWandMagic );
+        
+        // switch all on-off blocks on the whole room
+        for( int TileY = 0; TileY <= MapLevel.map_height; ++TileY )
+        for( int TileX = 0; TileX <= MapLevel.map_width;  ++TileX )
+        {
+            int* Tile = &MapLevel.map[ MapLevel.array_width * TileY + TileX ];
+            
+            if( *Tile == (int)Tile_OnBlock )
+              *Tile = (int)Tile_OffBlock;
+            else if( *Tile == (int)Tile_OffBlock )
+              *Tile = (int)Tile_OnBlock;
+        }
     }
 }
 

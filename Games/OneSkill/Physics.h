@@ -34,6 +34,11 @@ void CollidePlayerWithTileBottom( Player* P, int TileX, int TileY );
 void CollidePlayerWithTile( Player* P, RoomMap* R, int TileX, int TileY );
 void CollidePlayerWithRoom( Player* P, RoomMap* R );
 
+// collisions between tilemap and other objects (detection only)
+bool point_overlaps_tilemap( Vector2D* point, tilemap* tm );
+bool box_overlaps_tilemap( Box* B, tilemap* tm );
+int* get_tile_at_point( Vector2D* point, tilemap* tm );
+
 
 // *****************************************************************************
     // end include guard

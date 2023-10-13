@@ -184,7 +184,7 @@ void ResetRoom()
       PistolShot_Reset( &PistolShots[ i ] );
     
     // disable all highlights
-    for( int i = 0; i < 5; i++ )
+    for( int i = 0; i < 10; i++ )
       Highlight_Reset( &Highlights[ i ] );
 }
 
@@ -231,6 +231,6 @@ void UpdateRoom()
     for( int i = 0; i < 10; i++ )
       PistolShot_Update( &PistolShots[ i ] );
     
-    for( int i = 0; i < 5; i++ )
+    for( int i = 0; i < 10; i++ )
       Highlight_Update( &Highlights[ i ] );
 }

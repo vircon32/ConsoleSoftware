@@ -347,3 +347,64 @@ void CollidePlayerWithRoom( Player* P, RoomMap* R )
       for( int TileX = MinTileX; TileX <= MaxTileX; ++TileX )
         CollidePlayerWithTile( P, R, TileX, TileY );
 }
+
+
+// ---------------------------------------------------------
+//   COLLISIONS BETWEEN TILEMAP AND OTHER OBJECTS
+// ---------------------------------------------------------
+
+
+bool point_overlaps_tilemap( Vector2D* point, tilemap* tm )
+{
+    if( point->x < 0 || point->x > tilemap_total_width( tm ) )
+      return false;
+    
+    if( point->y < 0 || point->y > tilemap_total_height( tm ) )
+      return false;
+    
+    int tile_step_x = tm->tiles->width  + tm->tiles->gap_x;
+    int tile_step_y = tm->tiles->height + tm->tiles->gap_y;
+    int tile_x = point->x / tile_step_x;
+    int tile_y = point->y / tile_step_y;
+    
+    return TileHasLeftBoundary( tm->map[ tm->array_width * tile_y + tile_x ] );
+}
+
+// ---------------------------------------------------------
+
+bool box_overlaps_tilemap( Box* B, tilemap* tm )
+{
+    // determine the range of tiles overlapping box extents
+    // (needed to optimize the loop in large maps)
+    int tile_step_x = tm->tiles->width  + tm->tiles->gap_x;
+    int tile_step_y = tm->tiles->height + tm->tiles->gap_y;
+    
+    int min_tile_x = max( Box_Left( B ) / tile_step_x, 0 );
+    int min_tile_y = max( Box_Top( B )  / tile_step_y, 0 );
+    int max_tile_x = min( Box_Right( B )  / tile_step_x, tm->map_width -1 );
+    int max_tile_y = min( Box_Bottom( B ) / tile_step_y, tm->map_height-1 );
+    
+    for( int tile_y = min_tile_y; tile_y <= max_tile_y; ++tile_y )
+      for( int tile_x = min_tile_x; tile_x <= max_tile_x; ++tile_x )
+        if( TileHasLeftBoundary( tm->map[ tm->array_width * tile_y + tile_x ] ) )
+           return true;
+    
+    return false;
+}
+
+// ---------------------------------------------------------
+
+int* get_tile_at_point( Vector2D* point, tilemap* tm )
+{
+    if( point->x < 0 || point->x > tilemap_total_width( tm ) )
+      return NULL;
+    
+    if( point->y < 0 || point->y > tilemap_total_height( tm ) )
+      return NULL;
+    
+    int tile_step_x = tm->tiles->width  + tm->tiles->gap_x;
+    int tile_step_y = tm->tiles->height + tm->tiles->gap_y;
+    int tile_x = point->x / tile_step_x;
+    int tile_y = point->y / tile_step_y;
+    return &tm->map[ tm->array_width * tile_y + tile_x ];
+}

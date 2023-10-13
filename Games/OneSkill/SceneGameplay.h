@@ -313,7 +313,7 @@ void Gameplay_RunState_LevelClear()
     draw_region_at( 200, screen_height/2 );
     
     select_region( RegionTextClear );
-    draw_region_at( 320, screen_height/2 );
+    draw_region_at( 330, screen_height/2 );
     
     // fade out after a while
     if( Gameplay_ElapsedFrames >= 220 )
