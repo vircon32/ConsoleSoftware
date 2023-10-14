@@ -22,19 +22,8 @@ void DrawCurrentRoom()
     EntryDoor_Draw( &RoomEntry, &CurrentRoomMap.TopLeftOnScreen );
     ExitDoor_Draw( &RoomExit, &CurrentRoomMap.TopLeftOnScreen );
     
-    /*
-    for( int i = 0; i < ExistingCoins; i++ )
-      Coin_Draw( &Coins[ i ], &CurrentRoomMap.TopLeftOnScreen );
-    
-    for( int i = 0; i < ExistingConveyors; i++ )
-      Conveyor_Draw( &Conveyors[ i ], &CurrentRoomMap.TopLeftOnScreen );
-    
-    for( int i = 0; i < ExistingSprings; i++ )
-      Spring_Draw( &Springs[ i ], &CurrentRoomMap.TopLeftOnScreen );
-    
-    for( int i = 0; i < ExistingOnOffBlocks; i++ )
-      OnOffBlock_Draw( &OnOffBlocks[ i ], &CurrentRoomMap.TopLeftOnScreen );
-    */
+    for( int i = 0; i < ExistingGolems; i++ )
+      Golem_Draw( &Golems[ i ], &CurrentRoomMap.TopLeftOnScreen );
     
     for( int i = 0; i < 10; i++ )
       PistolShot_Draw( &PistolShots[ i ], &CurrentRoomMap.TopLeftOnScreen );

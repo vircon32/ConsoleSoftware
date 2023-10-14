@@ -162,7 +162,17 @@ void Gameplay_RunState_Level()
     CollidePlayerWithRoom( &Player1, &CurrentRoomMap );
     EnforceRoomBoundaries( &Player1, &CurrentRoomMap );
     
-    // (3) apply the restricted movements, that ensure no penetration
+    // (3) with boots, restrict movements with enemies below
+    if( Player1.Skill == Skill_Boots )
+    {
+        for( int i = 0; i < ExistingGolems; i++ )
+          Golem_CollideWithPlayer( &Golems[ i ], &Player1 );
+      
+        //for( int i = 0; i < ExistingBirds; i++ )
+        //  Bird_CollideWithPlayer( &Birds[ i ], &Player1 );
+    }
+    
+    // (4) apply the restricted movements, that ensure no penetration
     Player_ApplyMovement( &Player1 );
     
     // ------------------------

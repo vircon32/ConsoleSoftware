@@ -16,9 +16,9 @@
     #include "levelobjects/EntryDoor.h"
     #include "levelobjects/Spike.h"
     #include "levelobjects/PistolShot.h"
+    #include "levelobjects/Golem.h"
     /*
     #include "levelobjects/TimedSpike.h"
-    #include "levelobjects/Golem.h"
     #include "levelobjects/Bird.h"
     #include "levelobjects/Crate.h"
     #include "levelobjects/OnOffBlock.h"
@@ -44,28 +44,9 @@ int ExistingSkillPosts;
 Spike[ 30 ] Spikes;
 int ExistingSpikes;
 
-/*
-Coin[ 9 ] Coins;
-int ExistingCoins;
+Golem[ 10 ] Golems;
+int ExistingGolems;
 
-MorningStar[ 40 ] MorningStars;
-int ExistingMorningStars;
-
-Key[ 4 ] Keys;
-int ExistingKeys;
-
-Door[ 4 ] Doors;
-int ExistingDoors;
-
-OnOffBlock[ 40 ] OnOffBlocks;
-int ExistingOnOffBlocks;
-
-Spring[ 10 ] Springs;
-int ExistingSprings;
-
-Conveyor[ 40 ] Conveyors;
-int ExistingConveyors;
-*/
 
 // ---------------------------------------------------------
 //   LEVEL FUNCTIONS
