@@ -168,8 +168,8 @@ void Gameplay_RunState_Level()
         for( int i = 0; i < ExistingGolems; i++ )
           Golem_CollideWithPlayer( &Golems[ i ], &Player1 );
       
-        //for( int i = 0; i < ExistingBirds; i++ )
-        //  Bird_CollideWithPlayer( &Birds[ i ], &Player1 );
+        for( int i = 0; i < ExistingBirds; i++ )
+          Bird_CollideWithPlayer( &Birds[ i ], &Player1 );
     }
     
     // (4) apply the restricted movements, that ensure no penetration

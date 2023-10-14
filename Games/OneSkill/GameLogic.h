@@ -17,12 +17,8 @@
     #include "levelobjects/Spike.h"
     #include "levelobjects/PistolShot.h"
     #include "levelobjects/Golem.h"
-    /*
-    #include "levelobjects/TimedSpike.h"
     #include "levelobjects/Bird.h"
-    #include "levelobjects/Crate.h"
-    #include "levelobjects/OnOffBlock.h"
-    */
+    //#include "levelobjects/TimedSpike.h"
 // *****************************************************************************
 
 
@@ -46,6 +42,9 @@ int ExistingSpikes;
 
 Golem[ 10 ] Golems;
 int ExistingGolems;
+
+Bird[ 10 ] Birds;
+int ExistingBirds;
 
 
 // ---------------------------------------------------------

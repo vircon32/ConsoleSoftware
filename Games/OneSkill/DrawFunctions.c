@@ -25,6 +25,9 @@ void DrawCurrentRoom()
     for( int i = 0; i < ExistingGolems; i++ )
       Golem_Draw( &Golems[ i ], &CurrentRoomMap.TopLeftOnScreen );
     
+    for( int i = 0; i < ExistingBirds; i++ )
+      Bird_Draw( &Birds[ i ], &CurrentRoomMap.TopLeftOnScreen );
+    
     for( int i = 0; i < 10; i++ )
       PistolShot_Draw( &PistolShots[ i ], &CurrentRoomMap.TopLeftOnScreen );
     

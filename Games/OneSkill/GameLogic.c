@@ -25,7 +25,7 @@ void LoadRoom( Room* R )
     ExistingSkillPosts = 0;
     ExistingSpikes = 0;
     ExistingGolems = 0;
-    //ExistingBirds = 0;
+    ExistingBirds = 0;
     //ExistingTimedSpikes = 0;
     
     // copy the room map in memory
@@ -73,6 +73,13 @@ void LoadRoom( Room* R )
             Golem_Create( &Golems[ ExistingGolems ], TileX, TileY );
             ExistingGolems++;
         }
+        
+        else if( TileValue == Tile_Bird )
+        {
+            *TilePointer = Tile_Empty;
+            Bird_Create( &Birds[ ExistingBirds ], TileX, TileY );
+            ExistingBirds++;
+        }
     }
     
     // configure background rendering
@@ -107,6 +114,9 @@ void ResetRoom()
     for( int i = 0; i < ExistingGolems; i++ )
       Golem_Reset( &Golems[ i ] );
     
+    for( int i = 0; i < ExistingBirds; i++ )
+      Bird_Reset( &Birds[ i ] );
+    
     // disable all pistol shots
     for( int i = 0; i < 10; i++ )
       PistolShot_Reset( &PistolShots[ i ] );
@@ -134,6 +144,9 @@ void UpdateRoom()
     
     for( int i = 0; i < ExistingGolems; i++ )
       Golem_Update( &Golems[ i ], &Player1 );
+    
+    for( int i = 0; i < ExistingBirds; i++ )
+      Bird_Update( &Birds[ i ], &Player1 );
     
     for( int i = 0; i < 10; i++ )
       PistolShot_Update( &PistolShots[ i ] );

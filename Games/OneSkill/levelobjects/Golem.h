@@ -82,7 +82,7 @@ void Golem_DetectImpacts( Golem* G, Player* P )
             // kill golem when no health remains
             if( G->Health <= 0 )
             {
-                G->State = Golem_Dead;
+                G->State = Golem_Dying;
                 
                 Vector2D HighlightPosition = G->ShapeBox.Position;
                 HighlightPosition.y -= 32;
@@ -121,6 +121,10 @@ void Golem_CollideWithPlayer( Golem* G, Player* P )
             P->ShapeBox.DeltaPosition.y = 0;
             P->ShapeBox.Velocity.y = 0;
             P->ShapeBox.Position.y = Box_Top( &G->ShapeBox );
+            
+            // adjust player X speed
+            if( G->State == Golem_MovingBody )
+              P->ShapeBox.DeltaPosition.x += 1 * G->FacingDirectionX;
         }
     }
 }
@@ -172,6 +176,13 @@ void Golem_Update( Golem* G, Player* P )
         case Golem_Dead:
           return;
         
+        case Golem_Dying:
+        {
+            G->ShapeBox.Velocity.y += Gravity * frame_time;
+            G->ShapeBox.Position.y += G->ShapeBox.Velocity.y * frame_time;
+            return;
+        }
+        
         case Golem_Inactive:
         {
             // activate in initial state when player gets close enough
@@ -218,11 +229,6 @@ void Golem_Update( Golem* G, Player* P )
             break;
         }
         
-        case Golem_Dying:
-        {
-            break;
-        }
-        
         default: break;
     }
     
@@ -254,8 +260,14 @@ void Golem_Draw( Golem* G, Vector2D* LevelTopLeftOnScreen )
     // draw the golem dying
     if( G->State == Golem_Dying )
     {
+        // draw dying golem
         select_region( RegionGolemDeath );
         draw_region_zoomed_at( GolemX, GolemY );
+        
+        // if it exits the screen, it finishes dying
+        if( GolemY >= (screen_width + 70) )
+          G->State = Golem_Dead;
+        
         return;
     }
     
