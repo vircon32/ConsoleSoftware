@@ -194,6 +194,10 @@ void Bird_Update( Bird* B, Player* P )
                 break;
             }
             
+            // on certain points, play the flap sound
+            if( ((int)B->ShapeBox.Position.x % 40) < 2 )
+              play_sound( SoundBirdFlap );
+            
             // continue flying forward
             B->ShapeBox.Position.x += 1.5 * B->FacingDirectionX;
             break;

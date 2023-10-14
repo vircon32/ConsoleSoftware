@@ -16,12 +16,15 @@ void DrawCurrentRoom()
 {
     RoomMap_Draw( &CurrentRoomMap );
     
-    for( int i = 0; i < ExistingSkillPosts; i++ )
-      SkillPost_Draw( &SkillPosts[ i ], &CurrentRoomMap.TopLeftOnScreen );
-    
     EntryDoor_Draw( &RoomEntry, &CurrentRoomMap.TopLeftOnScreen );
     ExitDoor_Draw( &RoomExit, &CurrentRoomMap.TopLeftOnScreen );
     
+    for( int i = 0; i < ExistingSkillPosts; i++ )
+      SkillPost_Draw( &SkillPosts[ i ], &CurrentRoomMap.TopLeftOnScreen );
+    
+    for( int i = 0; i < ExistingTimedSpikes; i++ )
+      TimedSpike_Draw( &TimedSpikes[ i ], &CurrentRoomMap.TopLeftOnScreen );
+        
     for( int i = 0; i < ExistingGolems; i++ )
       Golem_Draw( &Golems[ i ], &CurrentRoomMap.TopLeftOnScreen );
     

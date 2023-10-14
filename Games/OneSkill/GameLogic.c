@@ -26,7 +26,7 @@ void LoadRoom( Room* R )
     ExistingSpikes = 0;
     ExistingGolems = 0;
     ExistingBirds = 0;
-    //ExistingTimedSpikes = 0;
+    ExistingTimedSpikes = 0;
     
     // copy the room map in memory
     RoomMap_Load( &CurrentRoomMap, R->MapArray, CurrentRoomMap.TilesInX, CurrentRoomMap.TilesInY );
@@ -61,10 +61,16 @@ void LoadRoom( Room* R )
             ExitDoor_Create( &RoomExit, TileX, TileY );
         }
         
-        else if( TileValue == Tile_Spikes )
+        else if( TileValue == Tile_Spike )
         {
             Spike_Create( &Spikes[ ExistingSpikes ], TileX, TileY );
             ExistingSpikes++;
+        }
+        
+        else if( TileValue == Tile_TimedSpike )
+        {
+            TimedSpike_Create( &TimedSpikes[ ExistingTimedSpikes ], TileX, TileY, TilePointer );
+            ExistingTimedSpikes++;
         }
         
         else if( TileValue == Tile_Golem )
@@ -111,6 +117,9 @@ void ResetRoom()
     for( int i = 0; i < ExistingSkillPosts; i++ )
       SkillPost_Reset( &SkillPosts[ i ] );
     
+    for( int i = 0; i < ExistingTimedSpikes; i++ )
+      TimedSpike_Reset( &TimedSpikes[ i ] );
+    
     for( int i = 0; i < ExistingGolems; i++ )
       Golem_Reset( &Golems[ i ] );
     
@@ -141,6 +150,9 @@ void UpdateRoom()
     
     for( int i = 0; i < ExistingSpikes; i++ )
       Spike_Update( &Spikes[ i ], &Player1 );
+    
+    for( int i = 0; i < ExistingTimedSpikes; i++ )
+      TimedSpike_Update( &TimedSpikes[ i ], &Player1 );
     
     for( int i = 0; i < ExistingGolems; i++ )
       Golem_Update( &Golems[ i ], &Player1 );

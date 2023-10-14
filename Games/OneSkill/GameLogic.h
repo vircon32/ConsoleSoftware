@@ -18,7 +18,7 @@
     #include "levelobjects/PistolShot.h"
     #include "levelobjects/Golem.h"
     #include "levelobjects/Bird.h"
-    //#include "levelobjects/TimedSpike.h"
+    #include "levelobjects/TimedSpike.h"
 // *****************************************************************************
 
 
@@ -39,6 +39,9 @@ int ExistingSkillPosts;
 
 Spike[ 30 ] Spikes;
 int ExistingSpikes;
+
+TimedSpike[ 30 ] TimedSpikes;
+int ExistingTimedSpikes;
 
 Golem[ 10 ] Golems;
 int ExistingGolems;

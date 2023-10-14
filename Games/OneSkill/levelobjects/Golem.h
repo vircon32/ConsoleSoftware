@@ -202,7 +202,12 @@ void Golem_Update( Golem* G, Player* P )
             
             // check if it is turn for the body
             if( G->HandsOffsetX >= -10 )
-              G->State = Golem_MovingBody;
+            {
+                G->State = Golem_MovingBody;
+                
+                // at each hand impulse play the walk sound
+                play_sound( SoundGolemWalk );
+            }
             
             break;
         }
