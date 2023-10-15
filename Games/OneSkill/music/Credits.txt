@@ -1,0 +1,12 @@
+Title music is adapted from "Automation (Looping)", by Eric Matyas.
+Downloaded from https://opengameart.org as CC-BY license.
+
+Cutscenes music adapted from "The Fable Begins (Looping)", by Eric Matyas.
+Downloaded from https://opengameart.org as CC-BY license.
+
+Day level music is adapted from "8-bit Music Pack (loopable)", by CodeManu.
+The used track is bgm_action_3.mp3.
+Downloaded from https://opengameart.org as CC-BY license.
+
+Night level music is adapted from "Spooky Enchantment (Looping)", by Eric Matyas.
+Downloaded from https://opengameart.org as CC-BY license.

@@ -26,14 +26,17 @@ void Gameplay_ChangeState( int NewState )
     GameState = NewState;
     Gameplay_ElapsedFrames = 0;
     
+    // set different music for day and night levels
+    int LevelMusic = MusicLevelDay + ((LevelNumber-1) % 2);
+    
     // some transitions have specific actions
     if( OldState == Gameplay_LevelIntro
     &&  NewState == Gameplay_Level )
-      play_sound_in_channel( MusicGameplay, ChannelMusic );
+      play_sound_in_channel( LevelMusic, ChannelMusic );
     
     if( OldState == Gameplay_RoomIntro
     &&  NewState == Gameplay_Level )
-      play_sound_in_channel( MusicGameplay, ChannelMusic );
+      play_sound_in_channel( LevelMusic, ChannelMusic );
     
     if( OldState == Gameplay_Pause
     &&  NewState == Gameplay_Level )

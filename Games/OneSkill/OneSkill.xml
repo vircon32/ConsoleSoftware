@@ -10,9 +10,10 @@
     </textures>
     <sounds>
         <sound path="obj/MusicTitle.vsnd" />
-        <sound path="obj/MusicGameplay.vsnd" />
         <sound path="obj/MusicCutscenes.vsnd" />
         <sound path="obj/MusicTutorial.vsnd" />
+        <sound path="obj/MusicLevelDay.vsnd" />
+        <sound path="obj/MusicLevelNight.vsnd" />
         
         <sound path="obj/SoundTitleSlide.vsnd" />
         <sound path="obj/SoundTitleLogo.vsnd" />

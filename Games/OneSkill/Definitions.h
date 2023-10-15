@@ -28,9 +28,10 @@ enum Textures
 enum Sounds
 {
     MusicTitle,
-    MusicGameplay,
     MusicCutscenes,
     MusicTutorial,
+    MusicLevelDay,
+    MusicLevelNight,
     
     SoundTitleSlide,
     SoundTitleLogo,

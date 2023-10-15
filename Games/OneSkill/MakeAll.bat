@@ -33,9 +33,10 @@ echo.
 echo Convert the WAV sounds
 echo --------------------------
 wav2vircon music\MusicTitle.wav      -o obj\MusicTitle.vsnd      || goto :failed
-wav2vircon music\MusicGameplay.wav   -o obj\MusicGameplay.vsnd   || goto :failed
 wav2vircon music\MusicCutscenes.wav  -o obj\MusicCutscenes.vsnd  || goto :failed
 wav2vircon music\MusicTutorial.wav   -o obj\MusicTutorial.vsnd   || goto :failed
+wav2vircon music\MusicLevelDay.wav   -o obj\MusicLevelDay.vsnd   || goto :failed
+wav2vircon music\MusicLevelNight.wav -o obj\MusicLevelNight.vsnd || goto :failed
 
 wav2vircon sounds\SoundTitleSlide.wav    -o obj\SoundTitleSlide.vsnd    || goto :failed
 wav2vircon sounds\SoundTitleLogo.wav     -o obj\SoundTitleLogo.vsnd     || goto :failed

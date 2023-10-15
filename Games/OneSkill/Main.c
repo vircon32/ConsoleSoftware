@@ -61,10 +61,13 @@ void main( void )
     select_sound( MusicTitle );
     set_sound_loop( true );
     
-    select_sound( MusicGameplay );
+    select_sound( MusicCutscenes );
     set_sound_loop( true );
     
-    select_sound( MusicCutscenes );
+    select_sound( MusicLevelDay );
+    set_sound_loop( true );
+    
+    select_sound( MusicLevelNight );
     set_sound_loop( true );
     
     // configure channel volumes
@@ -75,7 +78,7 @@ void main( void )
     }
     
     select_channel( ChannelMusic );
-    set_channel_volume( 0.2 );
+    set_channel_volume( 0.4 );
     
     // ------------------------------------
     // PART 3: CREATE TEXT FONT
@@ -159,8 +162,8 @@ void main( void )
     // set initial game state
     CreateGameLevels();
     ResetGameSession();
-    GameScene = Scene_Gameplay;
-    GameState = Gameplay_Initialize;
+    GameScene = Scene_Title;
+    GameState = Title_Initialize;
     
     // ------------------------------------
     // PART 7: MAIN LOOP
