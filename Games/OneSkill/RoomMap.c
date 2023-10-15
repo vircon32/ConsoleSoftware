@@ -61,10 +61,11 @@ void RoomMap_Draw( RoomMap* R )
     OffsetY = max( OffsetY, 0 );
     
     MapMountains.camera_x = screen_width/2 + OffsetX * 0.4;
-    MapMountains.camera_y = tilemap_total_height( &MapMountains ) - screen_height/2 - OffsetY * 0.4;
+    MapMountains.camera_y = tilemap_total_height( &MapMountains ) - screen_height/2 - OffsetY * 0.3;
     
     MapClouds.camera_x = screen_width/2 + OffsetX * 0.7;
-    MapClouds.camera_y = tilemap_total_height( &MapClouds ) - screen_height/2 - OffsetY * 0.7;
+    MapClouds.camera_y = tilemap_total_height( &MapClouds ) - screen_height/2 - OffsetY * 0.4;
+    MapClouds.camera_y += 120;
     
     // flat background color
     clear_screen( R->BackgroundColor );

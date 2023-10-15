@@ -29,6 +29,7 @@ struct Golem
     int HandsOffsetX;
     int FramesSinceLastHit;
     int Health;
+    bool IsOnScreen;
 };
 
 // ---------------------------------------------------------
@@ -56,6 +57,7 @@ void Golem_Reset( Golem* G )
     
     G->Health = G->InitialHealth;
     G->FramesSinceLastHit = 60;
+    G->IsOnScreen = false;
 }
 
 // ---------------------------------------------------------
@@ -206,7 +208,8 @@ void Golem_Update( Golem* G, Player* P )
                 G->State = Golem_MovingBody;
                 
                 // at each hand impulse play the walk sound
-                play_sound( SoundGolemWalk );
+                if( G->IsOnScreen )
+                  play_sound_in_channel( SoundGolemWalk, ChannelEnemies );
             }
             
             break;
@@ -261,6 +264,15 @@ void Golem_Draw( Golem* G, Vector2D* LevelTopLeftOnScreen )
     int GolemX = LevelTopLeftOnScreen->x + G->ShapeBox.Position.x;
     int GolemY = LevelTopLeftOnScreen->y + G->ShapeBox.Position.y;
     set_drawing_scale( G->FacingDirectionX, 1 );
+    
+    // determine if the golem is on screen
+    G->IsOnScreen = true;
+    
+    if( (GolemX - 35) > screen_width || (GolemX + 35 < 0) )
+      G->IsOnScreen = false;
+    
+    if( (GolemY - 60) > screen_height || (GolemY + 5 < 0) )
+      G->IsOnScreen = false;
     
     // draw the golem dying
     if( G->State == Golem_Dying )

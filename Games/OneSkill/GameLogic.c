@@ -89,7 +89,7 @@ void LoadRoom( Room* R )
     }
     
     // configure background rendering
-    if( RoomNumber == 1 )
+    if( (LevelNumber % 2) == 1 )
     {
         // day mode
         CurrentRoomMap.BackgroundColor = make_color_rgb( 203, 219, 252 );

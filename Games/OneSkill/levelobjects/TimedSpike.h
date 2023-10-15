@@ -4,13 +4,14 @@
 
 
 // define switching speed
-#define TimedSpike_SwitchFrames 90
+#define TimedSpike_SwitchFrames 100
 
 struct TimedSpike
 {
     Box EventBox;
     int* HomeTile;
     int ElapsedFrames;
+    bool IsOnScreen;
 };
 
 // ---------------------------------------------------------
@@ -31,6 +32,7 @@ void TimedSpike_Create( TimedSpike* TS, int TileX, int TileY, int* HomeTile )
 void TimedSpike_Reset( TimedSpike* TS )
 {
     TS->ElapsedFrames = 0;
+    TS->IsOnScreen = false;
     *TS->HomeTile = Tile_TimedSpike;
 }
 
@@ -50,7 +52,8 @@ void TimedSpike_Update( TimedSpike* TS, Player* P )
         else
           *TS->HomeTile = Tile_TimedSpike;
         
-        play_sound( SoundSpikesSwitch );
+        if( TS->IsOnScreen )
+          play_sound_in_channel( SoundSpikesSwitch, ChannelSpikes );
     }
     
     // when extended, check overlap with player
@@ -76,4 +79,13 @@ void TimedSpike_Draw( TimedSpike* TS, Vector2D* LevelTopLeftOnScreen )
     int TimedSpikeY = LevelTopLeftOnScreen->y + TS->EventBox.Position.y;
     select_region( RegionTimedSpikesSwitching );
     draw_region_at( TimedSpikeX, TimedSpikeY );
+    
+    // determine if the spikes are on screen
+    TS->IsOnScreen = true;
+    
+    if( (TimedSpikeX - 20) > screen_width || (TimedSpikeX + 20 < 0) )
+      TS->IsOnScreen = false;
+    
+    if( (TimedSpikeY - 0) > screen_height || (TimedSpikeY + 40 < 0) )
+      TS->IsOnScreen = false;
 }

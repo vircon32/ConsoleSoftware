@@ -65,7 +65,9 @@ enum Sounds
 // ---------------------------------------------------------
 
 
-#define ChannelMusic  15
+#define ChannelMusic    15
+#define ChannelEnemies  14
+#define ChannelSpikes   13
 
 
 // ---------------------------------------------------------

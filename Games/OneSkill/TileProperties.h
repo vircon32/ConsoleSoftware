@@ -11,8 +11,8 @@
 
 
 // basic, global definitions
-#define MaxTilesInX (16*6)
-#define MaxTilesInY  (9*6)
+#define MaxTilesInX (16*8)
+#define MaxTilesInY  (9*8)
 #define TileWidth  40
 #define TileHeight 40
 #define BackgroundTileWidth 160

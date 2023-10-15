@@ -27,6 +27,7 @@ struct Bird
     int FacingDirectionX;
     int FramesSinceLastHit;
     int Health;
+    bool IsOnScreen;
 };
 
 // ---------------------------------------------------------
@@ -53,6 +54,7 @@ void Bird_Reset( Bird* B )
     
     B->Health = B->InitialHealth;
     B->FramesSinceLastHit = 60;
+    B->IsOnScreen = false;
 }
 
 // ---------------------------------------------------------
@@ -195,8 +197,9 @@ void Bird_Update( Bird* B, Player* P )
             }
             
             // on certain points, play the flap sound
-            if( ((int)B->ShapeBox.Position.x % 40) < 2 )
-              play_sound( SoundBirdFlap );
+            if( B->IsOnScreen )
+              if( ((int)B->ShapeBox.Position.x % 50) < 2 )
+                play_sound_in_channel( SoundBirdFlap, ChannelEnemies );
             
             // continue flying forward
             B->ShapeBox.Position.x += 1.5 * B->FacingDirectionX;
@@ -231,6 +234,15 @@ void Bird_Draw( Bird* B, Vector2D* LevelTopLeftOnScreen )
     int BirdY = LevelTopLeftOnScreen->y + B->ShapeBox.Position.y;
     set_drawing_scale( B->FacingDirectionX, 1 );
     
+    // determine if the bird is on screen
+    B->IsOnScreen = true;
+    
+    if( (BirdX - 35) > screen_width || (BirdX + 35 < 0) )
+      B->IsOnScreen = false;
+    
+    if( (BirdY - 30) > screen_height || (BirdY + 5 < 0) )
+      B->IsOnScreen = false;
+    
     // draw the bird dying
     if( B->State == Bird_Dying )
     {
@@ -247,7 +259,7 @@ void Bird_Draw( Bird* B, Vector2D* LevelTopLeftOnScreen )
     
     // draw flapping animation
     int ReferenceX = fabs( B->ShapeBox.Position.x );
-    int AnimationFrame = (ReferenceX / 12) % 2;
+    int AnimationFrame = (ReferenceX / 15) % 2;
     select_region( FirstRegionBirdFlap + AnimationFrame );
     draw_region_zoomed_at( BirdX, BirdY );
     
