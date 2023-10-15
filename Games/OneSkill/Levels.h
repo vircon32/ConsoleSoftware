@@ -9,6 +9,11 @@
 //   DEFINITIONS FOR GAME LEVELS AND THEIR ROOMS
 // ---------------------------------------------------------
 
+
+// game-wide level structure
+#define NumberOfLevels  4
+#define RoomsPerLevel   2
+
 // a level is formed by 2 rooms, which each have the map
 // itself and dimensions (not all rooms have the same size)
 struct Room
@@ -19,13 +24,13 @@ struct Room
 
 struct Level
 {
-    Room[ 2 ] Rooms;
+    Room[ RoomsPerLevel ] Rooms;
 };
 
 // ---------------------------------------------------------
 
 // the level data itself
-Level[ 2 ] GameLevels;
+Level[ NumberOfLevels ] GameLevels;
 
 // function to initialize level data
 void CreateGameLevels();

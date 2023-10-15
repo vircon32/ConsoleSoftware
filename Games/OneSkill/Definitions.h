@@ -144,10 +144,6 @@ enum StatesChangeSkill
 // ---------------------------------------------------------
 
 
-// game-wide level structure
-#define NumberOfLevels  2
-#define RoomsPerLevel   2
-
 // all available skills
 enum PlayerSkills
 {

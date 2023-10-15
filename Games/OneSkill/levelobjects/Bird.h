@@ -47,7 +47,7 @@ void Bird_Create( Bird* B, int TileX, int TileY )
 
 void Bird_Reset( Bird* B )
 {
-    B->State = Bird_Inactive;
+    B->State = Bird_Flying;
     Box_FullStop( &B->ShapeBox );
     B->ShapeBox.Position = B->StartPosition;
     B->FacingDirectionX = -1;
@@ -169,10 +169,7 @@ void Bird_Update( Bird* B, Player* P )
         {
             // activate in initial state when player gets close enough
             if( Bird_IsWithinActiveDistance( B, P ) )
-            {
-                Bird_Reset( B );
-                B->State = Bird_Flying;
-            }
+              Bird_Reset( B );
             
             break;
         }

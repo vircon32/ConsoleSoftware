@@ -16,7 +16,7 @@ echo Import embedded data files
 echo --------------------------
 
 REM levels have 2 parts each
-for /l %%x in (1,1,2) do (
+for /l %%x in (1,1,4) do (
     tiled2vircon maps\Level%%x-1.tmx -o obj\ || goto :failed
     tiled2vircon maps\Level%%x-2.tmx -o obj\ || goto :failed
 )

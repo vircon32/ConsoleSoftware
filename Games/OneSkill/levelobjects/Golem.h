@@ -49,7 +49,7 @@ void Golem_Create( Golem* G, int TileX, int TileY )
 
 void Golem_Reset( Golem* G )
 {
-    G->State = Golem_Inactive;
+    G->State = G->State = Golem_MovingHands;
     Box_FullStop( &G->ShapeBox );
     G->ShapeBox.Position = G->StartPosition;
     G->HandsOffsetX = -35;
@@ -189,10 +189,7 @@ void Golem_Update( Golem* G, Player* P )
         {
             // activate in initial state when player gets close enough
             if( Golem_IsWithinActiveDistance( G, P ) )
-            {
-                Golem_Reset( G );
-                G->State = Golem_MovingHands;
-            }
+              Golem_Reset( G );
             
             break;
         }
