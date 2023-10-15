@@ -196,7 +196,10 @@ void Bird_Update( Bird* B, Player* P )
             // on certain points, play the flap sound
             if( B->IsOnScreen )
               if( ((int)B->ShapeBox.Position.x % 50) < 2 )
-                play_sound_in_channel( SoundBirdFlap, ChannelEnemies );
+              {
+                  stop_channel( ChannelEnemies );
+                  play_sound_in_channel( SoundBirdFlap, ChannelEnemies );
+              }
             
             // continue flying forward
             B->ShapeBox.Position.x += 1.5 * B->FacingDirectionX;

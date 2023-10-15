@@ -49,6 +49,7 @@ void SkillPost_Update( SkillPost* SP, Player* P )
             
             GameScene = Scene_ChangeSkill;
             GameState = ChangeSkill_Initialize;
+            play_sound( SoundMenuCancel );
         }
     }
 }

@@ -206,7 +206,10 @@ void Golem_Update( Golem* G, Player* P )
                 
                 // at each hand impulse play the walk sound
                 if( G->IsOnScreen )
-                  play_sound_in_channel( SoundGolemWalk, ChannelEnemies );
+                {
+                    stop_channel( ChannelEnemies );
+                    play_sound_in_channel( SoundGolemWalk, ChannelEnemies );
+                }
             }
             
             break;

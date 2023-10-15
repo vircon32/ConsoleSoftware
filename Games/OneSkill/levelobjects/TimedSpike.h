@@ -83,9 +83,9 @@ void TimedSpike_Draw( TimedSpike* TS, Vector2D* LevelTopLeftOnScreen )
     // determine if the spikes are on screen
     TS->IsOnScreen = true;
     
-    if( (TimedSpikeX - 20) > screen_width || (TimedSpikeX + 20 < 0) )
+    if( (TimedSpikeX - 40) > screen_width || (TimedSpikeX + 40 < 0) )
       TS->IsOnScreen = false;
     
-    if( (TimedSpikeY - 0) > screen_height || (TimedSpikeY + 40 < 0) )
+    if( (TimedSpikeY - 20) > screen_height || (TimedSpikeY + 60 < 0) )
       TS->IsOnScreen = false;
 }

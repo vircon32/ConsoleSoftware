@@ -42,7 +42,7 @@ void ChangeSkill_ChangeState( int NewState )
       play_sound( SoundMenuMove );
     
     else if( NewState == ChangeSkill_FadeOut )
-      play_sound( SoundMenuCancel );
+      play_sound( SoundMenuAccept );
 }
 
 
