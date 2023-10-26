@@ -1,0 +1,44 @@
+<texture-regions>
+    <texture name="TextureGameplay" path="TextureGameplay.png"/>
+    <region name="Logo" left="391" top="438" right="576" bottom="528" hotspot-x="483" hotspot-y="438"/>
+    <region name="PressStart" left="164" top="438" right="387" bottom="469" hotspot-x="276" hotspot-y="438"/>
+    <region name="2023" left="1" top="486" right="61" bottom="501" hotspot-x="1" hotspot-y="501"/>
+    <region name="Carra" left="65" top="486" right="123" bottom="501" hotspot-x="123" hotspot-y="501"/>
+    <region name="Ground" left="0" top="0" right="639" bottom="359" hotspot-x="0" hotspot-y="0"/>
+    <region name="HealthBarFrame" left="1" top="505" right="66" bottom="522" hotspot-x="1" hotspot-y="505"/>
+    <region name="ShadowTank" left="478" top="536" right="532" bottom="590" hotspot-x="501" hotspot-y="560"/>
+    <region name="ShadowTankDiagonal" left="536" top="536" right="599" bottom="598" hotspot-x="562" hotspot-y="565"/>
+    <matrix columns = "4" rows="3" separation="0">
+        <region name="Tileset" left="1" top="363" right="40" bottom="402" hotspot-x="1" hotspot-y="363"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="PlayerIcons" left="164" top="473" right="205" bottom="507" hotspot-x="164" hotspot-y="473"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="HealthBars" left="70" top="505" right="70" bottom="516" hotspot-x="70" hotspot-y="505"/>
+    </matrix>
+    <matrix columns = "10" rows="1" separation="0">
+        <region name="Numbers" left="405" top="604" right="426" bottom="635" hotspot-x="415" hotspot-y="619"/>
+    </matrix>
+    <matrix columns = "6" rows="1" separation="1">
+        <region name="CircleHighlight" left="164" top="363" right="235" bottom="434" hotspot-x="199" hotspot-y="398"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="TankBodiesUp" left="1" top="536" right="51" bottom="586" hotspot-x="26" hotspot-y="561"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="TankBodiesUpRight" left="211" top="536" right="275" bottom="600" hotspot-x="243" hotspot-y="568"/>
+    </matrix>
+    <matrix columns = "4" rows="1" separation="1">
+        <region name="TankBodiesRight" left="195" top="604" right="245" bottom="654" hotspot-x="220" hotspot-y="629"/>
+    </matrix>
+    <matrix columns = "8" rows="1" separation="1">
+        <region name="Turrets" left="1" top="590" right="23" bottom="639" hotspot-x="12" hotspot-y="630"/>
+    </matrix>
+    <matrix columns = "1" rows="8" separation="1">
+        <region name="Bullets" left="604" top="363" right="615" bottom="374" hotspot-x="609" hotspot-y="368"/>
+    </matrix>
+    <matrix columns = "1" rows="4" separation="1">
+        <region name="ShotBreaking" left="619" top="363" right="638" bottom="382" hotspot-x="628" hotspot-y="372"/>
+    </matrix>
+</texture-regions>

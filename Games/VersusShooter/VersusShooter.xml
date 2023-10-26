@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Versus Shooter" version="1.0" />
+    <binary path="obj/VersusShooter.vbin" />
+    <textures>
+        <texture path="obj/TextureGameplay.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/MusicLevel.vsnd" />
+        
+        <sound path="obj/SoundCountdown.vsnd" />
+        <sound path="obj/SoundShoot.vsnd" />
+        <sound path="obj/SoundTankHit.vsnd" />
+        <sound path="obj/SoundPressStart.vsnd" />
+        <sound path="obj/SoundExplosionSmall.vsnd" />
+        <sound path="obj/SoundExplosionLarge.vsnd" />
+        <sound path="obj/SoundRespawn.vsnd" />
+    </sounds>
+</rom-definition>

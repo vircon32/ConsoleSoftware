@@ -1,0 +1,14 @@
+Tank
+https://opengameart.org/content/top-down-vehicle
+by irmirx
+License CC-BY
+-----------------
+Earth texture
+https://opengameart.org/content/tileable-brick-ground-textures-set-2
+by Cethiel
+License CC0
+-----------------
+Floor tiles
+https://opengameart.org/content/tileable-brick-ground-textures-set-2
+by Cethiel
+License CC0
