@@ -6,6 +6,7 @@
     #include "video.h"
     
     // include additional headers
+    #include "vector2d.h"
     #include "../tilemap.h"
 // *****************************************************************************
 
@@ -121,16 +122,16 @@ void main( void )
         PlayerY += CharSpeed * DeltaY;
         
         // make camera follow the player
-        LandMap.camera_x = PlayerX;
-        LandMap.camera_y = PlayerY;
+        LandMap.camera_position.x = PlayerX;
+        LandMap.camera_position.y = PlayerY;
         
         // in this case, we want to restrict camera placement
         // so that, even when the player is near map bounds,
         // the screen view will never reach out of the map
         tilemap_clip_camera_position( &LandMap );
         
-        // render tile map
-        tilemap_draw( &LandMap );
+        // render tile map taking camera into account
+        tilemap_draw_from_camera( &LandMap );
         
         // to draw elements in the map, like our character, we first
         // need to convert its map coordinates to screen coordinates
