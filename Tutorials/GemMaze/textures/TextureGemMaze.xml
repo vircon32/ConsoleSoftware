@@ -1,0 +1,15 @@
+<texture-regions>
+    <texture name="TextureGemMaze" path="TextureGemMaze.png"/>
+    <region name="GuiGems" left="1" top="103" right="94" bottom="140" hotspot-x="1" hotspot-y="103"/>
+    <region name="GuiTime" left="98" top="103" right="179" bottom="140" hotspot-x="179" hotspot-y="103"/>
+    <region name="Player" left="183" top="103" right="222" bottom="142" hotspot-x="202" hotspot-y="122"/>
+    <region name="TextStart" left="1" top="169" right="106" bottom="239" hotspot-x="53" hotspot-y="204"/>
+    <region name="TextDeath" left="110" top="169" right="188" bottom="239" hotspot-x="149" hotspot-y="204"/>
+    <region name="TextClear" left="1" top="243" right="122" bottom="313" hotspot-x="61" hotspot-y="278"/>
+    <matrix columns = "4" rows="2" separation="0">
+        <region name="TileSet" left="0" top="0" right="49" bottom="49" hotspot-x="0" hotspot-y="0"/>
+    </matrix>
+    <matrix columns = "10" rows="1" separation="1">
+        <region name="Numbers" left="1" top="144" right="16" bottom="165" hotspot-x="1" hotspot-y="144"/>
+    </matrix>
+</texture-regions>
