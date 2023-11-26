@@ -6,6 +6,7 @@
     // include project headers
     #include "Player.h"
     #include "RoomMap.h"
+    #include "Physics.h"
     
     // now include all objects used in levels
     // (all these use the base headers and the player)
