@@ -15,6 +15,15 @@ However, it does not include any PC software related to Vircon32 such as the fol
   (it DOES run on the console, but it is part of the compiler)
 
 ----------------------------------
+### License
+
+There are several programs here, so any of them may have their own license. But unless otherwise specified, the global license is:
+- Software is provided under the [3-Clause BSD License](https://opensource.org/license/bsd-3-clause).
+- Assets are provided under [CC BY 4.0 License](https://creativecommons.org/licenses/by/4.0/)
+
+The intent of Vircon32 is to be open and free, that is why the chosen licenses are very permissive and should allow most uses.
+
+----------------------------------
 ### How to contribute
 
 If you want to publish your own games or content for the console, please do not make pull requests for this repository. Instead, do them at [CommunityContent](https://github.com/vircon32/ComputerSoftware). That repository is meant to receive contributions by other people. That way we can keep this for "official" console software that will demanded more polish in general.
