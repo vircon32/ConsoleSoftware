@@ -1,5 +1,5 @@
 /* *****************************************************************************
-*  Vircon32 library: "interval.h"                 File version: 2023/09/23     *
+*  Vircon32 library: "interval.h"                 File version: 2024/06/11     *
 *  --------------------------------------------------------------------------- *
 *  This header defines real number intervals and their general operations.     *
 ***************************************************************************** */
@@ -228,7 +228,7 @@ bool intervals_overlap( interval* i1, interval* i2 )
 {
     interval intersection;
     intervals_get_intersection( i1, i2, &intersection );
-    return interval_is_empty( &intersection );
+    return !interval_is_empty( &intersection );
 }
 
 // ---------------------------------------------------------
