@@ -3,7 +3,6 @@
 #include "video.h"
 #include "time.h"
 #include "string.h"
-#include "misc.h"
 
 
 // ---------------------------------------------------------
@@ -70,9 +69,18 @@ void draw_message_screen( int* title, int* message )
 
 void print_hex_value( int x, int y, int* name, int value )
 {
-    // convert the number to hex
-    int[ 10 ] hex_string;
-    itoa( value, hex_string, 16 );
+    // convert the number to hex, always
+    // showing the full 8 hex digits
+    int[ 16+1 ] hex_characters = "0123456789ABCDEF";
+    int[ 8+1 ] hex_string;
+    
+    for( int Digit = 7; Digit >= 0; Digit-- )
+    {
+        hex_string[ Digit ] = hex_characters[ value & 15 ];
+        value >>= 4;
+    }
+    
+    hex_string[ 8 ] = 0;
     
     // join all text parts
     int[ 60 ] text;
@@ -478,12 +486,13 @@ void main( void )
     if( !cartridge_connected() )
     {
         request_cartridge();
-        exit();
+        asm{ "hlt" }
     }
     
     // ensure that any video parameters we might have used
     // are restored to their expected defaults at startup
     set_multiply_color( color_white );
+    set_drawing_point( 0, 0 );
     select_region( 0 );
     
     // jump to first position in cartridge program rom

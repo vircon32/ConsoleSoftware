@@ -8,6 +8,10 @@ What is this?
     console. It is needed by any emulator of this console to
     perform basic tasks such as start-up and hardware error
     handling.
+    
+    Current version is 1.2. Previous version included a bug
+    showing hex numbers in CPU error messages that has been
+    fixed now.
 
 ------------------------------------------------------------
 
@@ -24,7 +28,7 @@ License
     This program is free and open source. It is offered under
     the 3-Clause BSD License, which full text is the following:
     
-    Copyright 2021 Carra.
+    Copyright 2021-2024 Carra.
     All rights reserved.
     
     Redistribution and use in source and binary forms, with or
