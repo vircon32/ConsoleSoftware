@@ -83,6 +83,10 @@ void main( void )
     // - - - - - - - - - - - - - - - - - - -
     // 2.1: define full font
     
+    // define texture and regions for our characters
+    FontLetters.texture_id = TextureFullFont;
+    FontLetters.character_zero_region_id = FirstRegionFullFont;
+    
     // define dimensions for our characters
     FontLetters.character_height = 31;
     FontLetters.use_variable_width = true;
@@ -91,10 +95,6 @@ void main( void )
     // 2 pixels overlap between characters, 15 pixels between lines
     FontLetters.character_separation = -2;
     FontLetters.line_separation = 15;
-    
-    // define texture and regions for our characters
-    FontLetters.texture_id = TextureFullFont;
-    FontLetters.character_zero_region_id = FirstRegionFullFont;
     
     // - - - - - - - - - - - - - - - - - - -
     // 2.2: define number font
