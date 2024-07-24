@@ -135,8 +135,9 @@ void main( void )
     Peasant.ShapeBox.position_y = 260;
     Peasant.FaceDirection = Left;
     
-    // scene triggers
+    // scene state and triggers
     PeasantHasSpoken = false;
+    SceneState = Scene_MovePlayer;
     
     // we will control the character with gamepad 1
     select_gamepad( 0 );
