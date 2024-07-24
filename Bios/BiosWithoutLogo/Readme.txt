@@ -12,6 +12,10 @@ What is this?
     to developers, who will often do frequent changes and
     tests. This BIOS will save them the time of waiting for
     the logo every single time they do a new test.
+    
+    Current version is 1.1. Previous version incorrectly
+    used global variables and had a but showing hex numbers
+    in CPU error messages. Both issues have been fixed now.
 
 ------------------------------------------------------------
 
@@ -28,7 +32,7 @@ License
     This program is free and open source. It is offered under
     the 3-Clause BSD License, which full text is the following:
     
-    Copyright 2023 Carra.
+    Copyright 2023-2024 Carra.
     All rights reserved.
     
     Redistribution and use in source and binary forms, with or

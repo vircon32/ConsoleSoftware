@@ -3,7 +3,6 @@
 #include "video.h"
 #include "time.h"
 #include "string.h"
-#include "misc.h"
 
 // include project libraries
 #include "ErrorInfo.h"
@@ -63,9 +62,18 @@ void draw_message_screen( error_message* message )
 
 void print_hex_value( int x, int y, int* name, int value )
 {
-    // convert the number to hex
-    int[ 10 ] hex_string;
-    itoa( value, hex_string, 16 );
+    // convert the number to hex, always
+    // showing the full 8 hex digits
+    int[ 16+1 ] hex_characters = "0123456789ABCDEF";
+    int[ 8+1 ] hex_string;
+    
+    for( int Digit = 7; Digit >= 0; Digit-- )
+    {
+        hex_string[ Digit ] = hex_characters[ value & 15 ];
+        value >>= 4;
+    }
+    
+    hex_string[ 8 ] = 0;
     
     // join all text parts
     int[ 60 ] text;
@@ -144,6 +152,73 @@ void error_handler()
     // ensure everything gets drawn
     end_frame();
     
+    // all possible error messages; do NOT store this as
+    // global variables, since it may collide with globals
+    // defined in the programs running from the cartridge
+    error_message[ 12 ] error_messages =
+    {
+        {
+            "ERROR: INVALID MEMORY READ",
+            "Program attempted to read from a memory address\n"
+            "that does not exist or is in a write-only device."
+        },
+        {
+            "ERROR: INVALID MEMORY WRITE",
+            "Program attempted to write on a memory address\n"
+            "that does not exist or is in a read-only device."
+        },
+        {
+            "ERROR: INVALID PORT READ",
+            "Program attempted to read from a port number\n"
+            "that does not exist or is set as write-only."
+        },
+        {
+            "ERROR: INVALID PORT WRITE",
+            "Program attempted to write on a port number\n"
+            "that does not exist or is set as read-only."
+        },
+        {
+            "ERROR: STACK OVERFLOW",
+            "Program pushed too many values in the stack\n"
+            "and available RAM memory was exhausted."
+        },
+        {
+            "ERROR: STACK UNDERFLOW",
+            "Program popped too many values from the stack\n"
+            "and all data stored in stack was exhausted."
+        },
+        {
+            "ERROR: DIVISION BY ZERO",
+            "Program attempted to perform a division or\n"
+            "modulus operation where the divisor was zero."
+        },
+        {
+            "ERROR: ARC COSINE OUT OF RANGE",
+            "Program attempted to perform an arc cosine\n"
+            "operation when the argument was not in [-1,+1]."
+        },
+        {
+            "ERROR: ARC TANGENT NOT DEFINED",
+            "Program attempted to perform an arc tangent\n"
+            "operation when both of the arguments were 0."
+        },
+        {
+            "ERROR: LOGARITHM OUT OF RANGE",
+            "Program attempted to perform a logarithm\n"
+            "operation when the argument is not positive."
+        },
+        {
+            "ERROR: POWER HAS NO REAL SOLUTION",
+            "Program attempted to perform a power operation\n"
+            "when base was negative and exponent non integer."
+        },
+        {
+            "UNKNOWN ERROR",
+            "Program caused a hardware error with an error\n"
+            "code that was not recognized by the BIOS."
+        }
+    };
+    
     // write the appropriate message for this error code
     if( error_code >= 0 && error_code < (int)error_unknown )
       draw_message_screen( &error_messages[ error_code ] );
@@ -210,7 +285,7 @@ void main( void )
     if( !cartridge_connected() )
     {
         request_cartridge();
-        exit();
+        asm{ "hlt" }
     }
     
     // ensure that any video parameters we might have used
