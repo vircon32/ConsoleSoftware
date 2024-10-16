@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Tutorial ASM: Bouncing ball" version="1.0" />
+    <binary path="obj/TutorialASM-BouncingBall.vbin" />
+    <textures>
+        <texture path="obj/TextureBall.vtex" />
+    </textures>
+    <sounds>
+        <sound path="obj/SoundBounce.vsnd" />
+    </sounds>
+</rom-definition>
