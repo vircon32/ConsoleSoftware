@@ -1,4 +1,4 @@
-ASM COUNTDOWN
+ASM 01: COUNTDOWN
 ------------------------
 This is an example assembly program that shows a 5-second countdown.
 

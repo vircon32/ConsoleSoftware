@@ -16,16 +16,18 @@
 ; there are no automatic conversions as in C and
 ; they would get interpreted incorrectly otherwise,
 ; producing garbage values
-%define BallRadius 30.0       ; used for collisions
-%define BallSpeed  3.0        ; 3 pixels / frame = 180 pixels / second
-%define BallAngle  0.785397   ; initial angle = pi/4 radians = 45 degrees
+%define BallRadius       30.0
+%define InitialCenterX  320.0
+%define InitialCenterY  180.0
+%define InitialSpeedX     2.0
+%define InitialSpeedY    -2.0
 
 ; store global variables in these RAM positions
 ; (all are interpreted as float)
-%define BallCenterX    [ 0 ]
-%define BallCenterY    [ 1 ]
-%define BallVelocityX  [ 2 ]
-%define BallVelocityY  [ 3 ]
+%define BallCenterX  [ 0 ]
+%define BallCenterY  [ 1 ]
+%define BallSpeedX   [ 2 ]
+%define BallSpeedY   [ 3 ]
 
 ; define region for the ball, with hotspot at center
 _define_region_ball:
