@@ -84,9 +84,10 @@ _define_robot_region:
 
 ; ----------------------------------------------------------
 ; In our texture, all robot regions are the same
-; size and are laid out in a row; this subroutine
-; makes use of that to iterate on X and define all
-; 8 robot regions
+; size and are laid out in a 3x3 matrix; this
+; subroutine makes use of that to iterate on X
+; and Y to define all 8 robot regions (plus 1
+; additional extra region in the middle, unused)
 %define TopLeftX R0
 %define TopLeftY R1
 %define RegionID R2

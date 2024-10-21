@@ -8,7 +8,7 @@ jmp _program
 ; ------------ DECLARATIONS ---------------
 
 ; define constants
-%define RobotSpeed 3       ; robot moves at 3 pixels/frame = 180 pixels/second
+%define RobotSpeed 2       ; robot moves at 2 pixels/frame = 120 pixels/second
 
 ; define variables with their addresses in memory
 ; (all of them are integers)
