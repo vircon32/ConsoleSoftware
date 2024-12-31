@@ -13,9 +13,11 @@
     
     You can use any regular Chip-8 ROM file by converting it into a
     Vircon32 memory card that this emulator can load. For that, use
-    the converter program called "chip8tovircon32". Once you have
-    loaded the memory card with your Chip-8 ROM, you can start/reset
-    the emulator and begin playing the game in Vircon32.
+    the converter program called "chip8tovircon32". This program is
+    available from the Vircon32 repository called "OtherPCTools".
+    Once you have loaded the memory card with your Chip-8 ROM, you
+    can start/reset the emulator and begin playing that game in
+    Vircon32.
     
     Since Chip-8 uses a keyboard with 16 keys (0-9 and A-F) you will
     need to use the first 2 Vircon32 gamepads to map all 16 keys.
