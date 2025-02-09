@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<rom-definition version="1.0">
+    <rom type="cartridge" title="Example: Tilemap zoomed" version="1.0" />
+    <binary path="obj/Example-TileMapZoomed.vbin" />
+    <textures>
+        <texture path="obj/TextureTiles.vtex" />
+    </textures>
+    <sounds />
+</rom-definition>
