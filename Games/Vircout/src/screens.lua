@@ -198,8 +198,8 @@ function draw_pause()
 
     draw_playfield()
 
-    -- 50% black overlay. 0x80000000 represented as signed 32-bit.
-    draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, -2147483648)
+    -- 50% black overlay.
+    draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0, 128)
     -- Restore the persistent GPU multiply/blend state before printing text.
     spr(REGION_SOLID, -2, -2)
 
@@ -223,29 +223,20 @@ function draw_dying()
     end
 end
 
--- Return a black packed color whose alpha advances every frame.
--- Important: colors are carried through 32-bit signed integer paths. Runtime
--- arithmetic above 0x7FFFFFFF can collapse to 0x80000000, which made the old
--- fade stop around 50% opacity. Keep the exact same bit patterns but represent
--- the upper half as negative signed 32-bit values.
-function fade_color_for_frame(frame)
+-- Alpha for the black fade overlay: one step of 8 per frame, capped at
+-- fully opaque.
+function fade_alpha_for_frame(frame)
     local alpha = frame * 8
 
-    if alpha >= 255 then
-        return -16777216  -- 0xFF000000
+    if alpha > 255 then
+        alpha = 255
     end
 
-    local packed = alpha * 16777216  -- alpha << 24
-
-    if alpha >= 128 then
-        packed = packed - 4294967296
-    end
-
-    return packed
+    return alpha
 end
 
 function draw_fade_overlay()
-    draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, fade_color_for_frame(state_frame))
+    draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0, fade_alpha_for_frame(state_frame))
 
     -- draw_solid_rect changes persistent GPU multiply/blend state. Restore it
     -- after the overlay so the next screen cannot inherit the black tint.
@@ -269,7 +260,7 @@ function draw_dying_fade()
     -- If update_dying_fade changed state this frame, keep the hand-off frame
     -- completely black. The next screen begins cleanly on the following frame.
     if game_state ~= STATE_DYING_FADE then
-        draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, -16777216)
+        draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0)
         spr(REGION_SOLID, -2, -2)
         return
     end
@@ -288,7 +279,7 @@ end
 
 function draw_game_over_scene()
     draw_gameplay_background()
-    draw_solid_rect(112, 112, 416, 130, 0xFF050812)
+    draw_solid_rect(112, 112, 416, 130, 18, 8, 5, 128)  -- was 0xFF050812
     spr(REGION_SOLID, -2, -2)
     draw_hud()
     print_centered(135, "GAME OVER")
@@ -309,7 +300,7 @@ end
 
 function draw_game_over_fade()
     if game_state ~= STATE_GAME_OVER_FADE then
-        draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, -16777216)
+        draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0)
         spr(REGION_SOLID, -2, -2)
         return
     end
@@ -347,7 +338,7 @@ function draw_fade_out()
     -- hand-off frame fully black so the next READY/ENDING screen really
     -- starts after a completed fade instead of flashing the newly loaded level.
     if game_state ~= STATE_FADE_OUT then
-        draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, -16777216)
+        draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0)
         spr(REGION_SOLID, -2, -2)
         return
     end
@@ -396,7 +387,7 @@ end
 
 function draw_ending_fade()
     if game_state ~= STATE_ENDING_FADE then
-        draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, -16777216)
+        draw_solid_rect(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0)
         spr(REGION_SOLID, -2, -2)
         return
     end

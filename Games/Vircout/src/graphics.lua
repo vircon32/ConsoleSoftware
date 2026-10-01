@@ -19,14 +19,18 @@ function format_score(value)
     return "99999"
 end
 
-function draw_solid_rect(x, y, width, height, color)
-    spr(REGION_SOLID, x, y, width, height, 0, color)
+-- Draw a solid rectangle tinted by color components (each 0-255; alpha
+-- defaults to opaque). The components stay plain numbers; rgba() packs them
+-- into the raw 0xAABBGGRR word right at the spr() call, which is the only
+-- place the packed word is needed.
+function draw_solid_rect(x, y, width, height, r, g, b, a)
+    spr(REGION_SOLID, x, y, width, height, 0, rgba(r, g, b, a))
 end
 
 function draw_playfield_borders()
-    draw_solid_rect(0, 0, SCREEN_WIDTH, PLAYFIELD_TOP, 0xFF000000)
-    draw_solid_rect(0, PLAYFIELD_TOP, PLAYFIELD_LEFT, SCREEN_HEIGHT - PLAYFIELD_TOP, 0xFF000000)
-    draw_solid_rect(PLAYFIELD_RIGHT, PLAYFIELD_TOP, SCREEN_WIDTH - PLAYFIELD_RIGHT, SCREEN_HEIGHT - PLAYFIELD_TOP, 0xFF000000)
+    draw_solid_rect(0, 0, SCREEN_WIDTH, PLAYFIELD_TOP, 0, 0, 0)
+    draw_solid_rect(0, PLAYFIELD_TOP, PLAYFIELD_LEFT, SCREEN_HEIGHT - PLAYFIELD_TOP, 0, 0, 0)
+    draw_solid_rect(PLAYFIELD_RIGHT, PLAYFIELD_TOP, SCREEN_WIDTH - PLAYFIELD_RIGHT, SCREEN_HEIGHT - PLAYFIELD_TOP, 0, 0, 0)
     spr(REGION_SOLID, -2, -2)
 end
 
