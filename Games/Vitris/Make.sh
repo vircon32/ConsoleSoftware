@@ -32,8 +32,8 @@ assemble obj/Vitris.asm -o obj/Vitris.vbin || abort_build
 echo
 echo Convert the PNG textures
 echo --------------------------
-png2vircon textures/TextureTitle.png     -o obj/TextureTitle.vtex     || abort_build
-png2vircon textures/TextureGameplay.png  -o obj/TextureGameplay.vtex  || abort_build
+png2vircon TextureTitle.png     -o obj/TextureTitle.vtex     || abort_build
+png2vircon TextureGameplay.png  -o obj/TextureGameplay.vtex  || abort_build
 
 echo
 echo Convert the WAV sounds

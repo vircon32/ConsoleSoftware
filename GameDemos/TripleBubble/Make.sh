@@ -30,5 +30,5 @@ echo Pack the ROM
 echo --------------------------
 packrom TripleBubble.xml -o "bin/Triple Bubble (Demo).v32" || abort_build
 
-echo.
+echo
 echo BUILD SUCCESSFUL

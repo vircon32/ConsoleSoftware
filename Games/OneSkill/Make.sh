@@ -28,7 +28,7 @@ assemble obj/OneSkill.asm -o obj/OneSkill.vbin || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom BasicPlatformer.xml -o "bin/One Skill.v32" || abort_build
+packrom OneSkill.xml -o "bin/One Skill.v32" || abort_build
 
 echo
 echo BUILD SUCCESSFUL
