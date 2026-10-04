@@ -34,7 +34,7 @@ assemble obj/Mahjong.asm -o obj/Mahjong.vbin || abort_build
 echo
 echo Convert the PNG textures
 echo --------------------------
-png2vircon textures/TextureMahjong.png  -o obj/TextureMahjong.vtex  || abort_build
+png2vircon TextureMahjong.png  -o obj/TextureMahjong.vtex  || abort_build
 
 echo
 echo Convert the WAV sounds

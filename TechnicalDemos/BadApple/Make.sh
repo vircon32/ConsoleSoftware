@@ -31,7 +31,7 @@ png2vircon TextureBadApple.png -o obj/TextureBadApple.vtex || abort_build
 echo
 echo Convert the WAV sounds
 echo --------------------------
-wav2vircon MusicBadApple.wav -o obj/SoundMusicBadApple.vsnd || abort_build
+wav2vircon MusicBadApple.wav -o obj/MusicBadApple.vsnd || abort_build
 
 echo
 echo Pack the ROM
