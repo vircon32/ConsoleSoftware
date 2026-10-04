@@ -1,4 +1,4 @@
-define CartridgeROMFirstAddress 0x20000000
+%define CartridgeROMFirstAddress 0x20000000
 
 ; ------------------------------------
 __hardware_error_vector:
