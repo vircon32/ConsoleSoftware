@@ -57,27 +57,7 @@ assemble obj\vircout.asm -o obj\vircout.vbin || goto :failed
 echo.
 echo Pack the ROM
 echo --------------------------
-packrom obj\vircout.xml -o bin\vircout.v32 || goto :failed
-
-where v32opt >nul 2>nul
-if errorlevel 1 goto :noopt
-
-echo.
-echo Build the optimized cart (v32opt)
-echo --------------------------
-v32opt -O3 -o obj\vircoutOpt.asm obj\vircout.asm || goto :optfailed
-assemble obj\vircoutOpt.asm -o obj\vircoutOpt.vbin || goto :optfailed
-packrom obj\vircoutOpt.xml -o bin\vircoutOpt.v32 || goto :optfailed
-goto :succeeded
-
-:optfailed
-echo.
-echo WARNING: the optimized build failed; the regular cart was still built
-goto :succeeded
-
-:noopt
-echo.
-echo v32opt was not found in your PATH: skipping the optimized build
+packrom obj\vircout.xml -o bin\Vircout.v32 || goto :failed
 goto :succeeded
 
 :failed

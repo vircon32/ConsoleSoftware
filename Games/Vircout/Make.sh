@@ -66,24 +66,7 @@ assemble obj/vircout.asm -o obj/vircout.vbin || abort_build
 echo
 echo Pack the ROM
 echo --------------------------
-packrom obj/vircout.xml -o bin/vircout.v32 || abort_build
-
-if command -v v32opt >/dev/null 2>&1; then
-    echo
-    echo Build the optimized cart \(v32opt\)
-    echo --------------------------
-    if v32opt -O3 -o obj/vircoutOpt.asm obj/vircout.asm \
-       && assemble obj/vircoutOpt.asm -o obj/vircoutOpt.vbin \
-       && packrom obj/vircoutOpt.xml -o bin/vircoutOpt.v32; then
-        :
-    else
-        echo
-        echo "WARNING: the optimized build failed; the regular cart was still built"
-    fi
-else
-    echo
-    echo "v32opt was not found in your PATH: skipping the optimized build"
-fi
+packrom obj/vircout.xml -o bin/Vircout.v32 || abort_build
 
 echo
 echo BUILD SUCCESSFUL
